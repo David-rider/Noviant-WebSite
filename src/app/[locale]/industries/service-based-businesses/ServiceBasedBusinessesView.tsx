@@ -14,14 +14,14 @@ export default function ServiceBasedBusinessesPage() {
             icon: MessageSquare,
             color: "text-blue-500",
             imgGradient: "from-blue-500/20 to-cyan-500/20",
-            imgUrl: "/images/unsplash/photo-1552581234-26160f608093.jpg"
+            imgUrl: "/images/unsplash/service_automation_1773243238685.png"
         },
         {
             id: "crm",
             icon: Share2,
             color: "text-indigo-500",
             imgGradient: "from-indigo-500/20 to-purple-500/20",
-            imgUrl: "/images/unsplash/photo-1552664730-d307ca884978.jpg"
+            imgUrl: "/images/unsplash/service_crm_1773243254115.png"
         }
     ];
 

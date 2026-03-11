@@ -14,14 +14,14 @@ export default function EducationPage() {
             icon: Wifi,
             color: "text-cyan-500",
             imgGradient: "from-cyan-500/20 to-teal-500/20",
-            imgUrl: "/images/unsplash/photo-1588580000645-4562a6d2c839.jpg"
+            imgUrl: "/images/unsplash/education_infrastructure_1773243209398.png"
         },
         {
             id: "learning",
             icon: Presentation,
             color: "text-amber-500",
             imgGradient: "from-amber-500/20 to-yellow-500/20",
-            imgUrl: "/images/unsplash/photo-1524178232363-1fb2b075b655.jpg"
+            imgUrl: "/images/unsplash/education_learning_1773243225085.png"
         }
     ];
 
