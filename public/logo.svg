@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+    <!-- 
+    Icon Size: 50x50
+    Position: x=5, y=5
+    Scale: 0.5 (from 100x100 coord system)
+    -->
+    <g transform="translate(5, 5) scale(0.50)">
+        <!-- Left Triangle (Navy) -->
+        <!-- Logic: Diamond left corner (0,50). Right edge x=25 vertical. -->
+        <path d="M0 50 L25 25 L25 75 Z" fill="#0F172A" />
+
+        <!-- Right Triangle (Navy) -->
+        <!-- Logic: Diamond right corner (100,50). Left edge x=75 vertical. -->
+        <path d="M100 50 L75 25 L75 75 Z" fill="#0F172A" />
+
+        <!-- Top Polygon (Red) -->
+        <!-- Logic: Diamond top corner (50,0). Sides x=35, x=65. Bottom diagonal (Top-Left to Bottom-Right). -->
+        <!-- Vertices: Top(50,0), Right-Top(65,15), Right-Bottom(65,55), Left-Bottom(35,25), Left-Top(35,15) -->
+        <title>Top Red</title>
+        <path d="M50 0 L65 15 L65 55 L35 25 L35 15 Z" fill="#991B1B" /> 
+
+        <!-- Bottom Polygon (Red) -->
+        <!-- Logic: Diamond bottom corner (50,100). Sides x=35, x=65. Top diagonal (Top-Left to Bottom-Right). -->
+        <!-- Vertices: Bottom(50,100), Left-Bottom(35,85), Left-Top(35,45), Right-Top(65,75), Right-Bottom(65,85) -->
+        <title>Bottom Red</title>
+        <path d="M50 100 L35 85 L35 45 L65 75 L65 85 Z" fill="#991B1B" />
+    </g>
+
+    <!-- Text: noviant -->
+    <!-- Scaled appropriately and aligned with the icon -->
+    <text x="65" y="42" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="38" fill="#0F172A" letter-spacing="-1">noviant</text>
+</svg>

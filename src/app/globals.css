@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  /* Softer Cloud White */
+  --foreground: #0f172a;
+  /* Slate 900 for contrast */
+  --cyber-blue: #2563eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Minimalist Tech Utilities */
+.cyber-grid {
+  /* Class signature kept for compatibility, content removed to eliminate noise */
+}
+
+.glass-morphism {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.neon-border-blue {
+  border: 1px solid #e2e8f0;
+}
+
+/* Sharp Technical Hover */
+.tech-hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.tech-hover:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Subtler Corner Brackets */
+.cyber-corner {
+  position: relative;
+}
+
+.cyber-corner::before,
+.cyber-corner::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #2563eb;
+  border-style: solid;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.cyber-corner::before {
+  top: 0;
+  left: 0;
+  border-width: 1.5px 0 0 1.5px;
+}
+
+.cyber-corner::after {
+  bottom: 0;
+  right: 0;
+  border-width: 0 1.5px 1.5px 0;
+}
+
+/* Clean Tech Button */
+.cyber-button {
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  /* Standard rounded for clarity over clip-path */
+}
+
+.cyber-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
+}
+
+/* Sci-Fi Scanline Effect */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.cyber-scanline {
+  position: fixed;
+  inset: 0;
+  height: 8px;
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(37, 99, 235, 0.08), transparent);
+  opacity: 1;
+  pointer-events: none;
+  z-index: 100;
+  animation: scanline 4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
