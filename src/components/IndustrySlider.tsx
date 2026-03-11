@@ -108,7 +108,7 @@ export default function IndustrySlider() {
 
                             <div className="pt-4">
                                 <Link
-                                    href={`/industries/${active}`}
+                                    href={`/industries/${active === 'service-businesses' ? 'service-based-businesses' : active}`}
                                     className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-xl font-semibold transition-all"
                                 >
                                     {t("learn_more") || "Learn More"} <ArrowRight className="w-4 h-4" />
