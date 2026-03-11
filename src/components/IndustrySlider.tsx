@@ -15,7 +15,7 @@ const industries = [
     {
         id: "education",
         icon: GraduationCap,
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+        image: "/images/unsplash/education_learning_1773243225085.png"
     },
     {
         id: "fashion",
@@ -50,7 +50,7 @@ const industries = [
     {
         id: "service-businesses",
         icon: Handshake,
-        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32b7"
+        image: "/images/unsplash/service_automation_1773243238685.png"
     }
 ];
 
