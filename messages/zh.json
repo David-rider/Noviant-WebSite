@@ -46,7 +46,8 @@
     "why_choose_us": "为什么选择我们？",
     "our_clients": "客户评价",
     "referral_program": "推荐奖励计划",
-    "language_label": "语言"
+    "language_label": "语言",
+    "news": "新闻"
   },
   "AI_Page": {
     "hero_title": "AI 基础设施解决方案",
@@ -299,6 +300,69 @@
         ]
       }
     }
+  },
+  "News_Page": {
+    "title": "新闻与洞见",
+    "subtitle": "来自 Noviant 团队的最新技术趋势、公司公告与行业洞见。",
+    "read_more": "阅读更多",
+    "categories": {
+      "all": "全部",
+      "company": "公司新闻",
+      "industry": "行业洞见",
+      "security": "网络安全",
+      "ai": "人工智能",
+      "cloud": "云与基础设施"
+    },
+    "articles": [
+      {
+        "id": "1",
+        "category": "ai",
+        "date": "2026年4月1日",
+        "title": "Noviant 推出面向企业用户的下一代 AI 基础设施平台",
+        "excerpt": "我们最新的 GPU 集群解决方案提供比上一代快 3 倍的 LLM 推理速度，专为金融服务和医疗机构打造。",
+        "image": "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg"
+      },
+      {
+        "id": "2",
+        "category": "security",
+        "date": "2026年3月25日",
+        "title": "零信任架构：纽约企业为何刻不容缓？",
+        "excerpt": "2026年第一季度，针对中小企业的网络威胁增加了43%。Noviant 的 vCISO 团队深度解析每家企业现在必须采取的关键步骤。",
+        "image": "/images/unsplash/photo-1555949963-ff9fe0c870eb.jpg"
+      },
+      {
+        "id": "3",
+        "category": "cloud",
+        "date": "2026年3月18日",
+        "title": "真正有效的混合云策略：2026年实战指南",
+        "excerpt": "多云的复杂性是真实存在的。我们的基础设施工程师分享了本季度完成的三次成功混合云迁移背后的蓝图。",
+        "image": "/images/unsplash/photo-1544197150-b99a580bb7a8.jpg"
+      },
+      {
+        "id": "4",
+        "category": "company",
+        "date": "2026年3月10日",
+        "title": "Noviant 扩展托管 IT 服务，深入布局医疗健康领域",
+        "excerpt": "我们非常自豪地宣布，符合 HIPAA 标准的托管 IT 套餐现已为三州地区的医疗实践机构提供服务。",
+        "image": "/images/unsplash/photo-1551434678-e076c223a692.jpg"
+      },
+      {
+        "id": "5",
+        "category": "industry",
+        "date": "2026年2月28日",
+        "title": "2026年企业 IT 现状：塑造未来一年的关键趋势",
+        "excerpt": "从多智能体 AI 工作流到主权云法规要求——Noviant 年度技术展望，洞察正在重塑企业 IT 格局的核心力量。",
+        "image": "/images/unsplash/photo-1504384308090-c894fdcc538d.jpg"
+      },
+      {
+        "id": "6",
+        "category": "ai",
+        "date": "2026年2月15日",
+        "title": "使用大语言模型自动化文档处理：一个真实的案例研究",
+        "excerpt": "一家中型金融公司如何利用 Noviant 基于 AWS Bedrock 构建的智能文档处理流水线，将人工文件审查时间减少了 80%。",
+        "image": "/images/unsplash/photo-1451187580459-43490279c0fa.jpg"
+      }
+    ]
   },
   "Footer": {
     "address": "纽约百老汇大道1250号36楼，邮编 10001",

@@ -46,7 +46,8 @@
     "why_choose_us": "Why Choose Us?",
     "our_clients": "Our Clients",
     "referral_program": "Referral Program",
-    "language_label": "Language"
+    "language_label": "Language",
+    "news": "News"
   },
   "AI_Page": {
     "hero_title": "AI Infrastructure Solutions",
@@ -299,6 +300,69 @@
         ]
       }
     }
+  },
+  "News_Page": {
+    "title": "News & Insights",
+    "subtitle": "The latest technology trends, company announcements, and industry insights from the Noviant team.",
+    "read_more": "Read More",
+    "categories": {
+      "all": "All",
+      "company": "Company News",
+      "industry": "Industry Insights",
+      "security": "Cybersecurity",
+      "ai": "Artificial Intelligence",
+      "cloud": "Cloud & Infrastructure"
+    },
+    "articles": [
+      {
+        "id": "1",
+        "category": "ai",
+        "date": "April 1, 2026",
+        "title": "Noviant Launches Next-Gen AI Infrastructure Platform for Enterprise Clients",
+        "excerpt": "Our newest GPU cluster solution delivers 3x faster LLM inference speeds, purpose-built for financial services and healthcare organizations.",
+        "image": "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg"
+      },
+      {
+        "id": "2",
+        "category": "security",
+        "date": "March 25, 2026",
+        "title": "Zero-Trust Architecture: Why New York Businesses Can't Wait",
+        "excerpt": "Cyber threats targeting SMBs increased by 43% in Q1 2026. Noviant's vCISO team breaks down the critical steps every business must take now.",
+        "image": "/images/unsplash/photo-1555949963-ff9fe0c870eb.jpg"
+      },
+      {
+        "id": "3",
+        "category": "cloud",
+        "date": "March 18, 2026",
+        "title": "Hybrid Cloud Strategies That Actually Work: A 2026 Guide",
+        "excerpt": "Multi-cloud complexity is real. Our infrastructure engineers share the blueprints behind three successful hybrid cloud migrations completed this quarter.",
+        "image": "/images/unsplash/photo-1544197150-b99a580bb7a8.jpg"
+      },
+      {
+        "id": "4",
+        "category": "company",
+        "date": "March 10, 2026",
+        "title": "Noviant Expands Managed IT Services to Serve the Healthcare Sector",
+        "excerpt": "We are proud to announce HIPAA-compliant managed IT packages now available to medical practices across the tri-state area.",
+        "image": "/images/unsplash/photo-1551434678-e076c223a692.jpg"
+      },
+      {
+        "id": "5",
+        "category": "industry",
+        "date": "February 28, 2026",
+        "title": "2026 State of Enterprise IT: Key Trends Shaping the Year Ahead",
+        "excerpt": "From agentic AI workflows to sovereign cloud mandates — Noviant's annual technology outlook identifies the forces reshaping enterprise IT.",
+        "image": "/images/unsplash/photo-1504384308090-c894fdcc538d.jpg"
+      },
+      {
+        "id": "6",
+        "category": "ai",
+        "date": "February 15, 2026",
+        "title": "Automating Document Processing with LLMs: A Real-World Case Study",
+        "excerpt": "How a mid-size financial firm reduced manual document review time by 80% using Noviant's Intelligent Document Processing pipeline built on AWS Bedrock.",
+        "image": "/images/unsplash/photo-1451187580459-43490279c0fa.jpg"
+      }
+    ]
   },
   "Footer": {
     "address": "1250 Broadway, 36th Floor, New York, NY 10001",

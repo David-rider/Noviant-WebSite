@@ -1,0 +1,182 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import PageHero from "@/components/PageHero";
+import { Link } from "@/i18n/routing";
+import { motion } from "framer-motion";
+import { ArrowRight, Calendar, Tag } from "lucide-react";
+import { useState } from "react";
+
+// Category badge color map
+const categoryColors: Record<string, { bg: string; text: string; dot: string }> = {
+    ai:       { bg: "bg-purple-50",  text: "text-purple-700",  dot: "bg-purple-500"  },
+    security: { bg: "bg-red-50",     text: "text-red-700",     dot: "bg-red-500"     },
+    cloud:    { bg: "bg-blue-50",    text: "text-blue-700",    dot: "bg-blue-500"    },
+    company:  { bg: "bg-green-50",   text: "text-green-700",   dot: "bg-green-500"   },
+    industry: { bg: "bg-amber-50",   text: "text-amber-700",   dot: "bg-amber-500"   },
+};
+
+// Fallback images using any existing unsplash photos
+const fallbackImages = [
+    "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg",
+    "/images/unsplash/photo-1555949963-ff9fe0c870eb.jpg",
+    "/images/unsplash/photo-1544197150-b99a580bb7a8.jpg",
+    "/images/unsplash/photo-1551434678-e076c223a692.jpg",
+    "/images/unsplash/photo-1504384308090-c894fdcc538d.jpg",
+    "/images/unsplash/photo-1451187580459-43490279c0fa.jpg",
+];
+
+interface Article {
+    id: string;
+    category: string;
+    date: string;
+    title: string;
+    excerpt: string;
+    image: string;
+}
+
+export default function NewsView() {
+    const t = useTranslations("News_Page");
+    const tNav = useTranslations("Navigation");
+    const [activeCategory, setActiveCategory] = useState("all");
+
+    const articles: Article[] = t.raw("articles") as Article[];
+    const categories = ["all", "company", "industry", "security", "ai", "cloud"] as const;
+
+    const filtered = activeCategory === "all"
+        ? articles
+        : articles.filter((a) => a.category === activeCategory);
+
+    return (
+        <div className="min-h-screen bg-[#f8fafc]">
+            <PageHero
+                title={t("title")}
+                subtitle={t("subtitle")}
+            />
+
+            <div className="container mx-auto px-4 py-20">
+                {/* Category Filter Pills */}
+                <div className="flex flex-wrap gap-2 justify-center mb-14">
+                    {categories.map((cat) => {
+                        const isActive = activeCategory === cat;
+                        const colors = cat === "all" ? null : categoryColors[cat];
+                        return (
+                            <button
+                                key={cat}
+                                onClick={() => setActiveCategory(cat)}
+                                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${
+                                    isActive
+                                        ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-200"
+                                        : "bg-white text-slate-600 border-slate-200 hover:border-blue-400 hover:text-blue-600"
+                                }`}
+                            >
+                                {cat === "all" && <span className="inline-block w-2 h-2 rounded-full bg-slate-400 mr-2 align-middle" />}
+                                {cat !== "all" && colors && (
+                                    <span className={`inline-block w-2 h-2 rounded-full mr-2 align-middle ${colors.dot}`} />
+                                )}
+                                {t(`categories.${cat}`)}
+                            </button>
+                        );
+                    })}
+                </div>
+
+                {/* News Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {filtered.map((article, index) => {
+                        const colors = categoryColors[article.category] ?? {
+                            bg: "bg-slate-50", text: "text-slate-700", dot: "bg-slate-400"
+                        };
+                        // Use the article's image, fallback to cycling list
+                        const imgSrc = article.image || fallbackImages[index % fallbackImages.length];
+
+                        return (
+                            <motion.article
+                                key={article.id}
+                                initial={{ opacity: 0, y: 24 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: index * 0.07 }}
+                                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col"
+                            >
+                                {/* Card Image */}
+                                <div className="relative h-48 overflow-hidden bg-slate-100">
+                                    <img
+                                        src={imgSrc}
+                                        alt={article.title}
+                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        onError={(e) => {
+                                            (e.target as HTMLImageElement).src = fallbackImages[index % fallbackImages.length];
+                                        }}
+                                    />
+                                    {/* Gradient overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+                                    {/* Category badge on image */}
+                                    <div className={`absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold ${colors.bg} ${colors.text}`}>
+                                        <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`} />
+                                        {t(`categories.${article.category}`)}
+                                    </div>
+                                </div>
+
+                                {/* Card Body */}
+                                <div className="flex flex-col flex-1 p-6">
+                                    {/* Date */}
+                                    <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-3">
+                                        <Calendar className="w-3.5 h-3.5" />
+                                        {article.date}
+                                    </div>
+
+                                    {/* Title */}
+                                    <h2 className="text-lg font-bold text-slate-900 mb-3 leading-snug group-hover:text-blue-600 transition-colors line-clamp-3">
+                                        {article.title}
+                                    </h2>
+
+                                    {/* Excerpt */}
+                                    <p className="text-sm text-slate-500 leading-relaxed flex-1 line-clamp-3">
+                                        {article.excerpt}
+                                    </p>
+
+                                    {/* Read More */}
+                                    <div className="mt-6 pt-4 border-t border-slate-100">
+                                        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:gap-3 transition-all">
+                                            {t("read_more")}
+                                            <ArrowRight className="w-4 h-4" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </motion.article>
+                        );
+                    })}
+                </div>
+
+                {filtered.length === 0 && (
+                    <div className="text-center py-24 text-slate-400">
+                        <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
+                        <p className="text-lg">No articles in this category yet.</p>
+                    </div>
+                )}
+
+                {/* CTA Banner */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="mt-20 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-10 md:p-16 text-white text-center"
+                >
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                        Ready to transform your IT?
+                    </h3>
+                    <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+                        Talk to our team about your infrastructure challenges. No jargon, just solutions.
+                    </p>
+                    <Link
+                        href="/contact"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
+                    >
+                        {tNav("contact")} <ArrowRight className="w-5 h-5" />
+                    </Link>
+                </motion.div>
+            </div>
+        </div>
+    );
+}

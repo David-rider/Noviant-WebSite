@@ -84,6 +84,11 @@ export default function Footer() {
                         </h4>
                         <ul className="space-y-2">
                             <li>
+                                <Link href="/news" className="text-sm text-zinc-500 hover:text-blue-600 transition-colors">
+                                    {tNav("news")}
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/partner" className="text-sm text-zinc-500 hover:text-blue-600 transition-colors">
                                     {tNav("partner")}
                                 </Link>

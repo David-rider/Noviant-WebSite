@@ -48,6 +48,7 @@ export default function Navbar() {
 
     const navLinks = [
         { href: "/partner", label: t("partner") },
+        { href: "/news", label: t("news") },
         { href: "/contact", label: t("contact") },
     ];
 
