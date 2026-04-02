@@ -305,6 +305,9 @@
     "title": "News & Insights",
     "subtitle": "The latest technology trends, company announcements, and industry insights from the Noviant team.",
     "read_more": "Read More",
+    "no_articles": "No articles in this category yet.",
+    "cta_title": "Ready to transform your IT?",
+    "cta_subtitle": "Talk to our team about your infrastructure challenges. No jargon, just solutions.",
     "categories": {
       "all": "All",
       "company": "Company News",

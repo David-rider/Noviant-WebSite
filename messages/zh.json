@@ -305,6 +305,9 @@
     "title": "新闻与洞见",
     "subtitle": "来自 Noviant 团队的最新技术趋势、公司公告与行业洞见。",
     "read_more": "阅读更多",
+    "no_articles": "该分类暂无文章。",
+    "cta_title": "准备好转型您的 IT 了吗？",
+    "cta_subtitle": "与我们的团队交流，探讨您的基础设施挑战——不说废话，只谈解决方案。",
     "categories": {
       "all": "全部",
       "company": "公司新闻",

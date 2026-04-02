@@ -151,7 +151,7 @@ export default function NewsView() {
                 {filtered.length === 0 && (
                     <div className="text-center py-24 text-slate-400">
                         <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
-                        <p className="text-lg">No articles in this category yet.</p>
+                        <p className="text-lg">{t("no_articles")}</p>
                     </div>
                 )}
 
@@ -164,10 +164,10 @@ export default function NewsView() {
                     className="mt-20 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-10 md:p-16 text-white text-center"
                 >
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                        Ready to transform your IT?
+                        {t("cta_title")}
                     </h3>
                     <p className="text-blue-100 mb-8 max-w-xl mx-auto">
-                        Talk to our team about your infrastructure challenges. No jargon, just solutions.
+                        {t("cta_subtitle")}
                     </p>
                     <Link
                         href="/contact"
