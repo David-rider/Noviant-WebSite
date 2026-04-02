@@ -52,12 +52,12 @@ export default function Navbar() {
     ];
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 border-b border-slate-200 shadow-sm">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-slate-200 shadow-sm" style={{ colorScheme: 'light' }}>
             <div className="container mx-auto px-4 h-16 flex items-center justify-between relative">
                 <Logo />
 
-                {/* Desktop Nav */}
-                <nav className="hidden xl:flex items-center gap-2">
+                {/* Desktop Nav — visible on lg (1024px) and above */}
+                <nav className="hidden lg:flex items-center gap-2">
                     <div className="relative group">
                         <button className="px-4 py-2 text-sm font-bold tracking-tight text-slate-700 hover:text-blue-600 transition-colors flex items-center gap-1 focus:outline-none">
                             {t("solutions")} <ChevronDown className="w-4 h-4" />
@@ -119,23 +119,23 @@ export default function Navbar() {
                     <LanguageSwitcher />
                 </nav>
 
-                {/* Mobile Menu Toggle */}
+                {/* Mobile Menu Toggle — hidden on lg and above */}
                 <button
-                    className="xl:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors"
+                    className="lg:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>
             </div>
 
-            {/* Mobile Nav */}
+            {/* Mobile Nav — only shown on screens below lg */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="xl:hidden bg-white border-b border-zinc-200 overflow-hidden"
+                        className="lg:hidden bg-white border-b border-slate-200 overflow-hidden"
                     >
                         <nav className="container mx-auto px-4 py-4 flex flex-col gap-4">
                             <div className="space-y-3">
