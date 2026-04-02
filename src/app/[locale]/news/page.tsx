@@ -10,6 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     };
 }
 
-export default function NewsPage() {
-    return <NewsView />;
+export default async function NewsPage({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    return <NewsView locale={locale} />;
 }
