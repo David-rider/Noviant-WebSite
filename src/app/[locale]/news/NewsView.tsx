@@ -3,9 +3,9 @@
 import { useTranslations } from "next-intl";
 import PageHero from "@/components/PageHero";
 import { Link } from "@/i18n/routing";
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, Tag } from "lucide-react";
-import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight, Calendar, Tag, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import { newsArticles } from "@/data/news";
 import type { NewsArticle } from "@/data/news";
 
@@ -23,51 +23,29 @@ const fallbackImage = "/images/unsplash/photo-1551434678-e076c223a692.jpg";
 export default function NewsView({ locale }: { locale: string }) {
     const t = useTranslations("News_Page");
     const tNav = useTranslations("Navigation");
-    const [activeCategory, setActiveCategory] = useState("all");
+    const [currentPage, setCurrentPage] = useState(1);
     const lang = locale as "en" | "zh";
 
-    const categories = ["all", "company", "industry", "security", "ai", "cloud"] as const;
+    const ITEMS_PER_PAGE = 6;
+    const totalPages = Math.ceil(newsArticles.length / ITEMS_PER_PAGE);
+    
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const paginatedArticles = newsArticles.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-    const filtered: NewsArticle[] =
-        activeCategory === "all"
-            ? newsArticles
-            : newsArticles.filter((a) => a.category === activeCategory);
+    // Scroll to top when page changes
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [currentPage]);
 
     return (
         <div className="min-h-screen bg-[#f8fafc]">
             <PageHero title={t("title")} subtitle={t("subtitle")} />
 
             <div className="container mx-auto px-4 py-20">
-                {/* Category Filter Pills */}
-                <div className="flex flex-wrap gap-2 justify-center mb-14">
-                    {categories.map((cat) => {
-                        const isActive = activeCategory === cat;
-                        const colors = cat === "all" ? null : categoryColors[cat];
-                        return (
-                            <button
-                                key={cat}
-                                onClick={() => setActiveCategory(cat)}
-                                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 border ${
-                                    isActive
-                                        ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-200"
-                                        : "bg-white text-slate-600 border-slate-200 hover:border-blue-400 hover:text-blue-600"
-                                }`}
-                            >
-                                {cat === "all" && (
-                                    <span className="inline-block w-2 h-2 rounded-full bg-slate-400 mr-2 align-middle" />
-                                )}
-                                {cat !== "all" && colors && (
-                                    <span className={`inline-block w-2 h-2 rounded-full mr-2 align-middle ${colors.dot}`} />
-                                )}
-                                {t(`categories.${cat}`)}
-                            </button>
-                        );
-                    })}
-                </div>
-
                 {/* News Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filtered.map((article, index) => {
+                    <AnimatePresence mode="wait">
+                        {paginatedArticles.map((article, index) => {
                         const colors = categoryColors[article.category] ?? {
                             bg: "bg-slate-50", text: "text-slate-700", dot: "bg-slate-400",
                         };
@@ -130,9 +108,47 @@ export default function NewsView({ locale }: { locale: string }) {
                             </motion.article>
                         );
                     })}
+                    </AnimatePresence>
                 </div>
 
-                {filtered.length === 0 && (
+                {/* Pagination Controls */}
+                {totalPages > 1 && (
+                    <div className="flex justify-center items-center gap-2 mt-16">
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                            disabled={currentPage === 1}
+                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-600 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-50 transition-colors"
+                        >
+                            <ChevronLeft className="w-5 h-5" />
+                        </button>
+
+                        <div className="flex gap-2">
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                                <button
+                                    key={pageNum}
+                                    onClick={() => setCurrentPage(pageNum)}
+                                    className={`w-10 h-10 rounded-lg border text-sm font-semibold transition-all ${
+                                        currentPage === pageNum
+                                            ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-200"
+                                            : "bg-white text-slate-600 border-slate-200 hover:border-blue-400 hover:text-blue-600"
+                                    }`}
+                                >
+                                    {pageNum}
+                                </button>
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                            disabled={currentPage === totalPages}
+                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-600 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-50 transition-colors"
+                        >
+                            <ChevronRight className="w-5 h-5" />
+                        </button>
+                    </div>
+                )}
+
+                {newsArticles.length === 0 && (
                     <div className="text-center py-24 text-slate-400">
                         <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
                         <p className="text-lg">{t("no_articles")}</p>
