@@ -1,7 +1,7 @@
 "use client";
 
 import PageHero from "@/components/PageHero";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { MapPin, Phone, Send, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -9,6 +9,9 @@ import { useState } from "react";
 export default function ContactPage() {
     const t = useTranslations("Contact_Page");
     const footerT = useTranslations("Footer");
+    const locale = useLocale();
+
+    const mapLanguage = locale === "zh" ? "zh-CN" : "en";
 
     // Form state
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -205,7 +208,7 @@ export default function ContactPage() {
                             {/* Map Display */}
                             <div className="mt-8 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-xl group hover:border-blue-500/30 transition-all duration-500">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6173!2d-73.9897!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c0ef%3A0x24757c38561db4e8!2s1250%20Broadway%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1713300000000!5m2!1sen!2sus"
+                                    src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6173!2d-73.9897!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c0ef%3A0x24757c38561db4e8!2s1250%20Broadway%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1s${mapLanguage}!2sen!4v1713300000000!5m2!1s${mapLanguage}!2sen&hl=${mapLanguage}`}
                                     width="100%"
                                     height="300"
                                     style={{ border: 0 }}
