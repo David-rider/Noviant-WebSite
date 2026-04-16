@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { ArrowLeft, Calendar, Tag, Play } from "lucide-react";
 import type { NewsArticle } from "@/data/news";
 
 const categoryColors: Record<string, { bg: string; text: string; dot: string }> = {
@@ -110,6 +110,35 @@ export default function ArticleView({
                                 );
                             })}
                         </div>
+
+                        {/* Video Link */}
+                        {article.videoUrl && (
+                            <div className="mt-12 pt-10 border-t border-slate-100">
+                                <a
+                                    href={article.videoUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500/50 hover:bg-blue-50/30 transition-all shadow-sm"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-red-100 text-red-600 group-hover:scale-110 transition-transform">
+                                            <Play className="w-6 h-6 fill-current" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold text-slate-900 leading-tight">
+                                                {t("watch_video")}
+                                            </h4>
+                                            <p className="text-sm text-slate-500 mt-1">
+                                                youtube.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="text-blue-600 font-medium text-sm flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        Open Link
+                                    </div>
+                                </a>
+                            </div>
+                        )}
                     </motion.div>
 
                     {/* Back to News */}

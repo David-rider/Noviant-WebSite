@@ -23,6 +23,7 @@ export interface NewsArticle {
     title: { en: string; zh: string };
     excerpt: { en: string; zh: string };
     body: { en: string; zh: string };
+    videoUrl?: string;
 }
 
 export const newsArticles: NewsArticle[] = [
@@ -172,6 +173,7 @@ export const newsArticles: NewsArticle[] = [
             en: `Noviant was recently featured in a video produced by the NYC Comptroller’s Office. The video highlights how local businesses in New York City are leveraging technology to grow and thrive.\n\nOur team is honored to represent the tech sector and show our impact on the New York business community through managed services and infrastructure innovation.`,
             zh: `Noviant 最近出现在纽约市审计办制作的视频中。该视频展示了纽约市本地企业如何利用技术实现增长和繁荣。\n\n我们的团队很荣幸能够代表技术领域，通过托管服务和基础设施创新展示我们对纽约商业社区的影响。`,
         },
+        videoUrl: "https://www.youtube.com/watch?v=Pnjhu8lz2oQ",
     },
     {
         id: "the-era-of-the-pc-isnt-as-over-as-you-might-think",
