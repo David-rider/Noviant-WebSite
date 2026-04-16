@@ -155,9 +155,14 @@ export default function ContactPage() {
                                     <h3 className="font-semibold text-zinc-900 dark:text-white mb-1">
                                         {t("info.address_label")}
                                     </h3>
-                                    <p className="text-zinc-600 dark:text-zinc-400">
+                                    <a
+                                        href="https://www.google.com/maps/search/?api=1&query=1250+Broadway+New+York+NY+10001"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    >
                                         {footerT("address")}
-                                    </p>
+                                    </a>
                                 </div>
                             </div>
 
@@ -193,6 +198,31 @@ export default function ContactPage() {
                                     <p className="text-zinc-600 dark:text-zinc-400 mb-1">(212) 809-6625 x8301</p>
                                     <a href={`mailto:${t("info.support_email")}`} className="text-blue-600 hover:text-blue-500 transition-colors">
                                         {t("info.support_email")}
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Map Display */}
+                            <div className="mt-8 rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-xl group hover:border-blue-500/30 transition-all duration-500">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6173!2d-73.9897!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9aeb1c0ef%3A0x24757c38561db4e8!2s1250%20Broadway%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1713300000000!5m2!1sen!2sus"
+                                    width="100%"
+                                    height="300"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className="filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
+                                />
+                                <div className="p-4 bg-zinc-50 dark:bg-zinc-900/80 border-t border-zinc-200 dark:border-zinc-800 flex justify-between items-center">
+                                    <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">1250 Broadway, New York, NY</span>
+                                    <a
+                                        href="https://www.google.com/maps/search/?api=1&query=1250+Broadway+New+York+NY+10001"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline"
+                                    >
+                                        Open in Maps
                                     </a>
                                 </div>
                             </div>
