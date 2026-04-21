@@ -44,7 +44,7 @@
     "cloud_computing": "云计算",
     "business_phone": "商业电话系统",
     "why_choose_us": "为什么选择我们？",
-    "our_clients": "客户评价",
+    "our_clients": "客户证言",
     "referral_program": "推荐奖励计划",
     "language_label": "语言",
     "news": "新闻"
@@ -724,15 +724,44 @@
       ]
     },
     "our_clients": {
-      "title": "客户评价",
+      "title": "客户证言",
       "subtitle": "看看其他企业所有者是如何评价我们的...",
       "desc": "自从采用 Noviant 的支持服务以来，最大的好处就是易于使用以及带来的安心感。",
+      "representative_title": "代表性客户",
+      "customers": [
+        { "name": "Actavis, Inc.", "industry": "医药" },
+        { "name": "NYC Criminal Justice Agency", "industry": "执法" },
+        { "name": "Baosteel America", "industry": "工业" },
+        { "name": "NYC Police Department", "industry": "安防" },
+        { "name": "Cahill Gordon & Reindel, LLP", "industry": "法律" },
+        { "name": "NYS Financial Control Board", "industry": "监管" },
+        { "name": "CBRE American Realty Capital", "industry": "房地产" },
+        { "name": "Oscar De La Renta", "industry": "时尚" },
+        { "name": "China Unicom Operations, LTD", "industry": "电信" },
+        { "name": "Panama Maritime Authority", "industry": "国际" },
+        { "name": "Fosun Capital", "industry": "投资" },
+        { "name": "DOITT", "industry": "政府" },
+        { "name": "JDRF", "industry": "非营利" },
+        { "name": "The Children’s Village", "industry": "非营利" },
+        { "name": "Genesis Investment Advisors, LLC", "industry": "金融" },
+        { "name": "Planned Parenthood", "industry": "非营利" },
+        { "name": "Iconix Brand Group, Inc.", "industry": "零售" },
+        { "name": "Playwrights Horizon, Inc.", "industry": "艺术与文化" },
+        { "name": "LGBT Community Center", "industry": "多元化" },
+        { "name": "Central Bank of Norway", "industry": "银行" },
+        { "name": "Malayan Bank Berhad", "industry": "投资银行" },
+        { "name": "MTA", "industry": "交通" },
+        { "name": "SUNY Down State Medical Center", "industry": "医疗保健" },
+        { "name": "ICBC (USA) Inc.", "industry": "银行" }
+      ],
       "features": [
         "无缝且高效的 VDI（虚拟桌面）和远程工作环境部署。",
         "三道坚不可摧的防线，有效抵御日益猖獗的网络攻击。",
         "借助 Azure 和复杂的微软生态系统提高了整体安全性。",
         "及时雨般的技术支持服务，以极快的响应速度解决问题。"
-      ]
+      ],
+      "cta_title": "准备好转型您的基础设施了吗？",
+      "cta_desc": "加入我们的成功客户网络，体验优质托管 IT 服务的与众不同之处。"
     },
     "referral_program": {
       "title": "推荐奖励计划",

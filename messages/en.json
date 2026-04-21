@@ -44,7 +44,7 @@
     "cloud_computing": "Cloud Computing",
     "business_phone": "Business Phone System",
     "why_choose_us": "Why Choose Us?",
-    "our_clients": "Our Clients",
+    "our_clients": "Client Testimonials",
     "referral_program": "Referral Program",
     "language_label": "Language",
     "news": "News"
@@ -674,15 +674,44 @@
       ]
     },
     "our_clients": {
-      "title": "Our Clients",
+      "title": "Client Testimonials",
       "subtitle": "See what other business owners are saying about us...",
       "desc": "The single greatest benefit since moving to Noviant’s support service has been ease of use and peace of mind.",
+      "representative_title": "Representative Customers",
+      "customers": [
+        { "name": "Actavis, Inc.", "industry": "Pharmaceutical" },
+        { "name": "NYC Criminal Justice Agency", "industry": "Law Enforcement" },
+        { "name": "Baosteel America", "industry": "Industrial" },
+        { "name": "NYC Police Department", "industry": "Security" },
+        { "name": "Cahill Gordon & Reindel, LLP", "industry": "Legal" },
+        { "name": "NYS Financial Control Board", "industry": "Regulatory" },
+        { "name": "CBRE American Realty Capital", "industry": "Real Estate" },
+        { "name": "Oscar De La Renta", "industry": "Fashion" },
+        { "name": "China Unicom Operations, LTD", "industry": "Telecom" },
+        { "name": "Panama Maritime Authority", "industry": "International" },
+        { "name": "Fosun Capital", "industry": "Investment" },
+        { "name": "DOITT", "industry": "Government" },
+        { "name": "JDRF", "industry": "Nonprofit" },
+        { "name": "The Children’s Village", "industry": "Nonprofit" },
+        { "name": "Genesis Investment Advisors, LLC", "industry": "Financial" },
+        { "name": "Planned Parenthood", "industry": "Nonprofit" },
+        { "name": "Iconix Brand Group, Inc.", "industry": "Retail" },
+        { "name": "Playwrights Horizon, Inc.", "industry": "Art & Culture" },
+        { "name": "LGBT Community Center", "industry": "Diversity" },
+        { "name": "Central Bank of Norway", "industry": "Banking" },
+        { "name": "Malayan Bank Berhad", "industry": "Investment Banking" },
+        { "name": "MTA", "industry": "Transportation" },
+        { "name": "SUNY Down State Medical Center", "industry": "Health" },
+        { "name": "ICBC (USA) Inc.", "industry": "Banking" }
+      ],
       "features": [
         "Seamless and Efficient VDI and Remote Work implementations.",
         "3 Lines of Defense from Cyber Attacks.",
         "Increased Security with Azure and Microsoft ecosystems.",
         "Prompt Support and Quick Response times."
-      ]
+      ],
+      "cta_title": "Ready to Transform Your Infrastructure?",
+      "cta_desc": "Join our network of successful clients and experience the difference of premium managed IT services."
     },
     "referral_program": {
       "title": "Referral Program",
