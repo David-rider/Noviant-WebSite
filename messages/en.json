@@ -811,7 +811,8 @@
     "title": "Terms",
     "description": "Please review our Master Service Agreement.",
     "action_link": "Click Here to view our Master Services Agreement",
-    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf"
+    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf",
+    "footer_note": "* This document is provided for informational purposes. If you have any questions regarding our terms, please contact us."
   },
   "Industries": {
     "learn_more": "Learn More",

@@ -53,7 +53,7 @@ export default function TermsView() {
                             </div>
 
                             <p className="text-sm text-zinc-500 dark:text-zinc-500 italic mt-12">
-                                * This document is provided for informational purposes. If you have any questions regarding our terms, please contact us.
+                                {t("footer_note")}
                             </p>
                         </div>
                     </div>

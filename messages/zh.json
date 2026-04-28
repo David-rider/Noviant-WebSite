@@ -857,11 +857,12 @@
     "description": "我们与精选的技术合作伙伴生态系统合作，确保我们的客户能够获得一流的硬件、软件和云服务。"
   },
   "Terms_Page": {
-    "hero_title": "主服务协议 (Master Service Agreement)",
-    "title": "条款 (Terms)",
-    "description": "请阅读我们的主服务协议 (Master Service Agreement)。",
+    "hero_title": "主服务协议",
+    "title": "条款",
+    "description": "请阅读我们的主服务协议。",
     "action_link": "点击此处查看我们的主服务协议",
-    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf"
+    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf",
+    "footer_note": "* 本文档仅供参考。如果您对我们的条款有任何疑问，请联系我们。"
   },
   "Industries": {
     "learn_more": "了解更多",
