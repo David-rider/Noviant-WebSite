@@ -47,7 +47,8 @@
     "our_clients": "Client Testimonials",
     "referral_program": "Referral Program",
     "language_label": "Language",
-    "news": "News"
+    "news": "News",
+    "terms": "Terms"
   },
   "AI_Page": {
     "hero_title": "AI Infrastructure Solutions",
@@ -321,7 +322,9 @@
   "Footer": {
     "address": "1250 Broadway, 36th Floor, New York, NY 10001",
     "phone": "+1(212)-809-6625",
-    "rights": "© 2026 Noviant. All rights reserved."
+    "rights": "© 1997-2026 Noviant. All rights reserved.",
+    "iso_certification_title": "ISO/IEC 27001:2022 Certified: ",
+    "iso_certification_desc": "Since obtaining certification on October 26, 2019, we have demonstrated that our information security management system includes a range of security standards, procedures, and guidelines; these specifications are developed in accordance with the certification requirements to protect our customers and information infrastructure."
   },
   "Services": {
     "title": "End-to-End Technology Solutions",
@@ -802,6 +805,13 @@
       "security": "Cybersecurity"
     },
     "description": "We work with a curated ecosystem of technology partners to ensure our clients have access to the best-in-class hardware, software, and cloud services."
+  },
+  "Terms_Page": {
+    "hero_title": "Master Service Agreement",
+    "title": "Terms",
+    "description": "Please review our Master Service Agreement.",
+    "action_link": "Click Here to view our Master Services Agreement",
+    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf"
   },
   "Industries": {
     "learn_more": "Learn More",

@@ -47,7 +47,8 @@
     "our_clients": "客户证言",
     "referral_program": "推荐奖励计划",
     "language_label": "语言",
-    "news": "新闻"
+    "news": "新闻",
+    "terms": "条款"
   },
   "AI_Page": {
     "hero_title": "AI 基础设施解决方案",
@@ -371,7 +372,9 @@
   "Footer": {
     "address": "纽约百老汇大道1250号36楼，邮编 10001",
     "phone": "+1(212)-809-6625",
-    "rights": "© 2026 Noviant. 保留所有权利。"
+    "rights": "© 1997-2026 Noviant. All rights reserved.",
+    "iso_certification_title": "ISO/IEC 27001:2022 认证：",
+    "iso_certification_desc": "自 2019 年 10 月 26 日获得认证以来，我们已证明自身的信息安全管理体系包含一系列安全标准、程序及准则；这些规范均依据该认证要求制定，旨在保护我们的客户及信息基础设施。"
   },
   "Services": {
     "title": "端到端技术解决方案",
@@ -852,6 +855,13 @@
       "security": "网络安全"
     },
     "description": "我们与精选的技术合作伙伴生态系统合作，确保我们的客户能够获得一流的硬件、软件和云服务。"
+  },
+  "Terms_Page": {
+    "hero_title": "主服务协议 (Master Service Agreement)",
+    "title": "条款 (Terms)",
+    "description": "请阅读我们的主服务协议 (Master Service Agreement)。",
+    "action_link": "点击此处查看我们的主服务协议",
+    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf"
   },
   "Industries": {
     "learn_more": "了解更多",

@@ -3,10 +3,12 @@
 import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 import { Link } from "@/i18n/routing";
+import Image from "next/image";
 
 export default function Footer() {
     const t = useTranslations("Footer");
     const tNav = useTranslations("Navigation");
+    const currentYear = new Date().getFullYear();
 
     const solutionLinks = [
         { href: "/ai-solutions", label: tNav("ai_solutions") },
@@ -112,10 +114,33 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-xs text-zinc-400">
-                        {t("rights")}
-                    </p>
+                <div className="pt-8 border-t border-zinc-200 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 flex-1">
+                        <div className="flex items-center gap-3">
+                            <p className="text-xs text-zinc-400 whitespace-nowrap">
+                                {t("rights")}
+                            </p>
+                            <span className="text-zinc-300 text-xs hidden md:inline">|</span>
+                            <Link href="/terms" className="text-xs text-zinc-400 hover:text-blue-600 transition-colors uppercase font-medium tracking-wider">
+                                {tNav("terms")}
+                            </Link>
+                        </div>
+                        <div className="flex items-start gap-3 bg-zinc-100/50 p-3 rounded-xl border border-zinc-200/50">
+                            <div className="shrink-0">
+                                <Image
+                                    src="/images/certifications/iso-27001-certification.png"
+                                    alt="ISO/IEC 27001:2022"
+                                    width={40}
+                                    height={40}
+                                    className="opacity-90 hover:opacity-100 transition-opacity"
+                                />
+                            </div>
+                            <p className="text-[10px] md:text-xs text-zinc-500 leading-relaxed max-w-3xl">
+                                <span className="font-bold">{t("iso_certification_title")}</span>
+                                {t("iso_certification_desc")}
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>

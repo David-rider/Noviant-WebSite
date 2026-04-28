@@ -1,0 +1,43 @@
+﻿
+> noviant-web@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 3.0s
+  Running TypeScript ...
+  Collecting page data using 23 workers ...
+  Generating static pages using 23 workers (0/16) ...
+  Generating static pages using 23 workers (4/16) 
+  Generating static pages using 23 workers (8/16) 
+  Generating static pages using 23 workers (12/16) 
+Γ£ô Generating static pages using 23 workers (16/16) in 716.5ms
+  Finalizing page optimization ...
+
+Route (app)
+Γöî Γùï /
+Γö£ Γùï /_not-found
+Γö£ ΓùÅ /[locale]
+Γöé Γö£ /en
+Γöé Γöö /zh
+Γö£ ΓùÅ /[locale]/ai-solutions
+Γöé Γö£ /en/ai-solutions
+Γöé Γöö /zh/ai-solutions
+Γö£ ΓùÅ /[locale]/contact
+Γöé Γö£ /en/contact
+Γöé Γöö /zh/contact
+Γö£ ΓùÅ /[locale]/industries
+Γöé Γö£ /en/industries
+Γöé Γöö /zh/industries
+Γö£ ΓùÅ /[locale]/msp
+Γöé Γö£ /en/msp
+Γöé Γöö /zh/msp
+Γöö ΓùÅ /[locale]/partner
+  Γö£ /en/partner
+  Γöö /zh/partner
+
+
+Γùï  (Static)  prerendered as static content
+ΓùÅ  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
