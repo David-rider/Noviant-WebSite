@@ -51,7 +51,7 @@ export default function OurClientsView({
                         {t("title")}
                     </h2>
                     <p className="text-lg text-slate-600 leading-relaxed mb-8 italic border-l-4 border-blue-600 pl-6">
-                        "{t("desc")}"
+                        &ldquo;{t("desc")}&rdquo;
                     </p>
 
                     {hasFeatures && (

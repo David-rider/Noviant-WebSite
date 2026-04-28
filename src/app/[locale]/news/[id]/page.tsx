@@ -1,7 +1,6 @@
-import { newsArticles, getAllArticleIds, getArticleById } from "@/data/news";
+import { getAllArticleIds, getArticleById } from "@/data/news";
 import ArticleView from "./ArticleView";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
 
 // Required for static export: pre-generate all article pages
 export async function generateStaticParams() {

@@ -8,7 +8,6 @@ import Image from "next/image";
 export default function Footer() {
     const t = useTranslations("Footer");
     const tNav = useTranslations("Navigation");
-    const currentYear = new Date().getFullYear();
 
     const solutionLinks = [
         { href: "/ai-solutions", label: tNav("ai_solutions") },

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import { ArrowLeft, Calendar, Tag, Play } from "lucide-react";
+import { ArrowLeft, Calendar, Play } from "lucide-react";
 import type { NewsArticle } from "@/data/news";
 
 const categoryColors: Record<string, { bg: string; text: string; dot: string }> = {

@@ -4,10 +4,10 @@ import { useTranslations } from "next-intl";
 import PageHero from "@/components/PageHero";
 import { Link } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight, Calendar, Tag, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Calendar, Tag, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { newsArticles } from "@/data/news";
-import type { NewsArticle } from "@/data/news";
+
 
 // Category badge color map
 const categoryColors: Record<string, { bg: string; text: string; dot: string }> = {
