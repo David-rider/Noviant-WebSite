@@ -52,19 +52,19 @@ export default function Footer() {
                                             href="https://www.linkedin.com/company/noviant/about/" 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="p-1.5 rounded-full border border-zinc-200 text-zinc-400 hover:text-blue-600 hover:border-blue-600 transition-all"
+                                            className="p-1.5 text-[#0077B5] hover:scale-110 transition-transform"
                                             aria-label="LinkedIn"
                                         >
-                                            <Linkedin size={16} />
+                                            <Linkedin size={20} fill="#0077B5" strokeWidth={0} />
                                         </a>
                                         <a 
                                             href="https://www.facebook.com/Noviant8" 
                                             target="_blank" 
                                             rel="noopener noreferrer"
-                                            className="p-1.5 rounded-full border border-zinc-200 text-zinc-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-all"
+                                            className="p-1.5 text-[#1877F2] hover:scale-110 transition-transform"
                                             aria-label="Facebook"
                                         >
-                                            <Facebook size={16} />
+                                            <Facebook size={20} fill="#1877F2" strokeWidth={0} />
                                         </a>
                                     </div>
                                 </div>
