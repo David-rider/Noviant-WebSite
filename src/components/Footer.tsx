@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { Linkedin, Facebook } from "lucide-react";
 
 export default function Footer() {
     const t = useTranslations("Footer");
@@ -31,13 +32,60 @@ export default function Footer() {
         <footer className="bg-zinc-50 border-t border-zinc-200 py-12" style={{ colorScheme: 'light' }}>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                    {/* Column 1: Logo + Address */}
+                    {/* Column 1: Logo + Address + ISO */}
                     <div className="col-span-1">
                         <Logo />
-                        <p className="mt-4 text-sm text-zinc-500 leading-relaxed">
-                            {t("address")} <br />
-                            {t("phone")}
-                        </p>
+                        <div className="mt-6 flex flex-col gap-4">
+                            <div className="space-y-2">
+                                <p className="text-sm text-zinc-500 leading-relaxed">
+                                    {t("address")}
+                                </p>
+                                <div className="flex items-center gap-4">
+                                    <a 
+                                        href={`tel:${t("phone")}`} 
+                                        className="text-sm text-zinc-500 hover:text-blue-600 transition-colors font-medium"
+                                    >
+                                        {t("phone")}
+                                    </a>
+                                    <div className="flex items-center gap-3">
+                                        <a 
+                                            href="https://www.linkedin.com/company/noviant/about/" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-1.5 rounded-full border border-zinc-200 text-zinc-400 hover:text-blue-600 hover:border-blue-600 transition-all"
+                                            aria-label="LinkedIn"
+                                        >
+                                            <Linkedin size={16} />
+                                        </a>
+                                        <a 
+                                            href="https://www.facebook.com/Noviant8" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-1.5 rounded-full border border-zinc-200 text-zinc-400 hover:text-[#1877F2] hover:border-[#1877F2] transition-all"
+                                            aria-label="Facebook"
+                                        >
+                                            <Facebook size={16} />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div className="group relative inline-block w-fit mt-2">
+                                <Image
+                                    src="/images/certifications/iso-27001-certification.png"
+                                    alt="ISO/IEC 27001:2022"
+                                    width={48}
+                                    height={48}
+                                    className="opacity-90 hover:opacity-100 transition-opacity cursor-help"
+                                />
+                                {/* Tooltip */}
+                                <div className="absolute bottom-full left-0 mb-3 w-72 p-3 bg-slate-900/95 backdrop-blur-sm text-white text-[11px] leading-relaxed rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none shadow-xl border border-white/10 translate-y-2 group-hover:translate-y-0 z-50">
+                                    <div className="font-bold mb-1 text-blue-400">{t("iso_certification_title")}</div>
+                                    {t("iso_certification_desc")}
+                                    <div className="absolute top-full left-6 -translate-y-px border-8 border-transparent border-t-slate-900/95" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Column 2: Solutions */}
@@ -114,31 +162,14 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-zinc-200 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
-                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8 flex-1">
-                        <div className="flex items-center gap-3">
-                            <p className="text-xs text-zinc-400 whitespace-nowrap">
-                                {t("rights")}
-                            </p>
-                            <span className="text-zinc-300 text-xs hidden md:inline">|</span>
-                            <Link href="/terms" className="text-xs text-zinc-400 hover:text-blue-600 transition-colors uppercase font-medium tracking-wider">
-                                {tNav("terms")}
-                            </Link>
-                        </div>
-                        <div className="flex items-start gap-3 bg-zinc-100/50 p-3 rounded-xl border border-zinc-200/50">
-                            <div className="shrink-0">
-                                <Image
-                                    src="/images/certifications/iso-27001-certification.png"
-                                    alt="ISO/IEC 27001:2022"
-                                    width={40}
-                                    height={40}
-                                    className="opacity-90 hover:opacity-100 transition-opacity"
-                                />
-                            </div>
-                            <p className="text-[10px] md:text-xs text-zinc-500 leading-relaxed max-w-3xl">
-                                <span className="font-bold">{t("iso_certification_title")}</span>
-                                {t("iso_certification_desc")}
-                            </p>
-                        </div>
+                    <div className="flex items-center gap-3">
+                        <p className="text-xs text-zinc-400 whitespace-nowrap">
+                            {t("rights")}
+                        </p>
+                        <span className="text-zinc-300 text-xs hidden md:inline">|</span>
+                        <Link href="/terms" className="text-xs text-zinc-400 hover:text-blue-600 transition-colors uppercase font-medium tracking-wider">
+                            {tNav("terms")}
+                        </Link>
                     </div>
                 </div>
             </div>

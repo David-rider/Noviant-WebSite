@@ -60,9 +60,9 @@ export default function GenericMSPView({
                                         <p className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-1">
                                             {t("phone_label")}
                                         </p>
-                                        <p className="text-3xl font-bold text-slate-900">
+                                        <a href={`tel:${t("phone")}`} className="text-3xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
                                             {t("phone")}
-                                        </p>
+                                        </a>
                                     </div>
                                 </div>
                             )}

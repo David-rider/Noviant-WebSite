@@ -179,7 +179,7 @@ export default function ContactPage() {
                                         {t("info.phone_label")}
                                     </h3>
                                     <div className="space-y-1 text-zinc-600 dark:text-zinc-400">
-                                        <p>{t("info.call_label")}: {footerT("phone")}</p>
+                                        <p>{t("info.call_label")}: <a href={`tel:${footerT("phone")}`} className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{footerT("phone")}</a></p>
                                         <p>{t("info.fax_label")}: {t("info.fax_number")}</p>
                                     </div>
                                 </div>
@@ -191,14 +191,14 @@ export default function ContactPage() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div>
                                     <h4 className="font-bold text-zinc-900 dark:text-white mb-2">{t("info.sales")}</h4>
-                                    <p className="text-zinc-600 dark:text-zinc-400 mb-1">(212) 809-6625 x8302</p>
+                                    <a href="tel:+12128096625,8302" className="text-zinc-600 dark:text-zinc-400 mb-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors block">(212) 809-6625 x8302</a>
                                     <a href={`mailto:${t("info.sales_email")}`} className="text-blue-600 hover:text-blue-500 transition-colors">
                                         {t("info.sales_email")}
                                     </a>
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-zinc-900 dark:text-white mb-2">{t("info.support")}</h4>
-                                    <p className="text-zinc-600 dark:text-zinc-400 mb-1">(212) 809-6625 x8301</p>
+                                    <a href="tel:+12128096625,8301" className="text-zinc-600 dark:text-zinc-400 mb-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors block">(212) 809-6625 x8301</a>
                                     <a href={`mailto:${t("info.support_email")}`} className="text-blue-600 hover:text-blue-500 transition-colors">
                                         {t("info.support_email")}
                                     </a>
