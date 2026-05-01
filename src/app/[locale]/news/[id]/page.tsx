@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 // Required for static export: pre-generate all article pages
 export async function generateStaticParams() {
     const ids = getAllArticleIds();
-    const locales = ["en", "zh"];
+    const locales = ["en", "zh-CN", "zh-TW"];
     return locales.flatMap((locale) =>
         ids.map((id) => ({ locale, id }))
     );
@@ -19,8 +19,8 @@ export async function generateMetadata({
     const { locale, id } = await params;
     const article = getArticleById(id);
     if (!article) return { title: "Not Found | Noviant" };
-    const title = article.title[locale as "en" | "zh"] ?? article.title.en;
-    const excerpt = article.excerpt[locale as "en" | "zh"] ?? article.excerpt.en;
+    const title = article.title[locale as "en" | "zh-CN" | "zh-TW"] ?? article.title.en;
+    const excerpt = article.excerpt[locale as "en" | "zh-CN" | "zh-TW"] ?? article.excerpt.en;
     return {
         title: `${title} | Noviant`,
         description: excerpt,
