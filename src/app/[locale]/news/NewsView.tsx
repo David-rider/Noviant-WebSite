@@ -24,7 +24,7 @@ export default function NewsView({ locale }: { locale: string }) {
     const t = useTranslations("News_Page");
     const tNav = useTranslations("Navigation");
     const [currentPage, setCurrentPage] = useState(1);
-    const lang = locale as "en" | "zh";
+    const lang = locale as "en" | "zh-CN" | "zh-TW";
 
     const ITEMS_PER_PAGE = 6;
     const totalPages = Math.ceil(newsArticles.length / ITEMS_PER_PAGE);

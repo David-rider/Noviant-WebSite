@@ -30,16 +30,21 @@ export async function generateMetadata({
 }) {
     const { locale } = await params;
     return {
-        title: locale === 'zh' 
-            ? 'Noviant | 纽约企业ICT与MSP托管服务 | AI与数字孪生解决方案'
+        title: locale.startsWith('zh') 
+            ? (locale === 'zh-TW' 
+                ? 'Noviant | 紐約企業ICT與MSP託管服務 | AI與數位孿生解決方案'
+                : 'Noviant | 纽约企业ICT与MSP托管服务 | AI与数字孪生解决方案')
             : 'Noviant | Enterprise ICT & MSP Solutions in New York | AI & Digital Twin',
-        description: locale === 'zh'
-            ? '位于纽约(New York)的顶级IT托管服务(MSP)和企业ICT咨询公司。我们在帮助企业进行数字化转型、集成AI人工智能和搭建房地产及MSP数字孪生环境方面处于领先地位。'
+        description: locale.startsWith('zh')
+            ? (locale === 'zh-TW'
+                ? '位於紐約(New York)的頂級IT託管服務(MSP)和企業ICT諮詢公司。我們在幫助企業進行數位化轉型、集成AI人工智慧和搭建房地產及MSP數位孿生環境方面處於領先地位。'
+                : '位于纽约(New York)的顶级IT托管服务(MSP)和企业ICT咨询公司。我们在帮助企业进行数字化转型、集成AI人工智能和搭建房地产及MSP数字孪生环境方面处于领先地位。')
             : 'Top-tier IT Managed Service Provider (MSP) and enterprise ICT consulting located in New York. We lead in enterprise digital transformation, AI integration, and Digital Twin deployment.',
         alternates: {
             languages: {
                 en: '/en',
-                zh: '/zh',
+                'zh-CN': '/zh-CN',
+                'zh-TW': '/zh-TW',
             },
         },
     };

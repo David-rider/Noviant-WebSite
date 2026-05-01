@@ -1,0 +1,973 @@
+{
+  "HomePage": {
+    "title": "Noviant | IT基礎設施的未來",
+    "hero_title": "賦能智能時代",
+    "hero_subtitle": "企業級AI基礎設施、託管服務與下一代網路連接。",
+    "cta_primary": "探索AI解決方案",
+    "cta_secondary": "託管服務",
+    "industries_title": "專業行業經驗",
+    "industries_subtitle": "量身定制的解決方案，滿足嚴格的合規性和性能標準。",
+    "core_sectors": "核心業務"
+  },
+  "NotFound": {
+    "title": "頁面未找到",
+    "description": "無法找到請求的資源",
+    "return_home": "返回首頁"
+  },
+  "Navigation": {
+    "home": "首頁",
+    "ai_solutions": "AI解決方案",
+    "industries": "行業方案",
+    "msp": "託管服務",
+    "partner": "合作伙伴",
+    "company": "公司",
+    "contact": "聯繫我們",
+    "solutions": "解決方案",
+    "cyber_security": "網路安全",
+    "cloud_solutions": "雲解決方案",
+    "data_analytics": "數據分析",
+    "digital_infrastructure": "數位基礎設施",
+    "consulting_implementation": "諮詢與實施",
+    "banking": "銀行業",
+    "education": "教育業",
+    "fashion": "時尚業",
+    "financial_services": "金融服務",
+    "government": "政府部門",
+    "health_services": "醫療服務",
+    "not_for_profit": "非營利組織",
+    "retail": "零售業",
+    "service_businesses": "服務型企業",
+    "support_center": "支持中心",
+    "is_this_you": "這說的是您嗎？",
+    "managed_it": "託管 IT 服務",
+    "cybersecurity_compliance": "網路安全與合規",
+    "cloud_computing": "雲端運算",
+    "business_phone": "商業電話系統",
+    "why_choose_us": "為什麼選擇我們？",
+    "our_clients": "客戶證言",
+    "referral_program": "推薦獎勵計劃",
+    "language_label": "語言",
+    "news": "新聞",
+    "terms": "條款"
+  },
+  "AI_Page": {
+    "hero_title": "AI 基礎設施解決方案",
+    "hero_subtitle": "通過高性能運算、安全數據中心和全球網路連接，為未來的智能時代提供動力。",
+    "sections": {
+      "server": {
+        "title": "GPU 伺服器集群",
+        "description": "專為大語言模型 (LLM) 訓練和推理定制。我們提供針對最大吞吐量優化的頂級 GPU 集群。",
+        "features": [
+          "最新一代 NVIDIA GPU",
+          "InfiniBand 網路",
+          "支持液冷技術"
+        ]
+      },
+      "datacenter": {
+        "title": "Tier III+ 數據中心",
+        "description": "專為高密度 AI 工作負載設計的戰略託管設施。通過冗餘電源和冷卻系統確保 99.999% 的正常運行時間。",
+        "features": [
+          "高密度機架 (最高 100kW)",
+          "24/7 全天候安保與監控",
+          "全球佈局"
+        ]
+      },
+      "connectivity": {
+        "title": "低延遲網路連接",
+        "description": "連接金融中心和 AI 研究機構的專用全球骨幹網。專為速度和安全性而優化。",
+        "features": [
+          "暗光纖接入",
+          "DDoS 防護",
+          "雲端直連服務"
+        ]
+      },
+      "gen_ai": {
+        "title": "生成式 AI 與多智能體系統",
+        "description": "利用我們量身定制的 Gen-AI 解決方案釋放大語言模型的潛力。我們將基於 AWS Bedrock 或開源框架構建無伺服器的智能文檔處理 (IDP) 以及複雜的多智能體工作流。",
+        "features": [
+          "多智能體(Agentic)工作流",
+          "智能文檔海量爬取與分析 (IDP)",
+          "自定義企業私有大模型微調"
+        ]
+      }
+    }
+  },
+  "CyberSecurity": {
+    "hero_title": "高級網路安全",
+    "hero_subtitle": "通過 AI 驅動的威脅檢測、零信任架構和全面的安全合规性保護您的企業。",
+    "sections": {
+      "mss": {
+        "title": "託管安全服務 (MSS)",
+        "description": "通過我們的 MSS 優化您的風險管理。我們提供主動監控、入侵檢測和對安全風險的快速響應。",
+        "features": [
+          "24/7 安全運營中心",
+          "AI 驅動的威脅檢測",
+          "自動化事件響應"
+        ]
+      },
+      "vciso": {
+        "title": "虛擬 CISO",
+        "description": "以非全職的成本獲得高管級別的安全領導力。我們的 vCISO 為您的安全戰略和風險管理提供指導。",
+        "features": [
+          "戰略安全路線圖",
+          "風險評估與管理",
+          "安全策略制定"
+        ]
+      },
+      "compliance": {
+        "title": "安全合規性",
+        "description": "輕鬆應對複雜的監管環境。我們確保您的系統符合嚴格的合規標準。",
+        "features": [
+          "HIPAA、PCI-DSS、SOC2 專家",
+          "持續的合規性監控",
+          "審計準備"
+        ]
+      },
+      "education": {
+        "title": "安全教育培訓",
+        "description": "通過尖端的安全意識培訓賦能您的團隊，有效防禦社交工程學和網路釣魚攻擊。",
+        "features": [
+          "交互式培訓模組",
+          "網路釣魚模擬",
+          "安全實踐分析"
+        ]
+      },
+      "iam": {
+        "title": "身份與訪問管理 (IAM/IGA)",
+        "description": "通過零信任架構保護您的外圍安全。我們深度集成 SailPoint、CyberArk 和 Okta 等頂級 IAM/IGA 解決方案，完美治理用戶訪問以及特權賬戶管控。",
+        "features": [
+          "零信任架構設計 (Zero Trust)",
+          "特權訪問管理 (PAM)",
+          "自動化身份合規治理"
+        ]
+      }
+    }
+  },
+  "CloudSolutions": {
+    "hero_title": "企業級雲解決方案",
+    "hero_subtitle": "專為高性能企業工作負載設計的可擴展、安全且主權可控的雲端基礎設施。",
+    "sections": {
+      "hosting": {
+        "title": "數據中心託管",
+        "description": "安全的公有和私有數據中心託管。隨時訪問您的數據，享受企業級內部數據中心的能力。",
+        "features": [
+          "高可用性基礎設施",
+          "私有與公有雲環境",
+          "安全的網路連接"
+        ]
+      },
+      "hybrid": {
+        "title": "混合雲與多雲",
+        "description": "在多個雲端環境中優化您的工作負載。通過混合策略減少供應商鎖定並實現性能最大化。",
+        "features": [
+          "多雲編排與管理",
+          "工作負載性能優化",
+          "無縫的雲端遷移"
+        ]
+      },
+      "protection": {
+        "title": "數據保護與備份",
+        "description": "堅不可摧的數據保護解決方案，確保您的業務關鍵數據免受洩露、損壞或丟失。",
+        "features": [
+          "不可變數據備份",
+          "災難恢復規劃",
+          "端到端數據加密"
+        ]
+      }
+    }
+  },
+  "DataAnalytics": {
+    "hero_title": "智能數據分析",
+    "hero_subtitle": "通過大數據、商業智能和人工智慧，將原始數據轉化為可操作的商業見解。",
+    "sections": {
+      "bigdata": {
+        "title": "大數據解決方案",
+        "description": "揭示隱藏的模式、市場趨勢和關聯性，以做出明智的業務決策並創造更多收入。",
+        "features": [
+          "海量數據處理能力",
+          "即時數據分析",
+          "預測性建模"
+        ]
+      },
+      "ai": {
+        "title": "人工智慧",
+        "description": "利用機器學習和 AI 模型提高效率、自動化流程，並從您的數據中提取寶貴的見解。",
+        "features": [
+          "大語言模型 (LLM) 集成",
+          "自動化的數據洞察",
+          "定制化 AI 模型"
+        ]
+      },
+      "bi": {
+        "title": "商業智能 (BI)",
+        "description": "從原始數據中生成有用的信息，協助您做出周密明確的商業決策。",
+        "features": [
+          "交互式視覺化儀表板",
+          "企業績效基準測試",
+          "文本與數據挖掘"
+        ]
+      }
+    }
+  },
+  "DigitalInfrastructure": {
+    "hero_title": "下一代數位基礎設施",
+    "hero_subtitle": "通過物聯網、虛擬化和高級網路技術，為智能企業奠定堅實基礎。",
+    "sections": {
+      "iot": {
+        "title": "物聯網 (IoT)",
+        "description": "連接和管理網路中的物理設備。我們幫助您利用 IoT 提高效率並解鎖新的業務可能性。",
+        "features": [
+          "IoT 設備統一管理",
+          "邊緣運算集成",
+          "即時遙測與數據收集"
+        ]
+      },
+      "datacenter": {
+        "title": "定制數據中心",
+        "description": "針對安全性、組織性和極致性能優化的定制數據中心設計與實施。",
+        "features": [
+          "高密度機架架構",
+          "高能效環保設計",
+          "可擴展的基礎設施"
+        ]
+      },
+      "networking": {
+        "title": "高級網路架構",
+        "description": "包括高級有線和無線在內的硬件、軟體和網路協議的安裝與全面管理。",
+        "features": [
+          "軟體定義網路 (SDN)",
+          "超低延遲路由優化",
+          "全場景無線網路覆蓋"
+        ]
+      },
+      "virtualization": {
+        "title": "系統虛擬化",
+        "description": "創建計算機網路資源、硬體平台和存儲的虛擬版本，在現有結構之上進行創新。",
+        "features": [
+          "伺服器與桌面虛擬化",
+          "計算資源深度優化",
+          "增強型的災難恢復"
+        ]
+      },
+      "network_automation": {
+        "title": "網路自動化與現場運維",
+        "description": "利用 Gluware 和 Ansible 強大的意圖驅動網路自動化簡化 IT 運營。我們提供大規模多站點基礎設施現場部署、IP 安防監控以及先進的數據中心改造升級。",
+        "features": [
+          "Gluware/Ansible 自動化編排",
+          "數據中心液冷及 GPU 改造",
+          "IP 安防監控設施統一部署"
+        ]
+      }
+    }
+  },
+  "ConsultingImplementation": {
+    "hero_title": "諮詢與實施",
+    "hero_subtitle": "專業的專家指導和強大的執行力，無縫部署您的各種技術解決方案。",
+    "sections": {
+      "professional": {
+        "title": "專業實施服務",
+        "description": "設計、開發和實施量身定制的軟體及解決方案，以解決您特定的 IT 挑戰。",
+        "features": [
+          "定制化軟體落地實施",
+          "系統架構演進規劃",
+          "企業技術路線圖設計"
+        ]
+      },
+      "managed": {
+        "title": "IT 託管服務",
+        "description": "主動應對您的技術需求。我們成為您的內部 IT 團隊，確保您的技術保持創新和高效。",
+        "features": [
+          "主動的系統運行監控",
+          "技術幫助台與工單支持",
+          "實現 IT 與業務的戰略一致"
+        ]
+      },
+      "cabling": {
+        "title": "弱電綜合佈線",
+        "description": "專業的弱電綜合佈線服務，安裝構建強大網路連接所需的任何關鍵電纜和強弱電線路。",
+        "features": [
+          "結構化佈線拓撲設計",
+          "高性能光纖安裝與熔接",
+          "網路基礎設施標準認證"
+        ]
+      },
+      "staffing": {
+        "title": "人員擴充與外包",
+        "description": "通過外包專業技能建立符合您業務目標的理想團隊，填補項目執行過程中的專業缺口。",
+        "features": [
+          "團隊技能差距深度分析",
+          "精準匹配專業技術人才",
+          "高彈性的團隊規模調整"
+        ]
+      }
+    }
+  },
+  "News_Page": {
+    "title": "新聞與洞見",
+    "subtitle": "來自 Noviant 團隊的最新技術趨势、公司公告與行業洞見。",
+    "read_more": "閱讀更多",
+    "no_articles": "該分類暫無文章。",
+    "cta_title": "準備好轉型您的 IT 了嗎？",
+    "cta_subtitle": "與我们的團隊交流，探討您的基礎設施挑戰——不說廢話，只談解決方案。",
+    "categories": {
+      "all": "全部",
+      "company": "公司新聞",
+      "industry": "行業洞見",
+      "security": "網路安全",
+      "ai": "人工智慧",
+      "cloud": "雲與基礎設施"
+    },
+    "watch_video": "觀看視頻",
+    "articles": [
+      {
+        "id": "1",
+        "category": "ai",
+        "date": "2026年4月1日",
+        "title": "Noviant 推出面向企業用戶的下一代 AI 基礎設施平台",
+        "excerpt": "我们最新的 GPU 集群解決方案提供比上一代快 3 倍的 LLM 推理速度，專為金融服務和醫療機構打造。",
+        "image": "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg"
+      },
+      {
+        "id": "2",
+        "category": "security",
+        "date": "2026年3月25日",
+        "title": "零信任架構：紐約企業為何刻不容緩？",
+        "excerpt": "2026年第一季度，針對中小企業的網路威脅增加了43%。Noviant 的 vCISO 團隊深度解析每家企業現在必須採取的关键步驟。",
+        "image": "/images/unsplash/photo-1555949963-ff9fe0c870eb.jpg"
+      },
+      {
+        "id": "3",
+        "category": "cloud",
+        "date": "2026年3月18日",
+        "title": "真正有效的混合雲策略：2026年實戰指南",
+        "excerpt": "多雲的複雜性是真實存在的。我們的基礎設施工程師分享了本季度完成的三次成功混合雲遷移背後的藍圖。",
+        "image": "/images/unsplash/photo-1544197150-b99a580bb7a8.jpg"
+      },
+      {
+        "id": "4",
+        "category": "company",
+        "date": "2026年3月10日",
+        "title": "Noviant 擴展託管 IT 服務，深入佈局醫療健康領域",
+        "excerpt": "我们非常自豪地宣布，符合 HIPAA 標準的託管 IT 套餐現已為三州地區的醫療實踐機構提供服務。",
+        "image": "/images/unsplash/photo-1551434678-e076c223a692.jpg"
+      },
+      {
+        "id": "5",
+        "category": "industry",
+        "date": "2026年2月28日",
+        "title": "2026年企業 IT 現狀：塑造未來一年的关键趋势",
+        "excerpt": "從多智能體 AI 工作流到主權雲法規要求——Noviant 年度技術展望，洞察正在重塑企業 IT 格局的核心力量。",
+        "image": "/images/unsplash/photo-1504384308090-c894fdcc538d.jpg"
+      },
+      {
+        "id": "6",
+        "category": "ai",
+        "date": "2026年2月15日",
+        "title": "使用大語言模型自動化文檔處理：一個真實的案例研究",
+        "excerpt": "一家中型金融公司如何利用 Noviant 基於 AWS Bedrock 構建的智能文檔處理流水線，將人工文件審查時間減少了 80%。",
+        "image": "/images/unsplash/photo-1451187580459-43490279c0fa.jpg"
+      }
+    ]
+  },
+  "Footer": {
+    "address": "紐約百老匯大道1250號36樓，郵編 10001",
+    "phone": "+1(212)-809-6625",
+    "rights": "© 1997-2026 Noviant. All rights reserved.",
+    "iso_certification_title": "ISO/IEC 27001:2022 認證：",
+    "iso_certification_desc": "自 2019 年 10 月 26 日獲得認證以來，我们已證明自身的信息安全管理體系包含一系列安全標準、程序及準則；這些規範均依據該認證要求制定，旨在保護我们的客戶及信息基礎設施。"
+  },
+  "Services": {
+    "title": "端到端技術解決方案",
+    "subtitle": "從下一代 AI 基礎設施到可靠的託管服務，我们為您的數位化轉型提供動力。",
+    "items": {
+      "ai": {
+        "title": "AI 解決方案",
+        "desc": "利用高性能 GPU 集群與智能體系統，深度賦能企業數智化轉型。"
+      },
+      "cloud": {
+        "title": "雲解決方案",
+        "desc": "提供可彈性擴展的現代雲基礎架構、安全遷移以及各類雲端託管服務。"
+      },
+      "cybersecurity": {
+        "title": "網路安全",
+        "desc": "構建零信任架構、主動防禦監測與身份治理，防範潛在網路威脅。"
+      },
+      "consulting": {
+        "title": "諮詢與實施",
+        "desc": "通過全面的技術路線圖、合規審計以及戰略規劃賦能業務增長。"
+      },
+      "data": {
+        "title": "數據分析",
+        "desc": "搭建直觀的即時儀表盤與強大且安全的數據流，驅動數據決策閉環。"
+      },
+      "infrastructure": {
+        "title": "數位基礎設施",
+        "desc": "優化複雜網路、提供定制化運維服務，並改造升級底層算力資源池。"
+      }
+    }
+  },
+  "Banking": {
+    "hero_title": "銀行業 IT 基礎設施",
+    "hero_subtitle": "針對銀行業量身打造的極具安全性、合規性和高可用性的 IT 解決方案。",
+    "sections": {
+      "security": {
+        "title": "AI 驅動的反欺詐",
+        "description": "通過主動的 AI 監控和高級威脅情報來全方位保護您的核心資產。",
+        "features": [
+          "即時金融交易分析",
+          "自動化的威脅響應",
+          "零信任網路架構"
+        ]
+      },
+      "compliance": {
+        "title": "嚴格的合規解決方案",
+        "description": "確保完全遵守 GLBA、SOX 等多項金融監管框架的要求。",
+        "features": [
+          "持續的安全性審計",
+          "極致加密的數據存儲",
+          "嚴格的安全訪問控制"
+        ]
+      }
+    }
+  },
+  "Education": {
+    "hero_title": "智慧教育科技",
+    "hero_subtitle": "通過可擴展的在線學習系統和智慧校園基礎設施為教育機構賦能。",
+    "sections": {
+      "infrastructure": {
+        "title": "全校園 Wi-Fi 與 IT",
+        "description": "可靠的高速網路，可輕鬆支持數千個併發連接設備的順暢互通。",
+        "features": [
+          "高密度的無線網路接入",
+          "安全的校園學生網路",
+          "網路頻寬深度優化"
+        ]
+      },
+      "learning": {
+        "title": "在線學習 (E-Learning) 系統",
+        "description": "提供極為靈活且可擴展的雲端基礎設施，支持現代遠程和混合學習環境。",
+        "features": [
+          "學習管理系統 (LMS) 深度整合",
+          "流暢的視頻流媒體解決方案",
+          "雲端教務協作工具"
+        ]
+      }
+    }
+  },
+  "Fashion": {
+    "hero_title": "時尚零售科技",
+    "hero_subtitle": "為現代時尚品牌打造的全渠道基礎設施架構與深度供應鏈分析。",
+    "sections": {
+      "analytics": {
+        "title": "供應鏈大數據分析",
+        "description": "利用前沿的人工智慧準確預測流行趋势、高效管理庫存，並從源頭優化物流配置。",
+        "features": [
+          "極具前瞻性的預測性 AI",
+          "即時庫存動態跟踪",
+          "高度自動化的補貨系統"
+        ]
+      },
+      "omnichannel": {
+        "title": "全渠道零售體驗",
+        "description": "消除數位店面與物理實體店之間的巨大鴻溝，為您構建完美的全渠道互聯生態。",
+        "features": [
+          "統一的互聯 POS 系統",
+          "跨渠道的消費者數據引擎",
+          "高性能電子商務底座"
+        ]
+      }
+    }
+  },
+  "FinancialServices": {
+    "hero_title": "核心金融科技",
+    "hero_subtitle": "提供超低延遲網路連接與高頻交易 (HFT) 基礎設施支持的金融基石。",
+    "sections": {
+      "trading": {
+        "title": "極限低延遲網路",
+        "description": "通過定制化的專用光纖技術和優化的網路路由，確保毫秒級的市場極速交易。",
+        "features": [
+          "直接市場接入 (DMA)",
+          "世界級數據中心主機託管",
+          "高冗餘的數據傳輸路徑"
+        ]
+      },
+      "risk": {
+        "title": "自動化的風險管理",
+        "description": "基於最強算法的評估引擎，全面且深入地監控並化解跨投資組合可能帶來的風險。",
+        "features": [
+          "極其嚴謹的算法審計",
+          "牢不可破的數據保護架構",
+          "軍用級安全的雲存儲"
+        ]
+      }
+    }
+  },
+  "Government": {
+    "hero_title": "政府定制 IT 解決方案",
+    "hero_subtitle": "為地方和州政府機構量身定制，極具安全性、符合 FedRAMP 等級標準的 IT 服務。",
+    "sections": {
+      "cloud": {
+        "title": "主權雲與 FedRAMP 認證",
+        "description": "實施超嚴格合規標準的頂層雲環境，全力以赴地保護敏感的公民政務數據不被洩露。",
+        "features": [
+          "政府專有雲 (GovCloud) 方案落地",
+          "絕對符合 CJIS 要求的系統",
+          "萬无一失的災難恢復預案"
+        ]
+      },
+      "civic": {
+        "title": "公共數位基礎設施",
+        "description": "通過可自由擴展的數位門戶實現公共管理和市政服務的全面現代化，造福於民。",
+        "features": [
+          "安全、快速的政務網頁門戶",
+          "高度受控的公共 API 網關",
+          "極強擴展性的海量數據庫"
+        ]
+      }
+    }
+  },
+  "HealthServices": {
+    "hero_title": "醫療 IT 與信息基礎設施",
+    "hero_subtitle": "符合 HIPAA 標準的託管服務，保護患者數據並確保最長正常運行時間。",
+    "sections": {
+      "diagnostics": {
+        "title": "全能型 AI 診斷支持",
+        "description": "高性能 GPU 集群，用於快速處理和分析醫學影像。",
+        "features": [
+          "醫療 PACS/RIS 影像系統整合",
+          "高速邊緣運算",
+          "安全病歷存儲"
+        ]
+      },
+      "telemedicine": {
+        "title": "無懈可擊的安全遠程醫療",
+        "description": "可靠的加密通信通道，用於遠程諮詢和 EHR 訪問。",
+        "features": [
+          "符合 HIPAA 標準的網路",
+          "EHR 系統支持",
+          "24/7 关键系統監控"
+        ]
+      }
+    }
+  },
+  "NotForProfit": {
+    "hero_title": "非營利組織專用科技",
+    "hero_subtitle": "面向使命驅動型結構的高性價比雲架構和捐贈者數據分析。",
+    "sections": {
+      "cloud": {
+        "title": "高性價比架構",
+        "description": "利用高效雲端運算和託管 IT，優化您的運營預算。",
+        "features": [
+          "非營利雲定價管理",
+          "虛擬伺服器部署",
+          "託管 VoIP 平台"
+        ]
+      },
+      "analytics": {
+        "title": "捐贈數據分析",
+        "description": "更好地了解支持者，並通過數據智能最大化籌款效果。",
+        "features": [
+          "CRM 集成與安全",
+          "數據挖掘與報告",
+          "預測性捐贈分析"
+        ]
+      }
+    }
+  },
+  "Retail": {
+    "hero_title": "現代零售業數位轉型",
+    "hero_subtitle": "用於店內分析和現代 POS 基礎設施的邊緣運算。",
+    "sections": {
+      "edge": {
+        "title": "邊緣運算與智能分析",
+        "description": "直接在門店處理數據，以了解客戶路徑並即時優化佈局。",
+        "features": [
+          "店內傳感器網路",
+          "即時流量分析",
+          "本地邊緣伺服器"
+        ]
+      },
+      "pos": {
+        "title": "現代化 POS 基礎設施",
+        "description": "通過有彈性的本地網路和雲端備份確保店鋪連續運營。",
+        "features": [
+          "高可用本地區域網路",
+          "自動故障轉移網路",
+          "安全支付網關"
+        ]
+      }
+    }
+  },
+  "ServiceBasedBusinesses": {
+    "hero_title": "服務型企業應用科技",
+    "hero_subtitle": "為服務提供商應用 AI 自動化客戶服務和無縫 CRM 集成。",
+    "sections": {
+      "automation": {
+        "title": "AI 自動化客戶服務引擎",
+        "description": "部署智能大語言模型機器人和自動化工作流，全天候處理客戶諮詢。",
+        "features": [
+          "自定義聊天機器人集成",
+          "工作流自動化引擎",
+          "智能呼叫路由"
+        ]
+      },
+      "crm": {
+        "title": "無縫型 CRM 數據整合",
+        "description": "通過將通信數據與雲端樞紐無縫鏈接，集中統籌您的所有運營協作。",
+        "features": [
+          "API 數據同步",
+          "安全身份管理",
+          "數據遷移服務"
+        ]
+      }
+    }
+  },
+  "MSP_Page": {
+    "title": "IT 託管服務",
+    "subtitle": "專為現代企業量身定制的主動、可靠且安全的 IT 管理服務。",
+    "features": {
+      "support": {
+        "title": "24/7/365 全天候支持",
+        "desc": "全天候技術支持，確保您的業務永不停歇。"
+      },
+      "security": {
+        "title": "網路安全",
+        "desc": "高級威脅防護、監控和事件響應。"
+      },
+      "cloud": {
+        "title": "雲端管理",
+        "desc": "AWS、Azure 和 Google Cloud 環境的專家級管理。"
+      },
+      "network": {
+        "title": "網路管理",
+        "desc": "監控並優化您的網路基礎設施，以實現最佳性能。"
+      },
+      "backup": {
+        "title": "備份與災難恢復",
+        "desc": "強大的數據保護策略，守護您的关键業務信息。"
+      },
+      "consulting": {
+        "title": "虛擬 CIO (vCIO) 諮詢",
+        "desc": "戰略性技術規劃，使 IT 與您的業務目標保持一致。"
+      }
+    }
+  },
+  "MSP_Pages": {
+    "support_center": {
+      "title": "支持中心",
+      "subtitle": "歡迎進入 Noviant 服務支持中心",
+      "desc": "請僅在需要技術支持時使用以下聯繫信息。對於所有其他常規諮詢，請使用“聯繫我們”頁面上的信息和表單。",
+      "phone": "212-981-8509",
+      "phone_label": "撥打支持熱線"
+    },
+    "is_this_you": {
+      "title": "這說的是您嗎？",
+      "subtitle": "將技術轉化為推動業務向前發展的力量。",
+      "desc": "我們的客戶通常擁有 10 到 50 個工作站，並且嚴重依賴他們的計算機、網路以及專業的業務應用程序來維持日常運營。",
+      "features": [
+        "您希望專注於您的核心業務，而不是為了技術問題煩惱。",
+        "您當前的 IT 系統似乎阻礙了業務發展，而不是提供了幫助。",
+        "您的計算機網路需要更好的可靠性和更高的安全性。",
+        "您相信：防患於未然比亡羊補牢要高效得多。"
+      ]
+    },
+    "managed_it": {
+      "title": "託管 IT 服務",
+      "subtitle": "獲得您理應擁有的安心感。",
+      "desc": "我們以固定費率管理您的所有 IT 服務，讓您可以將精力集中在刺激收入增長上。請考慮讓 Noviant 幫助您維持業務的最佳運營狀態。",
+      "features": [
+        "針對任何企業規模或預算量身定制的專屬套餐。",
+        "7×24 小時的可預測成本，絕無任何隱藏附加費用。",
+        "通過全天候的即時監控機制，大幅提高生產力。",
+        "無論什麼時間或是節假日，我们始終为您待命。"
+      ]
+    },
+    "cybersecurity": {
+      "title": "網路安全與合規",
+      "subtitle": "確保您的數據免受侵害。",
+      "desc": "網路安全應是各大企業的第一要務。隨著勒索軟體、黑客攻擊、系統漏洞和數據竊取事件每天在世界各地發生，您的企業遭到攻擊只是時間問題。",
+      "features": [
+        "評估您當前的網路業務環境。",
+        "全面評估您整體的系統安全健康狀況。",
+        "为您量身定制並實施完整的安全防禦計劃。",
+        "確保符合 HIPAA、SOC 以及其他多項合規性要求。"
+      ]
+    },
+    "cloud": {
+      "title": "雲端運算",
+      "subtitle": "从此不再擔憂數據丟失。",
+      "desc": "如果您需要系統管理幫助，希望保護您的計算機免受外部威脅，但又受到了嚴格的預算限制，Noviant 的雲端運算解決方案可以助您一臂之力。",
+      "features": [
+        "安全性 – 保護您企業关键系統和數據免受丟失或竊取。",
+        "服務與支持 – 提供 7×24 小時不間斷監控以防止問題發生。",
+        "數據保護 – 內置自動化數據備份和安全的雲端存儲方案。",
+        "您可用的工具 – 易於使用、直觀的控制系統與操作平台。"
+      ]
+    },
+    "business_phone": {
+      "title": "商業電話系統",
+      "subtitle": "連接更輕鬆，溝通更順暢。",
+      "desc": "終於等到了！一個無憂無慮的電話系統。它为您提供大型企業的通信功能，且易於設置、使用簡單，專為賦能您的團隊而打造。",
+      "features": [
+        "無任何隱藏費用，實現 100% 透明的計費和報價。",
+        "支持系統演進，每 36 個月免費更換全新話機設備。",
+        "無需簽訂長期合同，您隨時擁有無條件取消的自由。",
+        "提供免費的系統配置、使用培訓以及終身技術支持。"
+      ]
+    },
+    "why_choose_us": {
+      "title": "為什麼選擇我們？",
+      "subtitle": "您的業務依賴於 IT 系統。我们堅信，我们是您在紐約的最佳選擇。",
+      "desc": "以下是您可以放心依賴 Noviant 保持業務正常運轉的原因：",
+      "features": [
+        "快速響應 – 我们保證緊急事件的響應時間在 1 小時或更短。",
+        "經驗豐富且聲譽卓著 – 自 1997 年以來，一直由資深技術人員为您服務。",
+        "一站式服務 – 涵蓋硬體、軟體、供應商關係等一切 IT 事務。",
+        "100% 滿意度保證 – 我们將竭盡所能讓您對服務感到滿意。"
+      ]
+    },
+    "our_clients": {
+      "title": "客戶證言",
+      "subtitle": "看看其他企業所有者是如何評價我们的...",
+      "desc": "自從採用 Noviant 的支持服務以來，最大的好處就是易於使用以及帶來的安心感。",
+      "representative_title": "代表性客戶",
+      "customers": [
+        { "name": "Actavis, Inc.", "industry": "醫藥" },
+        { "name": "NYC Criminal Justice Agency", "industry": "執法" },
+        { "name": "Baosteel America", "industry": "工業" },
+        { "name": "NYC Police Department", "industry": "安防" },
+        { "name": "Cahill Gordon & Reindel, LLP", "industry": "法律" },
+        { "name": "NYS Financial Control Board", "industry": "監管" },
+        { "name": "CBRE American Realty Capital", "industry": "房地產" },
+        { "name": "Oscar De La Renta", "industry": "時尚" },
+        { "name": "China Unicom Operations, LTD", "industry": "電信" },
+        { "name": "Panama Maritime Authority", "industry": "國際" },
+        { "name": "Fosun Capital", "industry": "投資" },
+        { "name": "DOITT", "industry": "政府" },
+        { "name": "JDRF", "industry": "非營利" },
+        { "name": "The Children’s Village", "industry": "非營利" },
+        { "name": "Genesis Investment Advisors, LLC", "industry": "金融" },
+        { "name": "Planned Parenthood", "industry": "非營利" },
+        { "name": "Iconix Brand Group, Inc.", "industry": "零售" },
+        { "name": "Playwrights Horizon, Inc.", "industry": "藝術與文化" },
+        { "name": "LGBT Community Center", "industry": "多元化" },
+        { "name": "Central Bank of Norway", "industry": "銀行" },
+        { "name": "Malayan Bank Berhad", "industry": "投資銀行" },
+        { "name": "MTA", "industry": "交通" },
+        { "name": "SUNY Down State Medical Center", "industry": "醫療保健" },
+        { "name": "ICBC (USA) Inc.", "industry": "銀行" }
+      ],
+      "features": [
+        "無縫且高效的 VDI（虛擬桌面）和遠程工作環境部署。",
+        "三道堅不可摧的防線，有效抵禦日益猖獗的網路攻擊。",
+        "借助 Azure 和複雜的微軟生態系統提高了整體安全性。",
+        "及時雨般的技术支持服務，以極快的響應速度解決問題。"
+      ],
+      "cta_title": "準備好轉型您的基礎設施了嗎？",
+      "cta_desc": "加入我们的成功客戶網路，體驗優質託管 IT 服務的與眾不同之處。"
+    },
+    "referral_program": {
+      "title": "推薦獎勵計劃",
+      "subtitle": "在幫助同行享受無憂 IT 的同時收穫豐厚獎勵。",
+      "desc": "在 Noviant，我们相信轉介紹是最高形式的肯定。如果您認識任何為業務技術而擔憂的人，請幫個忙，讓他们與我们取得聯繫。",
+      "features": [
+        "安然入睡 - 我们的 7x24 小時技術團隊为您保駕護航。",
+        "提高生產力 - 更少的停機時間意味著更多的有效工作時間。",
+        "享受生活 - 最大化您的生活質量，把專業的事情交给我们。"
+      ]
+    }
+  },
+  "Contact_Page": {
+    "title": "聯繫我們與企業使命",
+    "subtitle": "準備好進行基礎設施轉型了嗎？我们的團隊隨時为您服務。",
+    "mission": {
+      "title": "我们的使命",
+      "who_we_are": "我们是誰",
+      "who_desc": "Noviant 的使命是利用現有和新興技術，徹底釋放客戶解決各類特定業務的全部潛能。我们是一支不斷學習進化的創新團隊。",
+      "partner": "為何選擇我們",
+      "partner_desc": "當您與我们合作時，我们累積的 20 餘年深厚行業經驗將轉化為您最堅實的後援。從 IT 戰略諮詢到跨平台系統管理，您的成功就是我们的首要責任。"
+    },
+    "form": {
+      "name": "姓名",
+      "email": "電子郵箱",
+      "phone": "電話",
+      "company": "公司",
+      "industry": "行業",
+      "solution": "選擇解決方案",
+      "select_placeholder": "請選擇...",
+      "message": "留言",
+      "submit": "發送信息",
+      "sending": "發送中...",
+      "success": "信息發送成功！",
+      "error": "發送失敗，請重試。",
+      "email_subject": "新聯繫請求：來自 {company} 的 {name}",
+      "email_body": "姓名: {name}\n郵箱: {email}\n公司: {company}\n電話: {phone}\n行業: {industry}\n方案: {solution}\n\n詳情:\n{message}",
+      "no_message": "未提供信息。",
+      "industries": {
+        "banking": "銀行",
+        "education": "教育",
+        "fashion": "時尚",
+        "financial": "金融服務",
+        "government": "政府",
+        "health": "醫療服務",
+        "nonprofit": "非營利組織",
+        "retail": "零售",
+        "service": "服務型企業",
+        "other": "其他"
+      },
+      "solutions": {
+        "business_continuity": "業務連續性與災難恢復",
+        "cabling": "綜合佈線",
+        "cloud": "雲端託管",
+        "security": "網路安全",
+        "analytics": "數據分析",
+        "infrastructure": "數位基礎設施",
+        "msp": "託管 IT 服務",
+        "professional": "專業服務",
+        "staffing": "人員擴充",
+        "vciso": "虛擬 CISO",
+        "virtualization": "虛擬化",
+        "voip": "VOIP 電話系統",
+        "other": "其他"
+      }
+    },
+    "info": {
+      "title": "聯繫方式",
+      "address_label": "總部地址",
+      "phone_label": "電話 / 傳真",
+      "call_label": "電話",
+      "fax_label": "傳真",
+      "fax_number": "(212) 809-6630",
+      "email_label": "電子郵箱",
+      "sales": "銷售部門",
+      "support": "技術支持",
+      "sales_email": "am@noviant.com",
+      "support_email": "support@noviant.com"
+    }
+  },
+  "Partners_Page": {
+    "title": "戰略合作伙伴",
+    "subtitle": "與行業領導者合作，提供世界一流的技术解決方案。",
+    "categories": {
+      "cloud": "雲與基礎設施",
+      "network": "網路與連接",
+      "hardware": "硬體與設備",
+      "security": "網路安全"
+    },
+    "description": "我们與精選的技术合作伙伴生態系統合作，確保我们的客戶能夠獲得一流的硬體、軟體和雲端服務。"
+  },
+  "Terms_Page": {
+    "hero_title": "主服務協議",
+    "title": "條款",
+    "description": "請閱讀我们的主服務協議。",
+    "action_link": "點擊此處查看我们的主服務協議",
+    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf",
+    "footer_note": "* 本文檔僅供參考。如果您對我们的條款有任何疑問，請聯繫我们。"
+  },
+  "Industries": {
+    "learn_more": "了解更多",
+    "tabs": {
+      "banking": "銀行業",
+      "education": "教育行業",
+      "fashion": "時尚電商",
+      "financial-services": "金融服務",
+      "government": "政府部門",
+      "health-services": "醫療健康",
+      "not-for-profit": "非營利組織",
+      "retail": "零售物流",
+      "service-businesses": "服務型企業"
+    },
+    "content": {
+      "banking": {
+        "title": "銀行業 IT 解決方案",
+        "desc": "為現代銀行機構提供安全、合規且高可用的底層網路基礎設施。",
+        "list": [
+          "即時交易處理",
+          "嚴格監管合規",
+          "高級威脅防護",
+          "保證不間断運行時"
+        ]
+      },
+      "education": {
+        "title": "教育科技賦能",
+        "desc": "通過協作、安全的數位化學習環境，為學校和大學賦能。",
+        "list": [
+          "全校安全 Wi-Fi",
+          "學生隱私數據保護",
+          "雲端電子學習平台",
+          "遠程教學網路基礎"
+        ]
+      },
+      "fashion": {
+        "title": "時尚與電商技术",
+        "desc": "簡化零售運營、庫存管理，打造沉浸式的現代電子商務體驗。",
+        "list": [
+          "全渠道零售支持",
+          "高速 POS 結算系統",
+          "供應鏈數據分析",
+          "彈性全天候雲端託管"
+        ]
+      },
+      "financial-services": {
+        "title": "金融服務支持",
+        "desc": "為金融和證券公司提供極低延遲的交易基礎設施與強大的數據管理。",
+        "list": [
+          "算法交易網路專線",
+          "加密數據分佈式存儲",
+          "全面的災難恢復",
+          "便於審計和合規的報告"
+        ]
+      },
+      "government": {
+        "title": "政府機構數位基建",
+        "desc": "專為地方及聯邦政府部門量身定制的無懈可擊的公共安全網路解決方案。",
+        "list": [
+          "零信任安全架構",
+          "符合標準的政務雲",
+          "快捷的公民服務門戶",
+          "數據主權本土保證"
+        ]
+      },
+      "health-services": {
+        "title": "醫療健康 IT",
+        "desc": "為現代醫療服務提供者打造符合 HIPAA 標準的網路及患者數據管理防線。",
+        "list": [
+          "電子健康病歷 (EHR)",
+          "遠程醫療視頻能力",
+          "患者極密數據安全",
+          "全天候 24/7 技术支持"
+        ]
+      },
+      "not-for-profit": {
+        "title": "非營利組織支持",
+        "desc": "利用高性價比、強擴展性的信息技术解決方案，將您的社會影響力最大化。",
+        "list": [
+          "捐贈者數據庫維護",
+          "跨地域雲端協作",
+          "符合預算的 IT 規劃",
+          "籌款平台平穩運行支撐"
+        ]
+      },
+      "retail": {
+        "title": "零售與物流業",
+        "desc": "涵蓋從門店終端到倉儲物流管理的端到端無縫信息化支持。",
+        "list": [
+          "雲端庫存即時同步",
+          "安全快捷的支付網關",
+          "多網點 SD-WAN 互聯",
+          "深刻的顧客行為數據分析"
+        ]
+      },
+      "service-businesses": {
+        "title": "服務型企業數位化",
+        "desc": "為諮詢、法律及專業服務類公司打造高度敏捷的技术底座。",
+        "list": [
+          "客戶訪問門戶安全",
+          "移動辦公全面賦能",
+          "智能文檔管理系統",
+          "自動計費及流轉系統集成"
+        ]
+      }
+    }
+  }
+}

@@ -26,7 +26,8 @@ export default function LanguageSwitcher() {
                 onChange={onSelectChange}
             >
                 <option value="en" className="text-black">English</option>
-                <option value="zh" className="text-black">中文</option>
+                <option value="zh-CN" className="text-black">简体中文</option>
+                <option value="zh-TW" className="text-black">繁體中文</option>
             </select>
         </div>
     );

@@ -23,7 +23,7 @@ export default function ArticleView({
 }) {
     const t = useTranslations("News_Page");
     const tNav = useTranslations("Navigation");
-    const lang = locale as "en" | "zh";
+    const lang = locale as "en" | "zh-CN" | "zh-TW";
     const colors = categoryColors[article.category] ?? {
         bg: "bg-slate-100", text: "text-slate-700", dot: "bg-slate-400"
     };

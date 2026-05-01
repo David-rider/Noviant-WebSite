@@ -15,23 +15,26 @@ function getKeys(obj, prefix = '') {
 }
 
 const enData = JSON.parse(fs.readFileSync(path.join(__dirname, 'messages', 'en.json'), 'utf8'));
-const zhData = JSON.parse(fs.readFileSync(path.join(__dirname, 'messages', 'zh.json'), 'utf8'));
+const zhCNData = JSON.parse(fs.readFileSync(path.join(__dirname, 'messages', 'zh-CN.json'), 'utf8'));
+const zhTWData = JSON.parse(fs.readFileSync(path.join(__dirname, 'messages', 'zh-TW.json'), 'utf8'));
 
 const enKeys = new Set(getKeys(enData));
-const zhKeys = new Set(getKeys(zhData));
+const zhCNKeys = new Set(getKeys(zhCNData));
+const zhTWKeys = new Set(getKeys(zhTWData));
 
-const missingInZh = [...enKeys].filter(k => !zhKeys.has(k));
-const missingInEn = [...zhKeys].filter(k => !enKeys.has(k));
+const missingInZhCN = [...enKeys].filter(k => !zhCNKeys.has(k));
+const missingInZhTW = [...enKeys].filter(k => !zhTWKeys.has(k));
 
-console.log('=== Keys in en.json missing from zh.json ===');
-if (missingInZh.length) missingInZh.forEach(k => console.log('  ' + k));
+console.log('=== Keys in en.json missing from zh-CN.json ===');
+if (missingInZhCN.length) missingInZhCN.forEach(k => console.log('  ' + k));
 else console.log('  None');
 
 console.log('');
-console.log('=== Keys in zh.json missing from en.json ===');
-if (missingInEn.length) missingInEn.forEach(k => console.log('  ' + k));
+console.log('=== Keys in en.json missing from zh-TW.json ===');
+if (missingInZhTW.length) missingInZhTW.forEach(k => console.log('  ' + k));
 else console.log('  None');
 
 console.log('');
 console.log(`Total en.json keys: ${enKeys.size}`);
-console.log(`Total zh.json keys: ${zhKeys.size}`);
+console.log(`Total zh-CN.json keys: ${zhCNKeys.size}`);
+console.log(`Total zh-TW.json keys: ${zhTWKeys.size}`);
