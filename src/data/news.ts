@@ -194,7 +194,7 @@ export const newsArticles: NewsArticle[] = [
         excerpt: {
             en: "Noviant featured by the NYC Comptroller highlighting local technology support for small businesses.",
             "zh-CN": "Noviant 被纽约市审计长专题报道，展示对本地小型企业的技术支持。",
-            "zh-TW": "Noviant 被紐約市審計長專題報導，展示對本地小型企業的技术支持。",
+            "zh-TW": "Noviant 被紐約市審計長專題報導，展示對本地小型企業的技術支持。",
         },
         body: {
             en: `Noviant was recently featured in a video produced by the NYC Comptroller’s Office. The video highlights how local businesses in New York City are leveraging technology to grow and thrive.\n\nOur team is honored to represent the tech sector and show our impact on the New York business community through managed services and infrastructure innovation.`,
