@@ -6,7 +6,7 @@ import { Link } from "@/i18n/routing";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Calendar, Tag, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { newsArticles } from "@/data/news";
+import { newsArticlesMetadata } from "@/data/news_manifest";
 
 
 // Category badge color map
@@ -22,15 +22,15 @@ const fallbackImage = "/images/unsplash/photo-1551434678-e076c223a692.jpg";
 
 export default function NewsView({ locale }: { locale: string }) {
     const t = useTranslations("News_Page");
+    const tData = useTranslations("NewsData");
     const tNav = useTranslations("Navigation");
     const [currentPage, setCurrentPage] = useState(1);
-    const lang = locale as "en" | "zh-CN" | "zh-TW";
 
     const ITEMS_PER_PAGE = 6;
-    const totalPages = Math.ceil(newsArticles.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(newsArticlesMetadata.length / ITEMS_PER_PAGE);
     
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    const paginatedArticles = newsArticles.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+    const paginatedArticles = newsArticlesMetadata.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     // Scroll to top when page changes
     useEffect(() => {
@@ -50,9 +50,9 @@ export default function NewsView({ locale }: { locale: string }) {
                             bg: "bg-slate-50", text: "text-slate-700", dot: "bg-slate-400",
                         };
                         const imgSrc = article.image || fallbackImage;
-                        const title   = article.title[lang]   ?? article.title.en;
-                        const excerpt = article.excerpt[lang]  ?? article.excerpt.en;
-                        const date    = article.date[lang]     ?? article.date.en;
+                        const title   = tData(`articles.${article.id}.title`);
+                        const excerpt = tData(`articles.${article.id}.excerpt`);
+                        const date    = tData(`articles.${article.id}.date`);
 
                         return (
                             <motion.article
@@ -148,7 +148,7 @@ export default function NewsView({ locale }: { locale: string }) {
                     </div>
                 )}
 
-                {newsArticles.length === 0 && (
+                {newsArticlesMetadata.length === 0 && (
                     <div className="text-center py-24 text-slate-400">
                         <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
                         <p className="text-lg">{t("no_articles")}</p>

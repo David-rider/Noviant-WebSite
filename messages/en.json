@@ -635,7 +635,7 @@
     "cybersecurity": {
       "title": "Cybersecurity & Compliance",
       "subtitle": "Keep your data safe from harm.",
-      "desc": "Network security should be a number one priority. With ransomware, hacks, attacks, vulnerabilities and data theft affecting companies daily, it’s just a matter of time before your business is hit.",
+      "desc": "Network security should be a number one priority. With ransomware, hacks, attacks, vulnerabilities and data theft affecting companies daily, it's just a matter of time before your business is hit.",
       "features": [
         "Evaluate your current network business environment.",
         "Assess your overall security health comprehensively.",
@@ -657,7 +657,7 @@
     "business_phone": {
       "title": "Business Phone System",
       "subtitle": "Stay connected, more easily.",
-      "desc": "Finally! A frustration-free phone system that gives you big business communication features in a solution that’s easy to set up, simple to use and built to empower your teams.",
+      "desc": "Finally! A frustration-free phone system that gives you big business communication features in a solution that's easy to set up, simple to use and built to empower your teams.",
       "features": [
         "No Hidden Fees, 100% Transparent Billing And Quoting.",
         "Free Phones that Evolve every 36 months.",
@@ -667,19 +667,19 @@
     },
     "why_choose_us": {
       "title": "Why Choose Us?",
-      "subtitle": "Your business depends on your IT systems. We’re confident we are your best choice in New York.",
+      "subtitle": "Your business depends on your IT systems. We're confident we are your best choice in New York.",
       "desc": "Here are the reasons you can depend on Noviant to keep you and your business up and running:",
       "features": [
         "Quick Response – Emergency response time is one hour or less guaranteed.",
         "Experienced & Reputable – Since 1997, serving with seasoned technicians.",
         "One Stop Shop – Covering hardware, software, vendor relations and more.",
-        "100% Satisfaction Guarantee – We’ll do whatever it takes to make you happy."
+        "100% Satisfaction Guarantee – We'll do whatever it takes to make you happy."
       ]
     },
     "our_clients": {
       "title": "Client Testimonials",
       "subtitle": "See what other business owners are saying about us...",
-      "desc": "The single greatest benefit since moving to Noviant’s support service has been ease of use and peace of mind.",
+      "desc": "The single greatest benefit since moving to Noviant's support service has been ease of use and peace of mind.",
       "representative_title": "Representative Customers",
       "customers": [
         { "name": "Actavis, Inc.", "industry": "Pharmaceutical" },
@@ -695,7 +695,7 @@
         { "name": "Fosun Capital", "industry": "Investment" },
         { "name": "DOITT", "industry": "Government" },
         { "name": "JDRF", "industry": "Nonprofit" },
-        { "name": "The Children’s Village", "industry": "Nonprofit" },
+        { "name": "The Children's Village", "industry": "Nonprofit" },
         { "name": "Genesis Investment Advisors, LLC", "industry": "Financial" },
         { "name": "Planned Parenthood", "industry": "Nonprofit" },
         { "name": "Iconix Brand Group, Inc.", "industry": "Retail" },
@@ -735,7 +735,7 @@
       "who_we_are": "We are Noviant",
       "who_desc": "Our mission is to unlock our client's full potential by leveraging existing and emerging technology for your unique business. We are a team of innovative problem solvers committed to consistent education and evolution.",
       "partner": "Why Partner With Us",
-      "partner_desc": "When you partner with Noviant, the knowledge and experience we've gained through over 20 years of operation become your resources. From IT consultation to cross-platform management, we make your business’ success our responsibility."
+      "partner_desc": "When you partner with Noviant, the knowledge and experience we've gained through over 20 years of operation become your resources. From IT consultation to cross-platform management, we make your business' success our responsibility."
     },
     "form": {
       "name": "Name",
@@ -917,6 +917,88 @@
           "Document management systems",
           "Automated billing integration"
         ]
+      }
+    }
+  },
+  "NewsData": {
+    "articles": {
+      "welcome-to-noviant-news": {
+        "date": "April 2, 2026",
+        "title": "Welcome to Noviant News — Your Source for IT Insights",
+        "excerpt": "This is Noviant's official news center. We will share technology updates, company announcements, and industry insights here. Stay tuned.",
+        "body": "Welcome to the Noviant News & Insights hub.\n\nWe created this space to keep you informed about the latest developments in enterprise IT, managed services, and AI infrastructure — all from the perspective of a team that works with these technologies every day.\n\nWhat to expect here:\n\n• Company announcements and new service launches\n• Technology deep-dives written by our engineers\n• Industry insights and best practices\n• Case studies from our client work\n\nIf you have questions about any of our services, please visit our Contact page. We look forward to sharing more with you soon."
+      },
+      "phunware-partners-with-noviant": {
+        "date": "May 14, 2020",
+        "title": "Phunware Partners with Noviant to Bring Pandemic Response Solutions to Cities",
+        "excerpt": "Phunware ecosystem expansion with Noviant to provide mobile solutions for pandemic response in healthcare and government sectors.",
+        "body": "Phunware, Inc. (NASDAQ: PHUN), a fully-integrated enterprise cloud platform for mobile that provides products, solutions, data and services for brands worldwide, announced today it has partnered with Noviant to bring Phunware's Pandemic Response Solutions to cities, health systems and small businesses.\n\nNoviant is a technology consulting and managed services company with a focus on delivering secure and innovative digital infrastructure. Through this partnership, Noviant will offer Phunware's mobile-first platform to help its clients manage the complexities of the COVID-19 pandemic, including symptom tracking, facility access management, and communication tools for remote teams."
+      },
+      "covid-19-resources": {
+        "date": "April 1, 2020",
+        "title": "Noviant is Committed to Providing You Updated Resources",
+        "excerpt": "Noviant provides critical IT and remote work resources to support businesses during the global pandemic.",
+        "body": "During these uncertain times, Noviant is committed to being your reliable technology partner. We understand the challenges of transitioning to remote work and maintaining system security.\n\nWe have curated a list of resources, from secure VPN setup guides to collaboration tool best practices, to ensure your business remains operational and secure. Our team is available 24/7 to assist with any technical issues and infrastructure adjustments needed to navigate this transition."
+      },
+      "notice-to-clients-in-response-to-covid-19": {
+        "date": "March 18, 2020",
+        "title": "Notice to Our Clients: Service Changes in Response to COVID-19",
+        "excerpt": "An update on how Noviant is adapting its services to prioritize safety while maintaining enterprise support.",
+        "body": "To prioritize the health of our staff and clients, Noviant is transitioning to fully remote support operations starting March 18, 2020. Our Helpdesk remains fully operational, and we have increased capacity to handle higher volumes of remote access requests.\n\nOn-site visits will be limited to critical infrastructure emergencies only. We are committed to providing the same high level of service you expect from us through our secure remote management tools."
+      },
+      "benefits-of-windows-virtual-desktop": {
+        "date": "March 2, 2020",
+        "title": "The Benefits of Using Microsoft Azure's Windows Virtual Desktop",
+        "excerpt": "How WVD enables secure, scalable, and remote-friendly computing environments for the modern workforce.",
+        "body": "Microsoft Azure's Windows Virtual Desktop (WVD) provides the only multi-session Windows 10 experience, optimized for Office 365 ProPlus. It allows businesses to deploy and scale Windows desktops and apps on Azure in minutes, with built-in security and compliance.\n\nBenefits include reduced hardware costs, unified management, and the ability to access a full desktop experience from any device, anywhere. This is a game-changer for businesses implementing flexible work policies."
+      },
+      "noviant-certified-for-the-iso-iec-270012013": {
+        "date": "October 26, 2019",
+        "title": "Noviant certified for the ISO/IEC 27001:2013",
+        "excerpt": "Noviant achieves global standard for information security management systems.",
+        "body": "We are proud to announce that Noviant has successfully achieved the ISO/IEC 27001:2013 certification. This internationally recognized standard ensures that our information security management systems are robust and meet the highest security requirements.\n\nThis certification reaffirms our commitment to protecting our clients' data and continuous improvement in our internal security processes."
+      },
+      "noviant-appears-in-nyc-comptrollers-video": {
+        "date": "March 1, 2019",
+        "title": "Noviant Appears in NYC Comptroller's Video",
+        "excerpt": "Noviant featured by the NYC Comptroller highlighting local technology support for small businesses.",
+        "body": "Noviant was recently featured in a video produced by the NYC Comptroller's Office. The video highlights how local businesses in New York City are leveraging technology to grow and thrive.\n\nOur team is honored to represent the tech sector and show our impact on the New York business community through managed services and infrastructure innovation."
+      },
+      "the-era-of-the-pc-isnt-as-over-as-you-might-think": {
+        "date": "March 1, 2019",
+        "title": "The era of the PC isn't as over as you might think",
+        "excerpt": "Why the desktop computer remains a cornerstone of enterprise productivity despite the mobile revolution.",
+        "body": "Despite the rise of smartphones and tablets, the desktop PC remains the primary workhorse for enterprise environments. High-performance tasks, complex data processing, and ergonomics still favor the traditional PC.\n\nModern infrastructure focuses on how to integrate the PC with cloud services rather than replacing it, ensuring users have the power they need for serious productivity."
+      },
+      "windows-8-1-unlikely-to-solve-the-os-problems": {
+        "date": "March 1, 2019",
+        "title": "Windows 8.1 unlikely to solve the OS' problems",
+        "excerpt": "An analytical look at Windows 8.1 and the persistent challenges of hybrid OS design.",
+        "body": "While Windows 8.1 addresses some UI complaints from users, the core tension between touch-first design and desktop productivity remains. Businesses are weighing the benefits of upgrading against potential training costs.\n\nAs we look ahead to future iterations, finding a balance between modern tile interfaces and the traditional desktop environment remains Microsoft's biggest challenge."
+      },
+      "avoiding-the-e-mail-crush-following-a-vacation": {
+        "date": "March 1, 2019",
+        "title": "Avoiding the e-mail crush following a vacation",
+        "excerpt": "Practical tips and filtering strategies to manage an overflowing inbox after time off.",
+        "body": "Coming back from vacation shouldn't be defined by an inbox of 500 unread emails. By implementing advanced filtering rules and scheduling focus time, you can prioritize critical communications over noise.\n\nWe recommend using categories and automated replies to setting expectations for recovery time, allowing you to transition back to work smoothly without the stress."
+      },
+      "why-office-mobile-isnt-a-good-investment": {
+        "date": "March 1, 2019",
+        "title": "Why Office Mobile isn't a good investment",
+        "excerpt": "A critical evaluation of mobile Office suites versus full cloud-sync desktop environments.",
+        "body": "For true productivity, mobile apps are often stripped of essential features. Businesses investing in 'mobile-only' licenses often find users reverting to desktop versions to finish complex tasks.\n\nHybrid cloud environments, where mobile is used for consumption and desktop for creation, remain the most efficient way to deploy Microsoft 365."
+      },
+      "theres-another-alternative-for-those-mourning-google-reader": {
+        "date": "March 1, 2019",
+        "title": "There's another alternative for those mourning Google Reader",
+        "excerpt": "Exploring RSS feed alternatives to stay updated with industry news after Google Reader's shutdown.",
+        "body": "With Google Reader gone, users are looking for reliable ways to aggregate their technology feeds. Feedly and other specialized aggregators represent the next generation of content consumption.\n\nEffective news monitoring is essential for IT professionals, and choosing the right tool determines how quickly you can respond to emerging trends."
+      },
+      "why-tech-less-meetings-should-be-your-goal": {
+        "date": "March 1, 2019",
+        "title": "Why tech-less meetings should be your goal",
+        "excerpt": "How removing screens from the boardroom can lead to better decision-making and human connection.",
+        "body": "Constant notifications and laptops in meetings lead to distracted teams. 'Tech-less' meetings focus on human interaction, whiteboarding, and active listening, leading to more creative outcomes.\n\nWe encourage organizations to designate specific meeting types where devices are deposited at the door to foster absolute focus."
       }
     }
   }

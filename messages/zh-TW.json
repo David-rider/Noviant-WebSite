@@ -745,7 +745,7 @@
         { "name": "Fosun Capital", "industry": "投資" },
         { "name": "DOITT", "industry": "政府" },
         { "name": "JDRF", "industry": "非營利" },
-        { "name": "The Children’s Village", "industry": "非營利" },
+        { "name": "The Children's Village", "industry": "非營利" },
         { "name": "Genesis Investment Advisors, LLC", "industry": "金融" },
         { "name": "Planned Parenthood", "industry": "非營利" },
         { "name": "Iconix Brand Group, Inc.", "industry": "零售" },
@@ -967,6 +967,88 @@
           "智能文檔管理系統",
           "自動計費及流轉系統集成"
         ]
+      }
+    }
+  },
+  "NewsData": {
+    "articles": {
+      "welcome-to-noviant-news": {
+        "date": "2026年4月2日",
+        "title": "歡迎來到 Noviant 新聞中心——您的 IT 洞見來源",
+        "excerpt": "這裡是 Noviant 的官方新聞中心。我們將在此分享技術動態、公司公告以及行業洞見，敬請關注。",
+        "body": "歡迎來到 Noviant 新聞與洞見中心。\n\n我們創建這個空間，是為了讓您及時了解企業 IT、託管服務和 AI 基礎設施領域的最新動態——一切來自每天與這些技術打交道的團隊視角。\n\n您可以在這裡期待：\n\n• 公司公告與新服務發布\n• 由我們工程師撰寫的深度技術文章\n• 行業洞見與最佳實踐\n• 來自客戶合作的案例研究\n\n如果您對我们的任何服務有疑問，請訪問聯繫頁面。我們期待很快與您分享更多內容。"
+      },
+      "phunware-partners-with-noviant": {
+        "date": "2020年5月14日",
+        "title": "Phunware 與 Noviant 合作，為城市提供疫情應對解決方案",
+        "excerpt": "Phunware 與 Noviant 合作擴展生態系統，為醫療和政府部門提供疫情應對移動解決方案。",
+        "body": "Phunware, Inc. (NASDAQ: PHUN) 是一家為全球品牌提供產品、解決方案、數據和服務的移動端全集成企業云端平台。該公司今天宣布，已與 Noviant 合作，將 Phunware 的疫情應對解決方案帶給城市、醫療系統和小型企業。\n\nNoviant 是一家技術諮詢和託管服務公司，專注於提供安全且創新的數位基礎設施。通過此次合作，Noviant 將提供 Phunware 的 mobile-first 平台，幫助其客戶應對 COVID-19 疫情帶來的複雜挑戰，包括症狀追踪、設施准入管理以及遠程團隊溝通工具。"
+      },
+      "covid-19-resources": {
+        "date": "2020年4月1日",
+        "title": "Noviant 致力於為您提供最新的資源支持",
+        "excerpt": "Noviant 提供關鍵的 IT 和遠程工作資源，在此全球疫情期間支持企業運營。",
+        "body": "在這些不確定的時期，Noviant 致力於成為您可靠的技术合作伙伴。我們深知向遠程辦公轉型及維持系統安全的挑戰。\n\n我們整理了一系列資源，從安全 VPN 設置指南到協作工具最佳實踐，以確保您的業務保持運行且安全。我們的團隊 24/7 全天候提供服務，協助處理任何技術問題和應對此轉型所需的基础設施調整。"
+      },
+      "notice-to-clients-in-response-to-covid-19": {
+        "date": "2020年3月18日",
+        "title": "致客戶通知：應對 COVID-19 的服務調整",
+        "excerpt": "關於 Noviant 如何調整服務以在維持企業支持的同时優先考慮安全的更新。",
+        "body": "為優先保障員工和客戶的健康，Noviant 將於 2020 年 3 月 18 日起全面轉型為遠程支持運營。我們的諮詢台（Helpdesk）仍全天候運作，並且我們已提升了處理大批量遠程訪問請求的能力。\n\n現場訪問將僅限於關鍵基礎設施緊急情況。我們承諾通過安全遠程 management 工具，繼續为您提供一如既往的高水平服務。"
+      },
+      "benefits-of-windows-virtual-desktop": {
+        "date": "2020年3月2日",
+        "title": "使用 Microsoft Azure Windows 虛擬桌面的優勢",
+        "excerpt": "WVD 如何為現代職場提供安全、可擴展且適合遠程辦公的計算環境。",
+        "body": "Microsoft Azure 的 Windows 虛擬桌面 (WVD) 提供了唯一的針對 Office 365 ProPlus 優化的多會話 Windows 10 體驗。它允許企業數分鐘內就在 Azure 上部署並擴展 Windows 桌面和應用，且內置安全性和合規性。\n\n優勢包括降低硬體成本、統一管理，以及能夠從任何設備、任何地點訪問完整的桌面體驗。對於實施靈活辦公政策的企業來說，這具有劃時代的意義。"
+      },
+      "noviant-certified-for-the-iso-iec-270012013": {
+        "date": "2019年10月26日",
+        "title": "Noviant 獲得 ISO/IEC 27001:2013 認證",
+        "excerpt": "Noviant 達到信息安全管理體系的國際標準。",
+        "body": "我們自豪地宣布，Noviant 已成功獲得 ISO/IEC 27001:2013 認證。這一國際認可的标准確保了我們的資訊安全管理體系穩健且符合最高安全要求。\n\n該認證再次肯定了我們對保護客戶數據的承諾，以及在內部安全流程中持續改進的決心。"
+      },
+      "noviant-appears-in-nyc-comptrollers-video": {
+        "date": "2019年3月1日",
+        "title": "Noviant 出現在紐約市審計長的宣傳視頻中",
+        "excerpt": "Noviant 被紐約市審計長專題報導，展示對本地小型企業的技术支持。",
+        "body": "Noviant 最近出現在紐約市審計辦製作的視頻中。該視頻展示了紐約市本地企業如何利用技術實現增長和繁榮。\n\n我們的團隊很榮幸能夠代表技術領域，通過託管服務和基礎設施創新展示我們對紐約商業社區的影响。"
+      },
+      "the-era-of-the-pc-isnt-as-over-as-you-might-think": {
+        "date": "2019年3月1日",
+        "title": "PC 時代還沒像你想像的那樣終結",
+        "excerpt": "儘管移動革命如火如荼，為什麼台式電腦仍是企業生產力的基石。",
+        "body": "儘管智能手機和平板電腦興起，台式機仍是企業環境中的主要生產工具。高性能任務、複雜數據處理以及人體工程學依然青睞傳統 PC。\n\n現代基礎設施側重於如何將 PC 與雲端服務集成而非取代它，確保用戶擁有重度生產力所需的算力。"
+      },
+      "windows-8-1-unlikely-to-solve-the-os-problems": {
+        "date": "2019年3月1日",
+        "title": "Windows 8.1 不太可能解決系統原有的核心問題",
+        "excerpt": "對 Windows 8.1 以及混合操作系統設計持續面臨的挑戰進行的分析。",
+        "body": "雖然 Windows 8.1 解決了一部分用戶的 UI 投訴，但觸控優先設計與桌面生產力之間的核心張力仍然存在。企業正在權衡升級帶來的好處與潜在的培訓成本。\n\n展望未來的迭代，在現代磁貼界面與傳統桌面環境之間尋找平衡點，仍是微軟面臨的最大挑戰。"
+      },
+      "avoiding-the-e-mail-crush-following-a-vacation": {
+        "date": "2019年3月1日",
+        "title": "如何避免度假歸來後的郵件狂潮",
+        "excerpt": "度假歸來後管理爆滿收件箱的實用技巧和過濾策略。",
+        "body": "度假歸來不應被 500 封未讀郵件定義的焦慮所籠罩。通過實施高級過濾規則和安排專注時間，您可以優先處理關鍵溝通，過濾雜音。\n\n我們建議使用類別標籤和自動回覆來設定恢復工作的預期時間，讓您能夠輕鬆順暢地回歸職場。"
+      },
+      "why-office-mobile-isnt-a-good-investment": {
+        "date": "2019年3月1日",
+        "title": "為什麼 Office 移動應用並不是一筆好投資",
+        "excerpt": "對行動版 Office 套件與全雲端同步桌面環境進行的批判性評估。",
+        "body": "對於真正的生產力而言，行動應用往往被削減了核心功能。投資於“僅限行動端”授權的企業經常發現用戶會回到桌面版來完成複雜任務。\n\n混合雲端環境（行動端用於查看，桌面端用於創作）仍是部署 Microsoft 365 最有效的方式。"
+      },
+      "theres-another-alternative-for-those-mourning-google-reader": {
+        "date": "2019年3月1日",
+        "title": "給那些懷念 Google Reader 的人的另一個選擇",
+        "excerpt": "在 Google Reader 關閉後，探索 RSS 訂閱替代方案以獲取行業新聞。",
+        "body": "隨著 Google Reader 的消失，用戶正在尋找可靠的方式來聚合他們的技術信息訂閱。Feedly 和其他專業聚合器代表了內容消費的下一代形式。\n\n有效的新聞監控對 IT 專業人員至關重要，選擇正確的工具決定了您應對新興趨勢的速度。"
+      },
+      "why-tech-less-meetings-should-be-your-goal": {
+        "date": "2019年3月1日",
+        "title": "為什麼“脫離科技”的會議應該是你的目標",
+        "excerpt": "減少會議室中的屏幕如何能帶來更好的決策和人際溝通。",
+        "body": "會議中不斷的通知和筆記型電腦會導致團隊分心。“脫离科技”的會議專注於人際互動、白板討論和積極傾聽，从而產生更多創意成果。\n\n我們鼓勵組織設立特定的會議類型，在這些會議中將設備留在門外，以培養絕對的專注力。"
       }
     }
   }

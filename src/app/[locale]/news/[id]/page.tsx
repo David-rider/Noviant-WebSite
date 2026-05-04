@@ -1,6 +1,7 @@
-import { getAllArticleIds, getArticleById } from "@/data/news";
+import { getAllArticleIds, getArticleMetadataById } from "@/data/news_manifest";
 import ArticleView from "./ArticleView";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 // Required for static export: pre-generate all article pages
 export async function generateStaticParams() {
@@ -17,10 +18,13 @@ export async function generateMetadata({
     params: Promise<{ locale: string; id: string }>;
 }) {
     const { locale, id } = await params;
-    const article = getArticleById(id);
+    const article = getArticleMetadataById(id);
     if (!article) return { title: "Not Found | Noviant" };
-    const title = article.title[locale as "en" | "zh-CN" | "zh-TW"] ?? article.title.en;
-    const excerpt = article.excerpt[locale as "en" | "zh-CN" | "zh-TW"] ?? article.excerpt.en;
+    
+    const t = await getTranslations({ locale, namespace: "NewsData" });
+    const title = t(`articles.${id}.title`);
+    const excerpt = t(`articles.${id}.excerpt`);
+    
     return {
         title: `${title} | Noviant`,
         description: excerpt,
@@ -33,7 +37,7 @@ export default async function ArticlePage({
     params: Promise<{ locale: string; id: string }>;
 }) {
     const { locale, id } = await params;
-    const article = getArticleById(id);
+    const article = getArticleMetadataById(id);
     if (!article) notFound();
     return <ArticleView article={article} locale={locale} />;
 }

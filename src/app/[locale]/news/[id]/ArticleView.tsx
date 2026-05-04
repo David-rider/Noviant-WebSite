@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Play } from "lucide-react";
-import type { NewsArticle } from "@/data/news";
+import type { NewsArticleMetadata } from "@/data/news_manifest";
 
 const categoryColors: Record<string, { bg: string; text: string; dot: string }> = {
     ai:       { bg: "bg-purple-100", text: "text-purple-700", dot: "bg-purple-500" },
@@ -18,20 +18,25 @@ export default function ArticleView({
     article,
     locale,
 }: {
-    article: NewsArticle;
+    article: NewsArticleMetadata;
     locale: string;
 }) {
     const t = useTranslations("News_Page");
+    const tData = useTranslations("NewsData");
     const tNav = useTranslations("Navigation");
-    const lang = locale as "en" | "zh-CN" | "zh-TW";
     const colors = categoryColors[article.category] ?? {
         bg: "bg-slate-100", text: "text-slate-700", dot: "bg-slate-400"
     };
 
+    const title   = tData(`articles.${article.id}.title`);
+    const excerpt = tData(`articles.${article.id}.excerpt`);
+    const date    = tData(`articles.${article.id}.date`);
+    const body    = tData(`articles.${article.id}.body`);
+
     // Split body into paragraphs on double newline
-    const paragraphs = (article.body[lang] ?? article.body.en)
+    const paragraphs = body
         .split("\n\n")
-        .map((p) => p.trim())
+        .map((p: string) => p.trim())
         .filter(Boolean);
 
     return (
@@ -40,7 +45,7 @@ export default function ArticleView({
             <div className="relative h-72 md:h-96 w-full overflow-hidden bg-slate-900">
                 <img
                     src={article.image}
-                    alt={article.title[lang]}
+                    alt={title}
                     className="w-full h-full object-cover opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
@@ -63,11 +68,11 @@ export default function ArticleView({
                         {t(`categories.${article.category}`)}
                     </div>
                     <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-3xl">
-                        {article.title[lang] ?? article.title.en}
+                        {title}
                     </h1>
                     <div className="flex items-center gap-2 mt-4 text-sm text-white/60">
                         <Calendar className="w-4 h-4" />
-                        {article.date[lang] ?? article.date.en}
+                        {date}
                     </div>
                 </div>
             </div>
@@ -83,7 +88,7 @@ export default function ArticleView({
                     >
                         {/* Excerpt lead */}
                         <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed border-l-4 border-blue-500 pl-6 mb-10">
-                            {article.excerpt[lang] ?? article.excerpt.en}
+                            {excerpt}
                         </p>
 
                         {/* Body paragraphs */}

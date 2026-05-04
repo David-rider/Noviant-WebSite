@@ -23,11 +23,7 @@ export default function OurClientsView({
     const hasFeatures = t.has("features.0");
 
     // Customers list handling
-    // next-intl doesn't easily iterate over objects in a generic way without raw, 
-    // but we can use a known count or just assume the structure.
-    // For simplicity, we'll try to get the raw array if available or just hardcode the count if needed.
-    // However, the best way in next-intl for lists is often to use the range approach.
-    const customerIndices = Array.from({ length: 24 }, (_, i) => i);
+    const customers = t.raw("customers") as Array<{ name: string; industry: string }>;
 
     return (
         <div className="min-h-screen bg-[#f8fafc]">
@@ -90,8 +86,7 @@ export default function OurClientsView({
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {customerIndices.map((i) => {
-                            if (!t.has(`customers.${i}.name`)) return null;
+                        {customers.map((customer, i) => {
                             return (
                                 <motion.div
                                     key={i}
@@ -106,12 +101,12 @@ export default function OurClientsView({
                                             <Building2 className="w-5 h-5" />
                                         </div>
                                         <h3 className="font-bold text-slate-900 group-hover:text-blue-700 transition-colors">
-                                            {t(`customers.${i}.name`)}
+                                            {customer.name}
                                         </h3>
                                     </div>
                                     <div className="flex items-center gap-2 text-sm text-slate-500 pl-14">
                                         <Globe className="w-4 h-4 opacity-50" />
-                                        <span>{t(`customers.${i}.industry`)}</span>
+                                        <span>{customer.industry}</span>
                                     </div>
                                 </motion.div>
                             );
