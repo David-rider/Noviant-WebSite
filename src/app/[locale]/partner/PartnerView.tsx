@@ -84,6 +84,7 @@ export default function PartnersPage() {
                                 <img
                                     src={partner.logo}
                                     alt={partner.name}
+                                    loading="lazy"
                                     className="max-w-[85%] max-h-[70%] object-contain transition-all duration-500 group-hover:scale-110"
                                     onError={(e) => {
                                         const slug = (partner as unknown as { slug: string }).slug || partner.name.toLowerCase().replace(/\s/g, '');

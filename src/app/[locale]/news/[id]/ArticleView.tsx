@@ -46,6 +46,7 @@ export default function ArticleView({
                 <img
                     src={article.image}
                     alt={title}
+                    loading="eager"
                     className="w-full h-full object-cover opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />

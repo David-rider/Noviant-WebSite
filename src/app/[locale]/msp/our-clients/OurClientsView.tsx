@@ -129,6 +129,7 @@ export default function OurClientsView({
                             <img
                                 src={imageSrc}
                                 alt={t("title")}
+                                loading="lazy"
                                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent mix-blend-multiply" />

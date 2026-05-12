@@ -6,6 +6,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -93,6 +94,12 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} suppressHydrationWarning>
             <head>
+                <meta name="referrer" content="strict-origin-when-cross-origin" />
+                <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+                <meta
+                    httpEquiv="Content-Security-Policy"
+                    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';"
+                />
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -112,6 +119,7 @@ export default async function LocaleLayout({
                             {children}
                         </main>
                         <Footer />
+                        <BackToTop />
                     </NextIntlClientProvider>
                 </ThemeProvider>
             </body>

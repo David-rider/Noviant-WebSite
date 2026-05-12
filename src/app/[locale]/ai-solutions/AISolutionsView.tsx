@@ -86,6 +86,7 @@ export default function AISolutionsPage() {
                                                 "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg"
                                 }
                                 alt={t(`sections.${section.id}.title`)}
+                                loading="lazy"
                                 className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-all duration-1000"
                             />
                             <div className={`absolute inset-0 bg-gradient-to-br ${section.imgGradient} opacity-40 mix-blend-overlay`} />

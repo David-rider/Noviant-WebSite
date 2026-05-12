@@ -11,7 +11,7 @@ export default function ContactPage() {
     const footerT = useTranslations("Footer");
     const locale = useLocale();
 
-    const mapLanguage = locale === "zh" ? "zh-CN" : "en";
+    const mapLanguage = locale.startsWith("zh") ? "zh-CN" : "en";
 
     // Form state
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -122,6 +122,7 @@ export default function ContactPage() {
                         <img
                             src="/images/unsplash/photo-1517245386807-bb43f82c33c4.jpg"
                             alt="Our Mission"
+                            loading="lazy"
                             className="absolute inset-0 w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-blue-900/20 mix-blend-overlay"></div>
@@ -215,6 +216,7 @@ export default function ContactPage() {
                                     allowFullScreen
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
+                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                                     className="filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
                                 />
                                 <div className="p-4 bg-zinc-50 dark:bg-zinc-900/80 border-t border-zinc-200 dark:border-zinc-800 flex justify-between items-center">
@@ -264,6 +266,7 @@ export default function ContactPage() {
                                             name="name"
                                             required
                                             type="text"
+                                            maxLength={100}
                                             className="w-full px-4 py-3 rounded-xl bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white"
                                         />
                                     </div>
@@ -275,6 +278,7 @@ export default function ContactPage() {
                                             id="company"
                                             name="company"
                                             type="text"
+                                            maxLength={150}
                                             className="w-full px-4 py-3 rounded-xl bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white"
                                         />
                                     </div>
@@ -290,6 +294,7 @@ export default function ContactPage() {
                                             name="email"
                                             required
                                             type="email"
+                                            maxLength={254}
                                             className="w-full px-4 py-3 rounded-xl bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white"
                                         />
                                     </div>
@@ -301,6 +306,7 @@ export default function ContactPage() {
                                             id="phone"
                                             name="phone"
                                             type="tel"
+                                            maxLength={30}
                                             className="w-full px-4 py-3 rounded-xl bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white"
                                         />
                                     </div>
@@ -349,6 +355,7 @@ export default function ContactPage() {
                                         id="message"
                                         name="message"
                                         rows={4}
+                                        maxLength={2000}
                                         className="w-full px-4 py-3 rounded-xl bg-white dark:bg-black border border-zinc-200 dark:border-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-zinc-900 dark:text-white resize-none"
                                     />
                                 </div>
