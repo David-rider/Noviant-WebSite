@@ -36,7 +36,7 @@ svg {
 
 /* Minimalist Tech Utilities */
 .cyber-grid {
-  /* Class signature kept for compatibility, content removed to eliminate noise */
+  display: block; /* compatibility stub — no visual effect */
 }
 
 .glass-morphism {
