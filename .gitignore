@@ -45,3 +45,27 @@ next-env.d.ts
 
 # claude code worktrees & internal data
 .claude/
+
+# temporary work directories
+tmp_*/
+tmp_zip_check/
+
+# python virtual environments
+.venv/
+venv/
+
+# one-off audit / generate scripts dropped in root
+audit.js
+check_i18n.js
+generate_logos.js
+parse_form.py
+
+# build & lint result dumps
+build-results*.txt
+eslint-results*.json
+eslint_audit.json
+lint_*.txt
+
+# raw HTML snapshots
+noviant_production_home.html
+partners_raw.html
