@@ -10,5 +10,21 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "files.exclude": {
+    "node_modules": true,
+    ".next": true,
+    "out": true,
+    ".venv": true,
+    ".claude": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    ".next": true,
+    "out": true,
+    ".venv": true,
+    ".claude": true
   }
 }
