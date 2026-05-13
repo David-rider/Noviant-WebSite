@@ -4,7 +4,8 @@ import PageHero from "@/components/PageHero";
 import { useTranslations, useLocale } from "next-intl";
 import { MapPin, Phone, Send, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function ContactPage() {
     const t = useTranslations("Contact_Page");
@@ -17,6 +18,8 @@ export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+    const captchaRef = useRef<HCaptcha>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -29,6 +32,11 @@ export default function ContactPage() {
 
         const industryLabel = t(`form.industries.${data.industry}`);
         const solutionLabel = t(`form.solutions.${data.solution}`);
+
+        if (!captchaToken) {
+            setIsSubmitting(false);
+            return;
+        }
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -49,16 +57,23 @@ export default function ContactPage() {
                     industry: industryLabel,
                     solution: solutionLabel,
                     message: String(data.message || t("form.no_message")),
+                    "h-captcha-response": captchaToken,
                 }),
             });
             const result = await response.json();
             if (result.success) {
                 setIsSent(true);
+                captchaRef.current?.resetCaptcha();
+                setCaptchaToken(null);
             } else {
                 setIsError(true);
+                captchaRef.current?.resetCaptcha();
+                setCaptchaToken(null);
             }
         } catch {
             setIsError(true);
+            captchaRef.current?.resetCaptcha();
+            setCaptchaToken(null);
         } finally {
             setIsSubmitting(false);
         }
@@ -383,9 +398,16 @@ export default function ContactPage() {
                                     />
                                 </div>
 
+                                <HCaptcha
+                                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be8"
+                                    onVerify={(token) => setCaptchaToken(token)}
+                                    onExpire={() => setCaptchaToken(null)}
+                                    ref={captchaRef}
+                                />
+
                                 <button
                                     type="submit"
-                                    disabled={isSubmitting}
+                                    disabled={isSubmitting || !captchaToken}
                                     className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                                 >
                                     {isSubmitting ? t("form.sending") : t("form.submit")}
