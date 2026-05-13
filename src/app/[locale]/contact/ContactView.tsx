@@ -16,10 +16,12 @@ export default function ContactPage() {
     // Form state
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSent, setIsSent] = useState(false);
+    const [isError, setIsError] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setIsError(false);
 
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
@@ -28,33 +30,38 @@ export default function ContactPage() {
         const industryLabel = t(`form.industries.${data.industry}`);
         const solutionLabel = t(`form.solutions.${data.solution}`);
 
-        // Construct email body
-        const subject = encodeURIComponent(
-            t("form.email_subject", {
-                name: String(data.name),
-                company: String(data.company || 'N/A')
-            })
-        );
-        const body = encodeURIComponent(
-            t("form.email_body", {
-                name: String(data.name),
-                email: String(data.email),
-                company: String(data.company || 'N/A'),
-                phone: String(data.phone || 'N/A'),
-                industry: industryLabel,
-                solution: solutionLabel,
-                message: String(data.message || t("form.no_message"))
-            })
-        );
-
-        // Open local mail client
-        window.location.href = `mailto:am@noviant.com?subject=${subject}&body=${body}`;
-
-        // Give some visual feedback
-        setTimeout(() => {
-            setIsSent(true);
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    access_key: "b01ab499-79cd-4eb7-b136-9da19950aef8",
+                    subject: t("form.email_subject", {
+                        name: String(data.name),
+                        company: String(data.company || "N/A"),
+                    }),
+                    from_name: String(data.name),
+                    replyto: String(data.email),
+                    name: String(data.name),
+                    email: String(data.email),
+                    company: String(data.company || "N/A"),
+                    phone: String(data.phone || "N/A"),
+                    industry: industryLabel,
+                    solution: solutionLabel,
+                    message: String(data.message || t("form.no_message")),
+                }),
+            });
+            const result = await response.json();
+            if (result.success) {
+                setIsSent(true);
+            } else {
+                setIsError(true);
+            }
+        } catch {
+            setIsError(true);
+        } finally {
             setIsSubmitting(false);
-        }, 500);
+        }
     };
 
     const industries = [
@@ -253,6 +260,22 @@ export default function ContactPage() {
                                 <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">
                                     {t("form.success")}
                                 </h3>
+                            </div>
+                        ) : isError ? (
+                            <div className="h-full flex flex-col items-center justify-center text-center py-12">
+                                <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center text-red-600 mb-6">
+                                    <Send className="w-8 h-8" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-2">
+                                    {t("form.error_title")}
+                                </h3>
+                                <p className="text-zinc-500 dark:text-zinc-400 mb-6">{t("form.error_desc")}</p>
+                                <button
+                                    onClick={() => setIsError(false)}
+                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-colors"
+                                >
+                                    {t("form.retry")}
+                                </button>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-4">
