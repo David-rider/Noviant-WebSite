@@ -39,17 +39,14 @@ export default function ContactPage() {
         }
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch("https://formspree.io/f/xbdwvgow", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { "Content-Type": "application/json", "Accept": "application/json" },
                 body: JSON.stringify({
-                    access_key: "b01ab499-79cd-4eb7-b136-9da19950aef8",
                     subject: t("form.email_subject", {
                         name: String(data.name),
                         company: String(data.company || "N/A"),
                     }),
-                    from_name: String(data.name),
-                    replyto: String(data.email),
                     name: String(data.name),
                     email: String(data.email),
                     company: String(data.company || "N/A"),
@@ -60,7 +57,7 @@ export default function ContactPage() {
                 }),
             });
             const result = await response.json();
-            if (result.success) {
+            if (result.ok) {
                 setIsSent(true);
                 captchaRef.current?.resetCaptcha();
                 setCaptchaToken(null);
