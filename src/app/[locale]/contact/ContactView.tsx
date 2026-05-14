@@ -57,7 +57,6 @@ export default function ContactPage() {
                     industry: industryLabel,
                     solution: solutionLabel,
                     message: String(data.message || t("form.no_message")),
-                    "h-captcha-response": captchaToken,
                 }),
             });
             const result = await response.json();
