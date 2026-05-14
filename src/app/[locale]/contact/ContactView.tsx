@@ -44,7 +44,6 @@ export default function ContactPage() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     access_key: "b01ab499-79cd-4eb7-b136-9da19950aef8",
-                    to: "houhuifeng1257@gmail.com",
                     subject: t("form.email_subject", {
                         name: String(data.name),
                         company: String(data.company || "N/A"),
