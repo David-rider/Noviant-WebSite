@@ -49,7 +49,11 @@ export default function Navbar() {
     const navLinks = [
         { href: "/partner", label: t("partner") },
         { href: "/news", label: t("news") },
-        { href: "/contact", label: t("contact") },
+    ];
+
+    const contactLinks = [
+        { href: "/contact", label: t("contact"), external: false },
+        { href: "https://na.myconnectwise.net/support/index.htm?company=noviant", label: t("client_login"), external: true },
     ];
 
     return (
@@ -112,6 +116,28 @@ export default function Navbar() {
                                 {link.label}
                             </Link>
                         ))}
+
+                        {/* Contact dropdown */}
+                        <div className="relative group">
+                            <button className="px-4 py-2 text-sm font-bold tracking-tight text-slate-700 hover:text-blue-600 transition-colors flex items-center gap-1 focus:outline-none">
+                                {t("contact")} <ChevronDown className="w-4 h-4" />
+                            </button>
+                            <div className="absolute top-full right-0 mt-2 w-48 bg-white border border-slate-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col py-2 overflow-hidden">
+                                {contactLinks.map((link) =>
+                                    link.external ? (
+                                        <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                                            className="px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 transition-colors">
+                                            {link.label}
+                                        </a>
+                                    ) : (
+                                        <Link key={link.href} href={link.href}
+                                            className="px-4 py-2.5 text-sm font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 transition-colors">
+                                            {link.label}
+                                        </Link>
+                                    )
+                                )}
+                            </div>
+                        </div>
 
                         <div className="h-4 w-px bg-slate-200 mx-4" />
                         <LanguageSwitcher />
@@ -203,6 +229,24 @@ export default function Navbar() {
                                         </Link>
                                     ))}
                                 </div>
+
+                                {/* Contact accordion */}
+                                <MobileAccordion label={t("contact")}>
+                                    {contactLinks.map((link) =>
+                                        link.external ? (
+                                            <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer"
+                                                onClick={() => setIsOpen(false)}
+                                                className="block py-2.5 px-3 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                                                {link.label}
+                                            </a>
+                                        ) : (
+                                            <Link key={link.href} href={link.href} onClick={() => setIsOpen(false)}
+                                                className="block py-2.5 px-3 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                                                {link.label}
+                                            </Link>
+                                        )
+                                    )}
+                                </MobileAccordion>
                             </nav>
 
                             {/* Drawer footer — language switcher pinned to bottom */}
