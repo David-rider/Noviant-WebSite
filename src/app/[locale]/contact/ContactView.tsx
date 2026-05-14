@@ -400,7 +400,7 @@ export default function ContactPage() {
                                 </div>
 
                                 <HCaptcha
-                                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be8"
+                                    sitekey="582aa408-9ffa-46fe-8ee8-44caab1eaf72"
                                     onVerify={(token) => setCaptchaToken(token)}
                                     onExpire={() => setCaptchaToken(null)}
                                     ref={captchaRef}
