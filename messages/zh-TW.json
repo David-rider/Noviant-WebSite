@@ -317,57 +317,7 @@
       "ai": "人工智慧",
       "cloud": "雲與基礎設施"
     },
-    "watch_video": "觀看視頻",
-    "articles": [
-      {
-        "id": "1",
-        "category": "ai",
-        "date": "2026年4月1日",
-        "title": "Noviant 推出面向企業用戶的下一代 AI 基礎設施平台",
-        "excerpt": "我們最新的 GPU 集群解決方案提供比上一代快 3 倍的 LLM 推理速度，專為金融服務和醫療機構打造。",
-        "image": "/images/unsplash/photo-1620712943543-bcc4688e7485.jpg"
-      },
-      {
-        "id": "2",
-        "category": "security",
-        "date": "2026年3月25日",
-        "title": "零信任架構：紐約企業為何刻不容緩？",
-        "excerpt": "2026年第一季度，針對中小企業的網路威脅增加了43%。Noviant 的 vCISO 團隊深度解析每家企業現在必須採取的關鍵步驟。",
-        "image": "/images/unsplash/photo-1555949963-ff9fe0c870eb.jpg"
-      },
-      {
-        "id": "3",
-        "category": "cloud",
-        "date": "2026年3月18日",
-        "title": "真正有效的混合雲策略：2026年實戰指南",
-        "excerpt": "多雲的複雜性是真實存在的。我們的基礎設施工程師分享了本季度完成的三次成功混合雲遷移背後的藍圖。",
-        "image": "/images/unsplash/photo-1544197150-b99a580bb7a8.jpg"
-      },
-      {
-        "id": "4",
-        "category": "company",
-        "date": "2026年3月10日",
-        "title": "Noviant 擴展託管 IT 服務，深入佈局醫療健康領域",
-        "excerpt": "我們非常自豪地宣布，符合 HIPAA 標準的託管 IT 套餐現已為三州地區的醫療實踐機構提供服務。",
-        "image": "/images/unsplash/photo-1551434678-e076c223a692.jpg"
-      },
-      {
-        "id": "5",
-        "category": "industry",
-        "date": "2026年2月28日",
-        "title": "2026年企業 IT 現狀：塑造未來一年的關鍵趨勢",
-        "excerpt": "從多智能體 AI 工作流到主權雲法規要求——Noviant 年度技術展望，洞察正在重塑企業 IT 格局的核心力量。",
-        "image": "/images/unsplash/photo-1504384308090-c894fdcc538d.jpg"
-      },
-      {
-        "id": "6",
-        "category": "ai",
-        "date": "2026年2月15日",
-        "title": "使用大語言模型自動化文檔處理：一個真實的案例研究",
-        "excerpt": "一家中型金融公司如何利用 Noviant 基於 AWS Bedrock 構建的智能文檔處理流水線，將人工文件審查時間減少了 80%。",
-        "image": "/images/unsplash/photo-1451187580459-43490279c0fa.jpg"
-      }
-    ]
+    "watch_video": "觀看視頻"
   },
   "Footer": {
     "address": "紐約百老匯大道1250號36樓，郵編 10001",
@@ -732,30 +682,102 @@
       "desc": "自從採用 Noviant 的支持服務以來，最大的好處就是易於使用以及帶來的安心感。",
       "representative_title": "代表性客戶",
       "customers": [
-        { "name": "Actavis, Inc.", "industry": "醫藥" },
-        { "name": "NYC Criminal Justice Agency", "industry": "執法" },
-        { "name": "Baosteel America", "industry": "工業" },
-        { "name": "NYC Police Department", "industry": "安防" },
-        { "name": "Cahill Gordon & Reindel, LLP", "industry": "法律" },
-        { "name": "NYS Financial Control Board", "industry": "監管" },
-        { "name": "CBRE American Realty Capital", "industry": "房地產" },
-        { "name": "Oscar De La Renta", "industry": "時尚" },
-        { "name": "China Unicom Operations, LTD", "industry": "電信" },
-        { "name": "Panama Maritime Authority", "industry": "國際" },
-        { "name": "Fosun Capital", "industry": "投資" },
-        { "name": "DOITT", "industry": "政府" },
-        { "name": "JDRF", "industry": "非營利" },
-        { "name": "The Children's Village", "industry": "非營利" },
-        { "name": "Genesis Investment Advisors, LLC", "industry": "金融" },
-        { "name": "Planned Parenthood", "industry": "非營利" },
-        { "name": "Iconix Brand Group, Inc.", "industry": "零售" },
-        { "name": "Playwrights Horizon, Inc.", "industry": "藝術與文化" },
-        { "name": "LGBT Community Center", "industry": "多元化" },
-        { "name": "Central Bank of Norway", "industry": "銀行" },
-        { "name": "Malayan Bank Berhad", "industry": "投資銀行" },
-        { "name": "MTA", "industry": "交通" },
-        { "name": "SUNY Down State Medical Center", "industry": "醫療保健" },
-        { "name": "ICBC (USA) Inc.", "industry": "銀行" }
+        {
+          "name": "Actavis, Inc.",
+          "industry": "醫藥"
+        },
+        {
+          "name": "NYC Criminal Justice Agency",
+          "industry": "執法"
+        },
+        {
+          "name": "Baosteel America",
+          "industry": "工業"
+        },
+        {
+          "name": "NYC Police Department",
+          "industry": "安防"
+        },
+        {
+          "name": "Cahill Gordon & Reindel, LLP",
+          "industry": "法律"
+        },
+        {
+          "name": "NYS Financial Control Board",
+          "industry": "監管"
+        },
+        {
+          "name": "CBRE American Realty Capital",
+          "industry": "房地產"
+        },
+        {
+          "name": "Oscar De La Renta",
+          "industry": "時尚"
+        },
+        {
+          "name": "China Unicom Operations, LTD",
+          "industry": "電信"
+        },
+        {
+          "name": "Panama Maritime Authority",
+          "industry": "國際"
+        },
+        {
+          "name": "Fosun Capital",
+          "industry": "投資"
+        },
+        {
+          "name": "DOITT",
+          "industry": "政府"
+        },
+        {
+          "name": "JDRF",
+          "industry": "非營利"
+        },
+        {
+          "name": "The Children's Village",
+          "industry": "非營利"
+        },
+        {
+          "name": "Genesis Investment Advisors, LLC",
+          "industry": "金融"
+        },
+        {
+          "name": "Planned Parenthood",
+          "industry": "非營利"
+        },
+        {
+          "name": "Iconix Brand Group, Inc.",
+          "industry": "零售"
+        },
+        {
+          "name": "Playwrights Horizon, Inc.",
+          "industry": "藝術與文化"
+        },
+        {
+          "name": "LGBT Community Center",
+          "industry": "多元化"
+        },
+        {
+          "name": "Central Bank of Norway",
+          "industry": "銀行"
+        },
+        {
+          "name": "Malayan Bank Berhad",
+          "industry": "投資銀行"
+        },
+        {
+          "name": "MTA",
+          "industry": "交通"
+        },
+        {
+          "name": "SUNY Down State Medical Center",
+          "industry": "醫療保健"
+        },
+        {
+          "name": "ICBC (USA) Inc.",
+          "industry": "銀行"
+        }
       ],
       "features": [
         "無縫且高效的 VDI（虛擬桌面）和遠程工作環境部署。",
