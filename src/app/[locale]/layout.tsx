@@ -94,6 +94,9 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} suppressHydrationWarning>
             <head>
+                {/* Website designed and developed by Apexzone | https://www.apexzone.xyz/ */}
+                <meta name="designer" content="Apexzone" />
+                <meta name="developer" content="Apexzone | https://www.apexzone.xyz/" />
                 <meta name="referrer" content="strict-origin-when-cross-origin" />
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta
