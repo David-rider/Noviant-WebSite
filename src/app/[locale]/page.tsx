@@ -3,6 +3,30 @@ import ServicesSection from "@/components/ServicesSection";
 import IndustrySlider from "@/components/IndustrySlider";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+    const { locale } = await params;
+    return {
+        title: locale.startsWith('zh')
+            ? (locale === 'zh-TW' ? 'Noviant | 紐約企業ICT與MSP託管服務 | AI與數位孿生解決方案' : 'Noviant | 纽约企业ICT与MSP托管服务 | AI与数字孪生解决方案')
+            : 'Noviant | Enterprise ICT & MSP Solutions in New York | AI & Digital Twin',
+        description: locale.startsWith('zh')
+            ? (locale === 'zh-TW' ? '紐約頂級IT託管服務商(MSP)與企業ICT顧問公司。專注於數位轉型、AI人工智慧整合與數位孿生解決方案。' : '纽约顶级IT托管服务商(MSP)与企业ICT顾问公司。专注于数字化转型、AI人工智能集成与数字孪生解决方案。')
+            : 'Top-tier IT Managed Service Provider (MSP) and enterprise ICT consulting in New York. We lead in digital transformation, AI integration, and Digital Twin solutions.',
+        openGraph: {
+            title: locale.startsWith('zh')
+                ? (locale === 'zh-TW' ? 'Noviant | 紐約企業ICT與MSP託管服務 | AI與數位孿生解決方案' : 'Noviant | 纽约企业ICT与MSP托管服务 | AI与数字孪生解决方案')
+                : 'Noviant | Enterprise ICT & MSP Solutions in New York | AI & Digital Twin',
+            description: locale.startsWith('zh')
+                ? (locale === 'zh-TW' ? '紐約頂級IT託管服務商(MSP)與企業ICT顧問公司。專注於數位轉型、AI人工智慧整合與數位孿生解決方案。' : '纽约顶级IT托管服务商(MSP)与企业ICT顾问公司。专注于数字化转型、AI人工智能集成与数字孪生解决方案。')
+                : 'Top-tier IT Managed Service Provider (MSP) and enterprise ICT consulting in New York. We lead in digital transformation, AI integration, and Digital Twin solutions.',
+            url: 'https://www.noviant.com',
+            siteName: 'Noviant',
+            locale: locale,
+            type: 'website',
+        },
+    };
+}
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);

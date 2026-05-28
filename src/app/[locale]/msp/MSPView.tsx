@@ -19,6 +19,16 @@ export default function MSPPage() {
 
     return (
         <div className="min-h-screen bg-[#f8fafc]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "What is a Managed Service Provider (MSP)?", "acceptedAnswer": { "@type": "Answer", "text": "A Managed Service Provider (MSP) is a company that remotely manages a customer's IT infrastructure and end-user systems. Noviant provides proactive 24/7 monitoring, helpdesk support, cybersecurity, cloud management, and more for New York businesses." } },
+                    { "@type": "Question", "name": "How much does managed IT services cost in New York?", "acceptedAnswer": { "@type": "Answer", "text": "Managed IT services pricing in New York typically ranges from $100 to $250 per user per month depending on the scope of services. Noviant offers customized plans tailored to your business size and needs." } },
+                    { "@type": "Question", "name": "What industries does Noviant serve in New York?", "acceptedAnswer": { "@type": "Answer", "text": "Noviant provides managed IT services across multiple industries in New York including banking, financial services, healthcare, education, government, retail, fashion, and nonprofit organizations." } },
+                    { "@type": "Question", "name": "Does Noviant provide 24/7 IT support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Noviant provides 24/7 IT helpdesk and monitoring services. Our team is available around the clock to respond to IT incidents and ensure your business systems remain operational." } }
+                ]
+            }) }} />
             <PageHero
                 title={t("title")}
                 subtitle={t("subtitle")}

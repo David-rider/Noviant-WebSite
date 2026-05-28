@@ -37,6 +37,15 @@ export default function AISolutionsPage() {
 
     return (
         <div className="min-h-screen bg-white dark:bg-black">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "What AI solutions does Noviant offer for enterprises?", "acceptedAnswer": { "@type": "Answer", "text": "Noviant offers enterprise AI solutions including process automation, predictive analytics, machine learning integration, natural language processing, AI-powered cybersecurity, and Digital Twin implementations for New York businesses." } },
+                    { "@type": "Question", "name": "How can AI improve my business operations?", "acceptedAnswer": { "@type": "Answer", "text": "AI can automate repetitive tasks, analyze large datasets for actionable insights, predict equipment failures, enhance customer service with intelligent chatbots, and improve security threat detection — resulting in significant cost savings and efficiency gains." } },
+                    { "@type": "Question", "name": "What is a Digital Twin and how does Noviant implement it?", "acceptedAnswer": { "@type": "Answer", "text": "A Digital Twin is a virtual replica of a physical system, process, or facility. Noviant designs and deploys Digital Twin solutions for real estate and MSP environments, enabling real-time monitoring, simulation, and predictive maintenance." } }
+                ]
+            }) }} />
             <PageHero
                 title={t("hero_title")}
                 subtitle={t("hero_subtitle")}
