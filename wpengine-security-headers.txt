@@ -1,0 +1,69 @@
+WP Engine -- HTTP Security Headers Configuration
+================================================
+Updated: 2026-05-14 (switched form service from Web3Forms to Formspree)
+
+Since this site is a static export deployed to WP Engine (Nginx), HTTP security
+headers must be configured at the hosting platform level, not in Next.js.
+
+
+Where to configure
+------------------
+WP Engine Admin Portal -> Your Environment -> Redirects / Custom Nginx Rules
+(exact menu path depends on your plan; contact WP Engine support if needed)
+
+
+Headers to add
+--------------
+
+Option A -- WP Engine Custom Nginx Snippet
+If your WP Engine plan supports custom Nginx configuration, request support to
+apply this:
+
+add_header X-Frame-Options "SAMEORIGIN" always;
+add_header X-Content-Type-Options "nosniff" always;
+add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;
+add_header Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()" always;
+add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://js.hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://newassets.hcaptcha.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://newassets.hcaptcha.com https://*.hcaptcha.com; connect-src 'self' https://formspree.io https://hcaptcha.com https://*.hcaptcha.com; object-src 'none'; base-uri 'self';" always;
+
+
+Option B -- CDN/WAF Layer (Recommended)
+If you use Cloudflare or another CDN in front of WP Engine, add these as
+Transform Rules -> Response Headers in the CDN dashboard. This is easier and
+does not require WP Engine support involvement.
+
+
+What these headers do
+---------------------
+Header                          Purpose
+------                          -------
+X-Frame-Options: SAMEORIGIN     Prevents third-party sites from embedding
+                                Noviant pages in iframes (Clickjacking protection)
+X-Content-Type-Options: nosniff Stops browsers from guessing content types
+                                (MIME sniffing attacks)
+Referrer-Policy                 Limits what URL info is sent to third parties
+Strict-Transport-Security       Forces HTTPS; prevents SSL-stripping attacks
+Permissions-Policy              Disables unused browser features (camera, mic, etc.)
+Content-Security-Policy         Controls which external resources the browser
+                                may load; restricts XSS attack surface
+
+
+CSP external resources allowed
+-------------------------------
+- https://js.hcaptcha.com, https://*.hcaptcha.com  (hCaptcha spam protection)
+- https://fonts.googleapis.com, https://fonts.gstatic.com  (Google Fonts)
+- https://newassets.hcaptcha.com  (hCaptcha styles)
+- https://www.google.com, https://newassets.hcaptcha.com  (Google Maps iframe + hCaptcha iframe)
+- https://formspree.io  (contact form submission API)
+
+
+Notes
+-----
+- X-Frame-Options is set to SAMEORIGIN (allows self-embedding if needed).
+  Change to DENY if you are certain no Noviant pages are embedded within
+  other Noviant pages.
+- HSTS preload requires submission to https://hstspreload.org after applying.
+- CSP is also partially applied via HTML <meta> tags in the site code.
+  Server-level CSP headers (this file) provide stronger coverage because
+  meta CSP cannot enforce frame-ancestors; only HTTP headers can.
+- connect-src was updated from api.web3forms.com to formspree.io on 2026-05-14.
