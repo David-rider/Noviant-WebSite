@@ -9,10 +9,19 @@ export interface NewsArticleMetadata {
     id: string;
     category: "ai" | "security" | "cloud" | "company" | "industry";
     image: string;
+    contentImage?: string;
+    contentImageCaption?: string;
     videoUrl?: string;
 }
 
 export const newsArticlesMetadata: NewsArticleMetadata[] = [
+    {
+        id: "noviant-liquidedge-ai-pod-launch",
+        category: "ai",
+        image: "/images/ai-solutions/liquidedge-ai-pod.jpg",
+        contentImage: "/images/ai-solutions/liquidedge-ai-pod.jpg",
+        contentImageCaption: "LiquidEdge AI POD — 40-ft Liquid-Cooled AI Datacenter Container",
+    },
     {
         id: "welcome-to-noviant-news",
         category: "company",

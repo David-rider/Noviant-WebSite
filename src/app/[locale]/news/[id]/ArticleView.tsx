@@ -92,6 +92,22 @@ export default function ArticleView({
                             {excerpt}
                         </p>
 
+                        {/* Inline product image */}
+                        {article.contentImage && (
+                            <div className="mb-10 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                                <img
+                                    src={article.contentImage}
+                                    alt={article.contentImageCaption ?? title}
+                                    className="w-full object-cover max-h-[420px]"
+                                />
+                                {article.contentImageCaption && (
+                                    <p className="text-xs text-slate-400 text-center py-2 px-4 bg-slate-50">
+                                        {article.contentImageCaption}
+                                    </p>
+                                )}
+                            </div>
+                        )}
+
                         {/* Body paragraphs */}
                         <div className="prose prose-slate max-w-none space-y-5">
                             {paragraphs.map((para, idx) => {
