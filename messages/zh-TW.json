@@ -91,6 +91,47 @@
           "自定義企業私有大模型微調"
         ]
       }
+    },
+    "liquidedge": {
+      "badge": "合作產品",
+      "title": "LiquidEdge AI POD",
+      "subtitle": "液冷一體化智算集裝箱",
+      "tagline": "工廠預製 · 即插即用 · 八週交付上線",
+      "description": "專為AI時代而設計，LiquidEdge AI POD將企業級GPU算力整合於40尺北美標準集裝箱中。冷板直接液冷技術實現年均PUE≤1.15——無需漫長土建，有電即可部署，工業園區、棕地、能源現場均可落地。",
+      "specs": [
+        { "label": "年均PUE", "value": "≤ 1.15" },
+        { "label": "交付週期", "value": "8週" },
+        { "label": "工作溫度", "value": "-40°C 至 +50°C" },
+        { "label": "防護等級", "value": "IP55 / 40尺ISO標箱" },
+        { "label": "IT功率範圍", "value": "44–200 kW" },
+        { "label": "GPU支援", "value": "GB200 / H100 / H200 / B200 / RTX 5090 / MI300X" }
+      ],
+      "tiers_title": "三檔產品 · 同一架構",
+      "tiers": [
+        {
+          "name": "LE-44",
+          "label": "單櫃 · 邊緣",
+          "power": "44 kW IT",
+          "gpus": "64× RTX 5090 · 32× H100/H200 · 24× B200",
+          "use": "推理 · 微調 · 邊緣AI"
+        },
+        {
+          "name": "LE-88",
+          "label": "雙櫃 · 主流",
+          "power": "88 kW IT",
+          "gpus": "128× RTX 5090 · 64× H100/H200 · 48× B200",
+          "use": "Neocloud · GPU即服務"
+        },
+        {
+          "name": "LE-200",
+          "label": "四櫃 · 重載",
+          "power": "200 kW IT",
+          "gpus": "1× GB200 NVL72 (72塊GPU) · 256× RTX 5090",
+          "use": "大模型訓練 · 超大規模過渡產能"
+        }
+      ],
+      "cta": "預約諮詢",
+      "compliance": "北美合規認證：UL 891 · NEC 2023 · NFPA 75/76 · ASHRAE TC 9.9 · FCC Part 15 · CSA C22.2"
     }
   },
   "CyberSecurity": {

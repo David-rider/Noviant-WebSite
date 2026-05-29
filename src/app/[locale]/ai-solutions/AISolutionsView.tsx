@@ -2,8 +2,9 @@
 
 import PageHero from "@/components/PageHero";
 import { useTranslations } from "next-intl";
-import { Server, Database, Cable, CheckCircle2, Cpu } from "lucide-react";
+import { Server, Database, Cable, CheckCircle2, Cpu, Zap, Thermometer, Box, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "@/i18n/routing";
 
 export default function AISolutionsPage() {
     const t = useTranslations("AI_Page");
@@ -112,6 +113,92 @@ export default function AISolutionsPage() {
                     </motion.div>
                 ))}
             </div>
+
+            {/* ── LiquidEdge AI POD Section ── */}
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="border-t border-zinc-200 dark:border-zinc-800"
+            >
+                <div className="container mx-auto px-4 py-24 space-y-16">
+
+                    {/* Header */}
+                    <div className="text-center space-y-4 max-w-3xl mx-auto">
+                        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-700">
+                            {t("liquidedge.badge")}
+                        </span>
+                        <h2 className="text-4xl md:text-5xl font-black text-zinc-900 dark:text-white">
+                            {t("liquidedge.title")}
+                        </h2>
+                        <p className="text-xl font-semibold text-blue-600 dark:text-blue-400">
+                            {t("liquidedge.subtitle")}
+                        </p>
+                        <p className="text-lg text-zinc-500 dark:text-zinc-400 italic">
+                            {t("liquidedge.tagline")}
+                        </p>
+                        <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                            {t("liquidedge.description")}
+                        </p>
+                    </div>
+
+                    {/* Spec Grid */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {(t.raw("liquidedge.specs") as { label: string; value: string }[]).map((spec, i) => (
+                            <div key={i} className="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col gap-1 hover:border-blue-500/40 transition-colors">
+                                <span className="text-xs font-semibold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">{spec.label}</span>
+                                <span className="text-lg font-bold text-zinc-900 dark:text-white">{spec.value}</span>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Three Tiers */}
+                    <div className="space-y-6">
+                        <h3 className="text-2xl font-bold text-zinc-900 dark:text-white text-center">
+                            {t("liquidedge.tiers_title")}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {(t.raw("liquidedge.tiers") as { name: string; label: string; power: string; gpus: string; use: string }[]).map((tier, i) => (
+                                <div key={i} className={`relative p-6 rounded-2xl border flex flex-col gap-4 cyber-corner transition-all hover:shadow-lg ${i === 1 ? 'bg-blue-600 dark:bg-blue-700 border-blue-500 text-white shadow-blue-500/20 shadow-xl' : 'bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700'}`}>
+                                    {i === 1 && (
+                                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full text-xs font-bold bg-white text-blue-600 shadow">FLAGSHIP</span>
+                                    )}
+                                    <div className="space-y-1">
+                                        <div className={`text-3xl font-black ${i === 1 ? 'text-white' : 'text-blue-600 dark:text-blue-400'}`}>{tier.name}</div>
+                                        <div className={`text-sm font-semibold ${i === 1 ? 'text-blue-100' : 'text-zinc-500 dark:text-zinc-400'}`}>{tier.label}</div>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <div className={`flex items-center gap-2 text-sm font-bold ${i === 1 ? 'text-white' : 'text-zinc-800 dark:text-zinc-200'}`}>
+                                            <Zap className="w-4 h-4 shrink-0" />{tier.power}
+                                        </div>
+                                        <div className={`flex items-start gap-2 text-sm ${i === 1 ? 'text-blue-100' : 'text-zinc-600 dark:text-zinc-400'}`}>
+                                            <Box className="w-4 h-4 shrink-0 mt-0.5" />{tier.gpus}
+                                        </div>
+                                        <div className={`flex items-center gap-2 text-sm ${i === 1 ? 'text-blue-100' : 'text-zinc-500 dark:text-zinc-400'}`}>
+                                            <Thermometer className="w-4 h-4 shrink-0" />{tier.use}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Compliance + CTA */}
+                    <div className="flex flex-col items-center gap-6 text-center">
+                        <p className="text-xs text-zinc-400 dark:text-zinc-500 max-w-2xl">
+                            {t("liquidedge.compliance")}
+                        </p>
+                        <Link href="/contact">
+                            <button className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-blue-500/20">
+                                {t("liquidedge.cta")} <ArrowRight className="w-5 h-5" />
+                            </button>
+                        </Link>
+                    </div>
+
+                </div>
+            </motion.div>
+
         </div>
     );
 }
