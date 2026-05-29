@@ -126,9 +126,6 @@ export default function AISolutionsPage() {
 
                     {/* Header */}
                     <div className="text-center space-y-4 max-w-3xl mx-auto">
-                        <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-700">
-                            {t("liquidedge.badge")}
-                        </span>
                         <h2 className="text-4xl md:text-5xl font-black text-zinc-900 dark:text-white">
                             {t("liquidedge.title")}
                         </h2>
@@ -181,6 +178,11 @@ export default function AISolutionsPage() {
                         <div className="absolute inset-0 neon-border-blue pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.div>
 
+                    {/* Compliance — below image */}
+                    <p className="text-xs text-zinc-400 dark:text-zinc-500 text-center">
+                        {t("liquidedge.compliance")}
+                    </p>
+
                     {/* Three Tiers */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-zinc-900 dark:text-white text-center">
@@ -212,11 +214,8 @@ export default function AISolutionsPage() {
                         </div>
                     </div>
 
-                    {/* Compliance + CTA */}
-                    <div className="flex flex-col items-center gap-6 text-center">
-                        <p className="text-xs text-zinc-400 dark:text-zinc-500 max-w-2xl">
-                            {t("liquidedge.compliance")}
-                        </p>
+                    {/* CTA */}
+                    <div className="flex justify-center">
                         <Link href="/contact">
                             <button className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-colors shadow-lg shadow-blue-500/20">
                                 {t("liquidedge.cta")} <ArrowRight className="w-5 h-5" />
