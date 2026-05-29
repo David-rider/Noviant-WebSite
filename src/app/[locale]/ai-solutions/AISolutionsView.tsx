@@ -153,6 +153,34 @@ export default function AISolutionsPage() {
                         ))}
                     </div>
 
+                    {/* Product Image */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.97 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.7 }}
+                        viewport={{ once: true }}
+                        className="relative rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-2xl group cyber-corner"
+                    >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src="/images/ai-solutions/liquidedge-ai-pod.jpg"
+                            alt="LiquidEdge AI POD — Liquid-Cooled AI Datacenter Container"
+                            className="w-full h-[420px] object-cover group-hover:scale-105 transition-transform duration-1000"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                        <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                            <div>
+                                <p className="text-white font-black text-2xl">LiquidEdge AI POD</p>
+                                <p className="text-blue-300 text-sm font-medium">40-ft ISO Container · IP55 · Direct Liquid Cooling</p>
+                            </div>
+                            <div className="text-right">
+                                <p className="text-white font-bold text-lg">PUE ≤ 1.15</p>
+                                <p className="text-zinc-300 text-sm">8-Week Delivery</p>
+                            </div>
+                        </div>
+                        <div className="absolute inset-0 neon-border-blue pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.div>
+
                     {/* Three Tiers */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-zinc-900 dark:text-white text-center">
