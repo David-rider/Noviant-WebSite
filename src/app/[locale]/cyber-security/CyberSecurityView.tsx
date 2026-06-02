@@ -48,15 +48,6 @@ export default function CyberSecurityPage() {
 
     return (
         <div className="min-h-screen bg-white dark:bg-black">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                    { "@type": "Question", "name": "What cybersecurity services does Noviant provide in New York?", "acceptedAnswer": { "@type": "Answer", "text": "Noviant provides comprehensive cybersecurity services including threat detection and response, vulnerability assessments, penetration testing, SIEM implementation, endpoint protection, email security, and vCISO advisory services for New York enterprises." } },
-                    { "@type": "Question", "name": "How does Noviant help with compliance requirements?", "acceptedAnswer": { "@type": "Answer", "text": "Noviant helps businesses achieve and maintain compliance with HIPAA, SOX, PCI-DSS, NIST, and other regulatory frameworks through gap assessments, policy development, technical controls implementation, and ongoing compliance monitoring." } },
-                    { "@type": "Question", "name": "What should I do if my business experiences a cyberattack?", "acceptedAnswer": { "@type": "Answer", "text": "If you experience a cyberattack, contact Noviant immediately at (212) 809-6625. Our incident response team will contain the threat, investigate the breach, recover your systems, and implement measures to prevent future attacks." } }
-                ]
-            }) }} />
             <PageHero
                 title={t("hero_title")}
                 subtitle={t("hero_subtitle")}

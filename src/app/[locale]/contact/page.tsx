@@ -28,5 +28,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     setRequestLocale(locale);
-    return <ContactPage />;
+    return (
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "How can I contact Noviant in New York?", "acceptedAnswer": { "@type": "Answer", "text": "You can contact Noviant by phone at (212) 809-6625, by email at sales@noviant.com, or by filling out the contact form on this page. Our office is located at 1250 Broadway, 36th Floor, New York, NY 10001." } },
+                    { "@type": "Question", "name": "What are Noviant's business hours?", "acceptedAnswer": { "@type": "Answer", "text": "Noviant's sales and consulting team is available Monday through Friday during business hours. Our IT support helpdesk is available 24/7 for existing managed service clients." } },
+                    { "@type": "Question", "name": "How quickly can Noviant respond to my IT inquiry?", "acceptedAnswer": { "@type": "Answer", "text": "For new business inquiries submitted through our contact form, a Noviant representative will respond within one business day. For existing clients with urgent IT issues, our 24/7 helpdesk provides immediate assistance." } }
+                ]
+            }) }} />
+            <ContactPage />
+        </>
+    );
 }
