@@ -14,6 +14,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 ? '提供位於紐約(New York)的企業級網路安全服務。全天候威脅監控、防勒索軟體、合規顧問及零信任安全架構。'
                 : '提供位于纽约(New York)的企业级网络安全服务。全天候威胁监控、防勒索软件、合规顾问及零信任安全架构。')
             : 'Enterprise-grade cybersecurity services located in New York. 24/7 threat monitoring, ransomware protection, compliance, and Zero Trust architecture.',
+        openGraph: {
+            title: locale.startsWith('zh')
+                ? (locale === 'zh-TW'
+                    ? '紐約企業級網路安全解決方案 - Noviant'
+                    : '纽约企业级网络安全解决方案 - Noviant')
+                : 'Enterprise Cybersecurity Solutions New York - Noviant',
+            description: locale.startsWith('zh')
+                ? (locale === 'zh-TW'
+                    ? '全天候威脅監控、防勒索軟體、合規顧問及零信任安全架構。'
+                    : '全天候威胁监控、防勒索软件、合规顾问及零信任安全架构。')
+                : '24/7 threat monitoring, ransomware protection, compliance, and Zero Trust architecture.',
+            url: `https://www.noviant.com/${locale}/cyber-security`,
+            siteName: 'Noviant',
+            images: [{ url: 'https://www.noviant.com/images/unsplash/photo-1550751827-4bd374c3f58b.jpg', width: 1200, height: 628, alt: 'Cyber Security' }],
+            locale: locale,
+            type: 'website',
+        },
     };
 }
 

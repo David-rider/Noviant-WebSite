@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant為紐約零售企業提供IT託管服務，涵蓋POS系統、庫存管理、電商基礎設施與PCI-DSS合規。' : 'Noviant为纽约零售企业提供IT托管服务，涵盖POS系统、库存管理、电商基础设施与PCI-DSS合规。')
                 : 'Managed IT services for retail businesses in New York. POS systems, inventory management, e-commerce infrastructure, and PCI-DSS compliance.',
-            url: 'https://www.noviant.com/en/industries/retail',
+            url: `https://www.noviant.com/${locale}/industries/retail`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

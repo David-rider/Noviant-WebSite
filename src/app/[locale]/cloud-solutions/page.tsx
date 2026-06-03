@@ -14,6 +14,23 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                 ? 'Noviant為紐約(New York)的企業提供頂級雲端服務和ICT技術諮詢。涵蓋雲端遷移、數據備份、Azure與AWS雲端部署架構。'
                 : 'Noviant为纽约(New York)的企业提供顶级云服务和ICT技术咨询。涵盖云迁移、数据备份、Azure与AWS云部署架构。')
             : 'Noviant provides top-tier cloud services and ICT technical consulting for enterprises in New York. Covering cloud migration, Azure & AWS deployment.',
+        openGraph: {
+            title: locale.startsWith('zh')
+                ? (locale === 'zh-TW'
+                    ? '企業雲端服務與ICT解決方案紐約 - Noviant'
+                    : '企业云服务与ICT解决方案纽约 - Noviant')
+                : 'Enterprise Cloud Services New York | Cloud Migration - Noviant',
+            description: locale.startsWith('zh')
+                ? (locale === 'zh-TW'
+                    ? 'Noviant為紐約企業提供雲端遷移、Azure、AWS與混合雲解決方案。'
+                    : 'Noviant为纽约企业提供云迁移、Azure、AWS与混合云解决方案。')
+                : 'Cloud migration, Azure, AWS, and hybrid cloud solutions for New York enterprises.',
+            url: `https://www.noviant.com/${locale}/cloud-solutions`,
+            siteName: 'Noviant',
+            images: [{ url: 'https://www.noviant.com/images/unsplash/photo-1451187580459-43490279c0fa.jpg', width: 1200, height: 628, alt: 'Cloud Solutions' }],
+            locale: locale,
+            type: 'website',
+        },
     };
 }
 

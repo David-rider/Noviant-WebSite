@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant紐約IT支援中心，提供24/7服務台、遠端與現場支援、工單系統與快速回應服務。' : 'Noviant纽约IT支持中心，提供24/7服务台、远程与现场支持、工单系统与快速响应服务。')
                 : 'Noviant\'s IT support center in New York. 24/7 helpdesk, remote and on-site support, ticketing system, and fast response times for your business.',
-            url: 'https://www.noviant.com/en/msp/support-center',
+            url: `https://www.noviant.com/${locale}/msp/support-center`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

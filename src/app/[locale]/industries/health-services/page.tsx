@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant為紐約醫療機構提供符合HIPAA標準的IT託管服務，涵蓋安全電子病歷、遠程醫療基礎設施與全天候支援。' : 'Noviant为纽约医疗机构提供符合HIPAA标准的IT托管服务，涵盖安全电子病历、远程医疗基础设施与全天候支持。')
                 : 'HIPAA-compliant IT managed services for healthcare providers and medical practices in New York. Secure EHR, telemedicine infrastructure, and 24/7 support.',
-            url: 'https://www.noviant.com/en/industries/health-services',
+            url: `https://www.noviant.com/${locale}/industries/health-services`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

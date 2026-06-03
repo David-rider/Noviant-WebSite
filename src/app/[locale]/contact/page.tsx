@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? '聯繫Noviant紐約IT專家，預約IT託管服務、網路安全、雲端解決方案及AI整合諮詢。' : '联系Noviant纽约IT专家，预约IT托管服务、网络安全、云解决方案及AI集成咨询。')
                 : 'Get in touch with Noviant\'s IT experts in New York. Request a consultation for managed IT services, cybersecurity, cloud solutions, and AI integration.',
-            url: 'https://www.noviant.com/en/contact',
+            url: `https://www.noviant.com/${locale}/contact`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

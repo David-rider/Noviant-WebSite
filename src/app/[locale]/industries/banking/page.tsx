@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant為紐約銀行與金融機構提供安全合規的IT託管服務，涵蓋SOX、PCI-DSS合規、網路安全與全天候支援。' : 'Noviant为纽约银行与金融机构提供安全合规的IT托管服务，涵盖SOX、PCI-DSS合规、网络安全与全天候支持。')
                 : 'Secure, compliant IT managed services for banks and financial institutions in New York. SOX, PCI-DSS compliance, cybersecurity, and 24/7 support.',
-            url: 'https://www.noviant.com/en/industries/banking',
+            url: `https://www.noviant.com/${locale}/industries/banking`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant為紐約企業提供雲端運算與遷移服務，涵蓋AWS、Azure、Microsoft 365部署、管理與最佳化。' : 'Noviant为纽约企业提供云计算与迁移服务，涵盖AWS、Azure、Microsoft 365部署、管理与优化。')
                 : 'Cloud computing and migration services for businesses in New York. AWS, Azure, Microsoft 365 deployment, management, and optimization.',
-            url: 'https://www.noviant.com/en/msp/cloud-computing',
+            url: `https://www.noviant.com/${locale}/msp/cloud-computing`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

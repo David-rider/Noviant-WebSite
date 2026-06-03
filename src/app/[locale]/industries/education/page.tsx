@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant為紐約學校、大學及教育機構提供IT託管服務，涵蓋安全網路、雲端學習平台與FERPA合規。' : 'Noviant为纽约学校、大学及教育机构提供IT托管服务，涵盖安全网络、云端学习平台与FERPA合规。')
                 : 'Managed IT services for schools, universities, and educational institutions in New York. Secure networks, cloud learning platforms, and FERPA compliance.',
-            url: 'https://www.noviant.com/en/industries/education',
+            url: `https://www.noviant.com/${locale}/industries/education`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant紐約企業網路安全與合規服務，涵蓋HIPAA、SOX、PCI-DSS、NIST框架、威脅偵測與事件回應。' : 'Noviant纽约企业网络安全与合规服务，涵盖HIPAA、SOX、PCI-DSS、NIST框架、威胁检测与事件响应。')
                 : 'Enterprise cybersecurity and compliance services in New York. HIPAA, SOX, PCI-DSS, NIST frameworks, threat detection, and incident response.',
-            url: 'https://www.noviant.com/en/msp/cybersecurity-compliance',
+            url: `https://www.noviant.com/${locale}/msp/cybersecurity-compliance`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

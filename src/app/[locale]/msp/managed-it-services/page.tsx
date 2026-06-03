@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant紐約全面IT託管服務，提供24/7服務台、主動監控、補丁管理與完整IT外包解決方案。' : 'Noviant纽约全面IT托管服务，提供24/7服务台、主动监控、补丁管理与完整IT外包解决方案。')
                 : 'Comprehensive managed IT services in New York. 24/7 helpdesk, proactive monitoring, patch management, and full IT outsourcing for your business.',
-            url: 'https://www.noviant.com/en/msp/managed-it-services',
+            url: `https://www.noviant.com/${locale}/msp/managed-it-services`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant紐約IT諮詢與實施服務，提供技術路線規劃、系統整合、專案管理與vCISO服務。' : 'Noviant纽约IT咨询与实施服务，提供技术路线规划、系统集成、项目管理与vCISO服务。')
                 : 'Expert IT consulting and implementation services in New York. Technology roadmaps, system integration, project management, and vCISO services.',
-            url: 'https://www.noviant.com/en/consulting-implementation',
+            url: `https://www.noviant.com/${locale}/consulting-implementation`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',

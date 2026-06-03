@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                     ? '液冷一體化智算集裝箱、GPU集群、生成式AI與數位孿生解決方案。'
                     : '液冷一体化智算集装箱、GPU集群、生成式AI与数字孪生解决方案。')
                 : 'Liquid-cooled AI datacenter containers, GPU clusters, generative AI, and Digital Twin solutions.',
-            url: 'https://www.noviant.com/en/ai-solutions',
+            url: `https://www.noviant.com/${locale}/ai-solutions`,
             siteName: 'Noviant',
             images: [{ url: 'https://www.noviant.com/images/ai-solutions/liquidedge-ai-pod.jpg', width: 1200, height: 628, alt: 'LiquidEdge AI POD' }],
             locale: locale,

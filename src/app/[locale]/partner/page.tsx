@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: locale.startsWith('zh')
                 ? (locale === 'zh-TW' ? 'Noviant紐約戰略技術合作夥伴，與頂級供應商合作，為企業提供最優質的IT解決方案。' : 'Noviant纽约战略技术合作伙伴，与顶级供应商合作，为企业提供最优质的IT解决方案。')
                 : 'Noviant\'s strategic technology partnerships in New York. We collaborate with leading vendors to deliver best-in-class IT solutions for your enterprise.',
-            url: 'https://www.noviant.com/en/partner',
+            url: `https://www.noviant.com/${locale}/partner`,
             siteName: 'Noviant',
             locale: locale,
             type: 'website',
