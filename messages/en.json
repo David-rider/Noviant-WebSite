@@ -760,12 +760,12 @@
     },
     "referral_program": {
       "title": "Referral Program",
-      "subtitle": "Reap rewards by helping associates enjoy worry-free IT.",
-      "desc": "At Noviant we believe that referrals are the greatest form of flattery. If you know someone who is worried about their business technology, do them a favor and put them in touch with us.",
+      "subtitle": "Earn rewards by connecting your network with enterprise-grade IT services.",
+      "desc": "At Noviant, we value relationships built on trust and mutual growth. If you know a business that could benefit from reliable, enterprise-grade IT services, we invite you to make an introduction — and we will reward you for it.",
       "features": [
-        "Sleeping like a baby - we take care of technology 24x7.",
-        "Increased productivity - less downtime translates into more work time.",
-        "Enjoying more time for yourself - maximize your quality of life."
+        "24/7 managed technology support ensuring continuous and uninterrupted business operations.",
+        "Proactive maintenance and monitoring that minimizes downtime and maximizes workforce productivity.",
+        "Expert IT management that allows your network to focus on core business objectives with confidence."
       ]
     }
   },
@@ -856,7 +856,7 @@
     "title": "Terms",
     "description": "Please review our Master Service Agreement.",
     "action_link": "Click Here to view our Master Services Agreement",
-    "pdf_url": "https://www.noviant.com/wp-content/uploads/2026/04/Noviant-MSA-for-website-1.pdf",
+    "pdf_url": "/documents/Noviant-MSA-for-website-1.pdf",
     "footer_note": "* This document is provided for informational purposes. If you have any questions regarding our terms, please contact us."
   },
   "Industries": {
