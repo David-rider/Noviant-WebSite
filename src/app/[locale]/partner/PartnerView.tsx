@@ -56,13 +56,13 @@ export default function PartnersPage() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-24 relative z-10">
+            <div className="container mx-auto px-4 py-14 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="max-w-3xl mb-16 cyber-corner p-8 bg-white/5 backdrop-blur-sm border border-white/10"
+                    className="max-w-3xl mb-10 cyber-corner p-6 bg-white/5 backdrop-blur-sm border border-white/10"
                 >
                     <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
                         {t("description")}

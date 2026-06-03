@@ -9,7 +9,7 @@ export default function Hero() {
     const t = useTranslations("HomePage");
 
     return (
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-white text-slate-900 pt-20">
+        <section className="relative min-h-[72vh] flex items-center justify-center overflow-hidden bg-white text-slate-900 pt-20">
             {/* Background Layer: Unified Light Tech */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-slate-50/50" />
@@ -21,22 +21,22 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
-                    className="p-8 md:p-12 max-w-5xl mx-auto"
+                    className="p-6 md:p-8 max-w-5xl mx-auto"
                 >
                     <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
-                        className="inline-block py-1 px-4 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold tracking-[0.1em] mb-8"
+                        className="inline-block py-1 px-4 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-bold tracking-[0.1em] mb-5"
                     >
                         {t("title")}
                     </motion.span>
 
-                    <h1 className="text-5xl md:text-8xl font-black mb-8 leading-none tracking-tight text-slate-900">
+                    <h1 className="text-5xl md:text-7xl font-black mb-5 leading-none tracking-tight text-slate-900">
                         {t("hero_title")}
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-slate-500/80 max-w-3xl mx-auto mb-12 leading-relaxed font-semibold">
+                    <p className="text-xl md:text-2xl text-slate-500/80 max-w-3xl mx-auto mb-8 leading-relaxed font-semibold">
                         {t("hero_subtitle")}
                     </p>
 

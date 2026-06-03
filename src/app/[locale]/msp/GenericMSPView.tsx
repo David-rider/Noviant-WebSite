@@ -33,28 +33,28 @@ export default function GenericMSPView({
                 bgGradient={bgGradient}
             />
 
-            <div className="container mx-auto px-4 py-24">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="container mx-auto px-4 py-14">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                     {/* Content Section */}
-                    <div className="space-y-8">
+                    <div className="space-y-5">
                         <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+                            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-tight">
                                 {t("title")}
                             </h2>
-                            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                            <p className="text-lg text-slate-600 leading-relaxed mb-5">
                                 {t("desc")}
                             </p>
 
                             {isSupportCenter && t.has("phone") && (
-                                <div className="mt-8 p-8 bg-blue-50 border border-blue-100 rounded-3xl flex items-center gap-6">
-                                    <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center shadow-lg">
-                                        <Phone className="w-8 h-8" />
+                                <div className="mt-5 p-5 bg-blue-50 border border-blue-100 rounded-2xl flex items-center gap-4">
+                                    <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center shadow-lg">
+                                        <Phone className="w-6 h-6" />
                                     </div>
                                     <div>
                                         <p className="text-sm font-semibold text-blue-600 uppercase tracking-wider mb-1">
@@ -68,7 +68,7 @@ export default function GenericMSPView({
                             )}
 
                             {hasFeatures && (
-                                <div className="space-y-4 mt-8">
+                                <div className="space-y-3 mt-5">
                                     {featureIndices.map((i) => {
                                         if (!t.has(`features.${i}`)) return null;
                                         return (
@@ -85,7 +85,7 @@ export default function GenericMSPView({
                                 </div>
                             )}
 
-                            <div className="mt-12 flex items-center gap-4">
+                            <div className="mt-8 flex items-center gap-4">
                                 <Link
                                     href="/contact"
                                     className="px-8 py-4 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-600/20 inline-flex items-center gap-2"

@@ -14,7 +14,7 @@ export default function PageHero({
     bgGradient = "from-blue-900/40 via-black to-black"
 }: PageHeroProps) {
     return (
-        <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-black text-white pt-16">
+        <section className="relative h-[42vh] min-h-[260px] flex items-center justify-center overflow-hidden bg-black text-white pt-16">
             {/* Background Elements */}
             <div className={`absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] ${bgGradient} opacity-80`} />
             <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
@@ -25,10 +25,10 @@ export default function PageHero({
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
+                    <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
                         {title}
                     </h1>
-                    <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-base md:text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
                         {subtitle}
                     </p>
                 </motion.div>

@@ -18,14 +18,14 @@ export default function TermsView() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-24 relative z-10">
+            <div className="container mx-auto px-4 py-14 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="max-w-4xl mx-auto"
                 >
-                    <div className="bg-zinc-50 dark:bg-zinc-900/50 p-8 md:p-16 rounded-[2.5rem] border border-zinc-200 dark:border-zinc-800 cyber-corner hover:neon-glow-blue transition-all duration-500 shadow-2xl">
+                    <div className="bg-zinc-50 dark:bg-zinc-900/50 p-6 md:p-10 rounded-[2.5rem] border border-zinc-200 dark:border-zinc-800 cyber-corner hover:neon-glow-blue transition-all duration-500 shadow-2xl">
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-4 bg-blue-100 dark:bg-blue-900/30 rounded-2xl text-blue-600 dark:text-blue-400">
                                 <FileText className="w-8 h-8" />

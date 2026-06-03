@@ -41,7 +41,7 @@ export default function ServicesSection() {
     ];
 
     return (
-        <section className="py-24 bg-slate-50/50 dark:bg-slate-900/20">
+        <section className="py-14 bg-slate-50/50 dark:bg-slate-900/20">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">

@@ -150,7 +150,7 @@ export default function NewsView({ locale }: { locale: string }) {
                 )}
 
                 {newsArticlesMetadata.length === 0 && (
-                    <div className="text-center py-24 text-slate-400">
+                    <div className="text-center py-14 text-slate-400">
                         <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
                         <p className="text-lg">{t("no_articles")}</p>
                     </div>
@@ -162,12 +162,12 @@ export default function NewsView({ locale }: { locale: string }) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mt-20 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-10 md:p-16 text-white text-center"
+                    className="mt-12 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-8 md:p-10 text-white text-center"
                 >
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">
                         {t("cta_title")}
                     </h3>
-                    <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+                    <p className="text-blue-100 mb-5 max-w-xl mx-auto">
                         {t("cta_subtitle")}
                     </p>
                     <Link

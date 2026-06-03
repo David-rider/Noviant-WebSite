@@ -33,7 +33,7 @@ export default function GovernmentPage() {
                 bgGradient="from-slate-900/40 via-black to-black"
             />
 
-            <div className="container mx-auto px-4 py-24 space-y-32">
+            <div className="container mx-auto px-4 py-14 space-y-16">
                 {sections.map((section, index) => (
                     <motion.div
                         key={section.id}
@@ -41,7 +41,7 @@ export default function GovernmentPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12 lg:gap-20`}
+                        className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-12`}
                     >
                         {/* Text Content */}
                         <div className="flex-1 space-y-6">

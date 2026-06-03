@@ -95,7 +95,7 @@ export default function ContactPage() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-24 relative z-10 space-y-24">
+            <div className="container mx-auto px-4 py-14 relative z-10 space-y-14">
 
                 {/* Our Mission Section */}
                 <motion.div
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center"
                 >
                     <div className="space-y-6">
                         <h2 className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
