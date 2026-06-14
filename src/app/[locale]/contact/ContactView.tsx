@@ -6,6 +6,7 @@ import { MapPin, Phone, Send, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { Link } from "@/i18n/routing";
 
 export default function ContactPage() {
     const t = useTranslations("Contact_Page");
@@ -409,6 +410,16 @@ export default function ContactPage() {
                                     {isSubmitting ? t("form.sending") : t("form.submit")}
                                     {!isSubmitting && <Send className="w-4 h-4" />}
                                 </button>
+
+                                <p className="text-xs text-zinc-500 dark:text-zinc-500 text-center">
+                                    {t.rich("form.privacy_notice", {
+                                        link: (chunks) => (
+                                            <Link href="/privacy" className="text-blue-600 hover:underline">
+                                                {chunks}
+                                            </Link>
+                                        ),
+                                    })}
+                                </p>
                             </form>
                         )}
                     </motion.div>

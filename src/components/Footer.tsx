@@ -170,6 +170,10 @@ export default function Footer() {
                         <Link href="/terms" className="text-xs text-zinc-400 hover:text-blue-600 transition-colors uppercase font-medium tracking-wider">
                             {tNav("terms")}
                         </Link>
+                        <span className="text-zinc-300 text-xs hidden md:inline">|</span>
+                        <Link href="/privacy" className="text-xs text-zinc-400 hover:text-blue-600 transition-colors uppercase font-medium tracking-wider">
+                            {tNav("privacy")}
+                        </Link>
                     </div>
                 </div>
             </div>
