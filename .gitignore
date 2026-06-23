@@ -69,3 +69,6 @@ lint_*.txt
 # raw HTML snapshots
 noviant_production_home.html
 partners_raw.html
+
+# local-only documents (not for git, e.g. generated Word docs)
+/local-docs/

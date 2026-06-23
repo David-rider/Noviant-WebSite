@@ -40,8 +40,12 @@ const STATIC_ROUTES = [
     { path: "/privacy", priority: 0.4, changeFrequency: "yearly" as const },
 ];
 
+// Bump this only when site-wide content actually changes — keeps
+// sitemap lastModified meaningful instead of resetting on every deploy.
+const LAST_MODIFIED = new Date("2026-06-23");
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date();
+    const lastModified = LAST_MODIFIED;
     const entries: MetadataRoute.Sitemap = [];
 
     for (const { path, priority, changeFrequency } of STATIC_ROUTES) {

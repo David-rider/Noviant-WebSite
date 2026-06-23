@@ -1,14 +1,16 @@
 # 项目经验文档 (Project Experience Documentation)
 
-本目录存放 Noviant 网站项目的**开发与运维经验文档**，持续维护、版本化管理。
+本目录存放 Noviant 网站项目的**开发与运维经验文档**生成脚本，持续维护、版本化管理。
 
 ## 文件说明
 
-| 文件 | 用途 |
-|------|------|
-| `Noviant网站项目-经验文档-vX.Y.docx` | 最终的 Word 文档（交付/阅读用） |
-| `build-doc.js` | 文档的**源文件**（脚本生成 Word，便于版本控制与持续修订） |
-| `README.md` | 本说明 |
+| 文件 | 用途 | 是否提交 Git |
+|------|------|------|
+| `build-doc.js` | 文档的**源文件**（脚本生成 Word，便于版本控制与持续修订） | 是 |
+| `README.md` | 本说明 | 是 |
+| `../../local-docs/project-experience/Noviant网站项目-经验文档-vX.Y.docx` | 生成的 Word 文档（交付/阅读用） | **否，仅本地保留** |
+
+> `.docx` 输出文件位于仓库根目录的 `local-docs/project-experience/`，该目录已加入 `.gitignore`，不会提交到 GitHub/Vercel。
 
 ## 如何更新文档（持续优化）
 
@@ -25,8 +27,7 @@
    npm install docx
    node build-doc.js
    ```
-3. 生成新的 `Noviant网站项目-经验文档-vX.Y.docx`
-4. 提交到 Git
+3. 生成新的 `Noviant网站项目-经验文档-vX.Y.docx`，输出到 `local-docs/project-experience/`（仅本地，不提交）
 
 ## 版本号规则
 

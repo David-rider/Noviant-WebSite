@@ -348,8 +348,10 @@ const doc = new Document({
     ],
 });
 
-const outPath = path.join(__dirname, `Noviant网站项目-经验文档-${DOC_VERSION}.docx`);
+const outDir = path.join(__dirname, "..", "..", "local-docs", "project-experience");
+const outPath = path.join(outDir, `Noviant网站项目-经验文档-${DOC_VERSION}.docx`);
 Packer.toBuffer(doc).then((buf) => {
+    fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(outPath, buf);
     console.log("Created:", outPath, (buf.length / 1024).toFixed(0) + "KB");
 });
