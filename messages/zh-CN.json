@@ -366,8 +366,8 @@
     "address": "纽约百老汇大道1250号36楼，邮编 10001",
     "phone": "+1(212)-809-6625",
     "rights": "© 1997-2026 Noviant. All rights reserved.",
-    "iso_certification_title": "ISO/IEC 27001:2022 认证：",
-    "iso_certification_desc": "自 2019 年 10 月 26 日获得认证以来，我们已证明自身的信息安全管理体系包含一系列安全标准、程序及准则；这些规范均依据该认证要求制定，旨在保护我们的客户及信息基础设施。"
+    "iso_certification_title": "ISO/IEC 27001:2022 认证",
+    "iso_certification_desc": "自 2019 年 10 月 26 日起获得认证；自 2025 年 10 月 26 日起升级为 ISO/IEC 27001:2022 认证（有效期至 2028 年 10 月 25 日）。证书编号 382119.00，由 ANAB 认可的认证机构 DEKRA Certification, Inc. 颁发。认证范围：包括网络安全、云解决方案、数据分析与数据基础设施的托管服务。"
   },
   "Services": {
     "title": "端到端技术解决方案",
