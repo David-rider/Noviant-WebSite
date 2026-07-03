@@ -791,6 +791,7 @@
       "message": "Message",
       "submit": "Send Message",
       "sending": "Sending...",
+      "captcha_required": "Please complete the verification above to enable sending.",
       "success": "Message sent successfully!",
       "error": "Failed to send message. Please try again.",
       "error_title": "Submission Failed",

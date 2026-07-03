@@ -411,6 +411,12 @@ export default function ContactPage() {
                                     {!isSubmitting && <Send className="w-4 h-4" />}
                                 </button>
 
+                                {!captchaToken && (
+                                    <p className="text-xs text-amber-600 dark:text-amber-400 text-center -mt-2">
+                                        {t("form.captcha_required")}
+                                    </p>
+                                )}
+
                                 <p className="text-xs text-zinc-500 dark:text-zinc-500 text-center">
                                     {t.rich("form.privacy_notice", {
                                         link: (chunks) => (

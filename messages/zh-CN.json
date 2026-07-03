@@ -863,6 +863,7 @@
       "message": "留言",
       "submit": "发送信息",
       "sending": "发送中...",
+      "captcha_required": "请先完成上方人机验证，即可发送。",
       "success": "信息发送成功！",
       "error": "发送失败，请重试。",
       "error_title": "提交失败",
