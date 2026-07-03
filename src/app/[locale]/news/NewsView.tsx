@@ -20,7 +20,7 @@ const categoryColors: Record<string, { bg: string; text: string; dot: string }> 
 
 const fallbackImage = "/images/unsplash/photo-1551434678-e076c223a692.jpg";
 
-export default function NewsView({ locale }: { locale: string }) {
+export default function NewsView() {
     const t = useTranslations("News_Page");
     const tData = useTranslations("NewsData");
     const tNav = useTranslations("Navigation");

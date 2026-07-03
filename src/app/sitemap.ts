@@ -56,9 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 changeFrequency,
                 priority,
                 alternates: {
-                    languages: Object.fromEntries(
-                        LOCALES.map((l) => [l, `${BASE_URL}/${l}${path}/`])
-                    ),
+                    languages: {
+                        ...Object.fromEntries(
+                            LOCALES.map((l) => [l, `${BASE_URL}/${l}${path}/`])
+                        ),
+                        'x-default': `${BASE_URL}/en${path}/`,
+                    },
                 },
             });
         }
@@ -72,9 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
                 changeFrequency: "yearly",
                 priority: 0.5,
                 alternates: {
-                    languages: Object.fromEntries(
-                        LOCALES.map((l) => [l, `${BASE_URL}/${l}/news/${article.id}/`])
-                    ),
+                    languages: {
+                        ...Object.fromEntries(
+                            LOCALES.map((l) => [l, `${BASE_URL}/${l}/news/${article.id}/`])
+                        ),
+                        'x-default': `${BASE_URL}/en/news/${article.id}/`,
+                    },
                 },
             });
         }

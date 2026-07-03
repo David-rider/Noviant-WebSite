@@ -47,8 +47,8 @@ export default async function ArticlePage({
 }: {
     params: Promise<{ locale: string; id: string }>;
 }) {
-    const { locale, id } = await params;
+    const { id } = await params;
     const article = getArticleMetadataById(id);
     if (!article) notFound();
-    return <ArticleView article={article} locale={locale} />;
+    return <ArticleView article={article} />;
 }

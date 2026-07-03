@@ -3,8 +3,7 @@
 import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 import { Link } from "@/i18n/routing";
-import Image from "next/image";
-import { Linkedin, Facebook } from "lucide-react";
+import { Linkedin, Facebook, ShieldCheck } from "lucide-react";
 
 export default function Footer() {
     const t = useTranslations("Footer");
@@ -71,13 +70,12 @@ export default function Footer() {
                             </div>
                             
                             <div className="group relative inline-block w-fit mt-2">
-                                <Image
-                                    src="/images/certifications/iso-27001-certification.png"
-                                    alt="ISO/IEC 27001:2022"
-                                    width={48}
-                                    height={48}
-                                    className="opacity-90 hover:opacity-100 transition-opacity cursor-help"
-                                />
+                                {/* Text-only certification notice — replace with the official
+                                    DEKRA certification mark once artwork is provided */}
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-zinc-300 bg-white text-[11px] font-semibold text-zinc-700 cursor-help">
+                                    <ShieldCheck size={14} className="text-blue-600 shrink-0" />
+                                    <span>{t("iso_certification_title")}</span>
+                                </div>
                                 {/* Tooltip */}
                                 <div className="absolute bottom-full left-0 mb-3 w-72 p-3 bg-slate-900/95 backdrop-blur-sm text-white text-[11px] leading-relaxed rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none shadow-xl border border-white/10 translate-y-2 group-hover:translate-y-0 z-50">
                                     <div className="font-bold mb-1 text-blue-400">{t("iso_certification_title")}</div>

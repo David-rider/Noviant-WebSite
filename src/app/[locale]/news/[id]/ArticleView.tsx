@@ -16,10 +16,8 @@ const categoryColors: Record<string, { bg: string; text: string; dot: string }> 
 
 export default function ArticleView({
     article,
-    locale,
 }: {
     article: NewsArticleMetadata;
-    locale: string;
 }) {
     const t = useTranslations("News_Page");
     const tData = useTranslations("NewsData");

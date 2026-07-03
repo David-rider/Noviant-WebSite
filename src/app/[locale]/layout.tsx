@@ -46,6 +46,7 @@ export async function generateMetadata({
                 en: '/en',
                 'zh-CN': '/zh-CN',
                 'zh-TW': '/zh-TW',
+                'x-default': '/en',
             },
         },
     };

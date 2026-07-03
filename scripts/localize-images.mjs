@@ -11,7 +11,7 @@ const PUBLIC_IMG_DIR = path.resolve(__dirname, '../public/images/unsplash');
 async function ensureDir(dir) {
     try {
         await fs.mkdir(dir, { recursive: true });
-    } catch (e) { }
+    } catch { }
 }
 
 async function walk(dir) {
@@ -36,7 +36,6 @@ async function run() {
     for (const file of files) {
         let content = await fs.readFile(file, 'utf8');
         const regex = /"https:\/\/images\.unsplash\.com\/([^"?]+)(\?[^"]+)?"/g;
-        let match;
         let modified = false;
 
         const matches = [...content.matchAll(regex)];
