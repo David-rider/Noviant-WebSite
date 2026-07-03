@@ -790,9 +790,7 @@
       "select_placeholder": "Select...",
       "message": "Message",
       "submit": "Send Message",
-      "sending": "Sending...",
-      "captcha_required": "Please complete the verification above to enable sending.",
-      "success": "Message sent successfully!",
+      "sending": "Sending...",      "success": "Message sent successfully!",
       "error": "Failed to send message. Please try again.",
       "error_title": "Submission Failed",
       "error_desc": "Something went wrong. Please try again or contact us directly by email.",
@@ -889,12 +887,12 @@
         "body": "To operate our contact form securely, we rely on a small number of trusted third-party processors:",
         "items": [
           "Formspree — processes and delivers contact form submissions to us by email. Your form data is transmitted to Formspree for this purpose.",
-          "hCaptcha — provides spam and abuse protection on our forms. hCaptcha may collect device and usage data to distinguish humans from automated bots, in accordance with the hCaptcha Privacy Policy."
+          "Spam protection — Formspree applies server-side spam filtering (including CAPTCHA verification) to submissions, which may involve processing device and usage signals to distinguish humans from automated bots, in accordance with Formspree's Privacy Policy."
         ]
       },
       {
         "heading": "4. Cookies and Tracking",
-        "body": "Our website does not use advertising cookies, analytics trackers, or third-party behavioral tracking. The only cookies that may be set are strictly necessary cookies required by hCaptcha to provide bot protection on our contact form. Because we do not perform tracking, we do not display a cookie consent banner."
+        "body": "Our website does not use advertising cookies, analytics trackers, or third-party behavioral tracking. The only cookies that may be set are strictly necessary cookies required for bot protection on our contact form. Because we do not perform tracking, we do not display a cookie consent banner."
       },
       {
         "heading": "5. Data Retention",

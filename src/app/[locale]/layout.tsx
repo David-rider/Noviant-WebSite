@@ -101,7 +101,7 @@ export default async function LocaleLayout({
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta
                     httpEquiv="Content-Security-Policy"
-                    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://js.hcaptcha.com https://*.hcaptcha.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://newassets.hcaptcha.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com https://newassets.hcaptcha.com https://*.hcaptcha.com; connect-src 'self' https://formspree.io https://hcaptcha.com https://*.hcaptcha.com; object-src 'none'; base-uri 'self';"
+                    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self';"
                 />
                 <script
                     type="application/ld+json"

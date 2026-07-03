@@ -4,8 +4,7 @@ import PageHero from "@/components/PageHero";
 import { useTranslations, useLocale } from "next-intl";
 import { MapPin, Phone, Send, Target, Users } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useState } from "react";
 import { Link } from "@/i18n/routing";
 
 export default function ContactPage() {
@@ -19,8 +18,6 @@ export default function ContactPage() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSent, setIsSent] = useState(false);
     const [isError, setIsError] = useState(false);
-    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-    const captchaRef = useRef<HCaptcha>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -33,11 +30,6 @@ export default function ContactPage() {
 
         const industryLabel = t(`form.industries.${data.industry}`);
         const solutionLabel = t(`form.solutions.${data.solution}`);
-
-        if (!captchaToken) {
-            setIsSubmitting(false);
-            return;
-        }
 
         try {
             const response = await fetch("https://formspree.io/f/xbdwvgow", {
@@ -60,17 +52,11 @@ export default function ContactPage() {
             const result = await response.json();
             if (result.ok) {
                 setIsSent(true);
-                captchaRef.current?.resetCaptcha();
-                setCaptchaToken(null);
             } else {
                 setIsError(true);
-                captchaRef.current?.resetCaptcha();
-                setCaptchaToken(null);
             }
         } catch {
             setIsError(true);
-            captchaRef.current?.resetCaptcha();
-            setCaptchaToken(null);
         } finally {
             setIsSubmitting(false);
         }
@@ -395,27 +381,14 @@ export default function ContactPage() {
                                     />
                                 </div>
 
-                                <HCaptcha
-                                    sitekey="582aa408-9ffa-46fe-8ee8-44caab1eaf72"
-                                    onVerify={(token) => setCaptchaToken(token)}
-                                    onExpire={() => setCaptchaToken(null)}
-                                    ref={captchaRef}
-                                />
-
                                 <button
                                     type="submit"
-                                    disabled={isSubmitting || !captchaToken}
+                                    disabled={isSubmitting}
                                     className="w-full py-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
                                 >
                                     {isSubmitting ? t("form.sending") : t("form.submit")}
                                     {!isSubmitting && <Send className="w-4 h-4" />}
                                 </button>
-
-                                {!captchaToken && (
-                                    <p className="text-xs text-amber-600 dark:text-amber-400 text-center -mt-2">
-                                        {t("form.captcha_required")}
-                                    </p>
-                                )}
 
                                 <p className="text-xs text-zinc-500 dark:text-zinc-500 text-center">
                                     {t.rich("form.privacy_notice", {
