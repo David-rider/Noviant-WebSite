@@ -16,6 +16,13 @@ export interface NewsArticleMetadata {
 
 export const newsArticlesMetadata: NewsArticleMetadata[] = [
     {
+        id: "noviant-at-nys-mwbe-expo-2026",
+        category: "company",
+        image: "/images/news/mwbe-expo-2026.jpg",
+        contentImage: "/images/news/mwbe-expo-2026.jpg",
+        contentImageCaption: "The 2026 NYS MWBE Regional Opportunities Expo at the Javits Center, New York",
+    },
+    {
         id: "noviant-liquidedge-ai-pod-launch",
         category: "ai",
         image: "/images/ai-solutions/liquidedge-ai-pod.jpg",
