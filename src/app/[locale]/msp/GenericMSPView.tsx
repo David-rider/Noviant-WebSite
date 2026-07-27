@@ -33,8 +33,8 @@ export default function GenericMSPView({
                 bgGradient={bgGradient}
             />
 
-            <div className="container mx-auto px-4 py-14">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="container mx-auto px-4 py-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
 
                     {/* Content Section */}
                     <div className="space-y-5">

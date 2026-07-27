@@ -77,7 +77,7 @@ export default function ArticleView({
             </div>
 
             {/* Article body */}
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-4 py-12">
                 <div className="max-w-3xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -86,13 +86,13 @@ export default function ArticleView({
                         className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12"
                     >
                         {/* Excerpt lead */}
-                        <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed border-l-4 border-blue-500 pl-6 mb-10">
+                        <p className="text-lg md:text-xl text-slate-600 font-medium leading-relaxed border-l-4 border-blue-500 pl-6 mb-6">
                             {excerpt}
                         </p>
 
                         {/* Inline product image */}
                         {article.contentImage && (
-                            <div className="mb-10 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
+                            <div className="mb-6 rounded-2xl overflow-hidden border border-slate-200 shadow-md">
                                 <img
                                     src={article.contentImage}
                                     alt={article.contentImageCaption ?? title}
@@ -133,7 +133,7 @@ export default function ArticleView({
 
                         {/* Video Link */}
                         {article.videoUrl && (
-                            <div className="mt-12 pt-10 border-t border-slate-100">
+                            <div className="mt-8 pt-10 border-t border-slate-100">
                                 <a
                                     href={article.videoUrl}
                                     target="_blank"
@@ -162,7 +162,7 @@ export default function ArticleView({
                     </motion.div>
 
                     {/* Back to News */}
-                    <div className="mt-10 text-center">
+                    <div className="mt-6 text-center">
                         <Link
                             href="/news"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors shadow-md"

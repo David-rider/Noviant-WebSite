@@ -96,7 +96,7 @@ export default function ContactPage() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-14 relative z-10 space-y-14">
+            <div className="container mx-auto px-4 py-10 relative z-10 space-y-10">
 
                 {/* Our Mission Section */}
                 <motion.div
@@ -104,7 +104,7 @@ export default function ContactPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-8 items-center"
                 >
                     <div className="space-y-6">
                         <h2 className="text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
@@ -150,14 +150,14 @@ export default function ContactPage() {
                 </motion.div>
 
                 {/* Contact Form Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="space-y-12 cyber-corner p-10 bg-white/5 backdrop-blur-sm border border-white/10"
+                        className="space-y-8 cyber-corner p-10 bg-white/5 backdrop-blur-sm border border-white/10"
                     >
                         <div>
                             <h2 className="text-3xl font-bold mb-6 text-zinc-900 dark:text-white">
@@ -265,7 +265,7 @@ export default function ContactPage() {
                             {t("form.submit")}
                         </h3>
                         {isSent ? (
-                            <div className="h-full flex flex-col items-center justify-center text-center py-12">
+                            <div className="h-full flex flex-col items-center justify-center text-center py-8">
                                 <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center text-green-600 mb-6">
                                     <Send className="w-8 h-8" />
                                 </div>
@@ -274,7 +274,7 @@ export default function ContactPage() {
                                 </h3>
                             </div>
                         ) : isError ? (
-                            <div className="h-full flex flex-col items-center justify-center text-center py-12">
+                            <div className="h-full flex flex-col items-center justify-center text-center py-8">
                                 <div className="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center text-red-600 mb-6">
                                     <Send className="w-8 h-8" />
                                 </div>

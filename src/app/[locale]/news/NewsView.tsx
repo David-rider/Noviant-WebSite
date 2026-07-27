@@ -41,7 +41,7 @@ export default function NewsView() {
         <div className="min-h-screen bg-[#f8fafc]">
             <PageHero title={t("title")} subtitle={t("subtitle")} />
 
-            <div className="container mx-auto px-4 py-20">
+            <div className="container mx-auto px-4 py-14">
                 {/* News Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <AnimatePresence mode="wait">
@@ -114,7 +114,7 @@ export default function NewsView() {
 
                 {/* Pagination Controls */}
                 {totalPages > 1 && (
-                    <div className="flex justify-center items-center gap-2 mt-16">
+                    <div className="flex justify-center items-center gap-2 mt-10">
                         <button
                             onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
                             disabled={currentPage === 1}
@@ -150,7 +150,7 @@ export default function NewsView() {
                 )}
 
                 {newsArticlesMetadata.length === 0 && (
-                    <div className="text-center py-14 text-slate-400">
+                    <div className="text-center py-10 text-slate-400">
                         <Tag className="w-12 h-12 mx-auto mb-4 opacity-30" />
                         <p className="text-lg">{t("no_articles")}</p>
                     </div>
@@ -162,7 +162,7 @@ export default function NewsView() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mt-12 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-8 md:p-10 text-white text-center"
+                    className="mt-8 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 p-8 md:p-10 text-white text-center"
                 >
                     <h3 className="text-2xl md:text-3xl font-bold mb-4">
                         {t("cta_title")}

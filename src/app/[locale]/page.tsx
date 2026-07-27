@@ -45,9 +45,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
 
             {/* Industries Section */}
-            <section className="py-16 bg-slate-50 relative overflow-hidden">
+            <section className="py-12 bg-slate-50 relative overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
-                    <div className="text-center mb-10">
+                    <div className="text-center mb-6">
                         <h2 className="text-4xl md:text-5xl font-black mb-6 text-slate-900 tracking-tight">
                             {t("industries_title")}
                         </h2>

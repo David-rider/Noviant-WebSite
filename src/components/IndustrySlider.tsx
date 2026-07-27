@@ -62,7 +62,7 @@ export default function IndustrySlider() {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {industries.map((ind) => (
                     <button
                         key={ind.id}
@@ -86,7 +86,7 @@ export default function IndustrySlider() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4 }}
-                        className="flex flex-col lg:flex-row gap-12 items-center h-full"
+                        className="flex flex-col lg:flex-row gap-8 items-center h-full"
                     >
                         <div className="flex-1 space-y-8">
                             <div>

@@ -26,7 +26,7 @@ export default function PrivacyView() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-14 relative z-10">
+            <div className="container mx-auto px-4 py-10 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ export default function PrivacyView() {
                             </h2>
                         </div>
 
-                        <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-10">
+                        <p className="text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
                             {t("intro")}
                         </p>
 
@@ -71,7 +71,7 @@ export default function PrivacyView() {
                         </div>
 
                         {/* Contact block */}
-                        <div className="mt-10 pt-8 border-t border-zinc-200 dark:border-zinc-800 space-y-4">
+                        <div className="mt-6 pt-8 border-t border-zinc-200 dark:border-zinc-800 space-y-4">
                             <p className="text-lg font-bold text-zinc-900 dark:text-white">
                                 {t("contact_company")}
                             </p>

@@ -78,7 +78,7 @@ export default function OurClientsView({
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                             {t("representative_title")}
                         </h2>
@@ -117,7 +117,7 @@ export default function OurClientsView({
 
             {/* Bottom Section - Image and Contact Us moved here */}
             <div className="container mx-auto px-4 pb-32">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-white p-8 lg:p-16 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-8 lg:p-16 rounded-[3rem] shadow-xl shadow-slate-200/50 border border-slate-100">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}

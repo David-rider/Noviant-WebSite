@@ -5,7 +5,7 @@ export default function Loading() {
             <div className="h-64 bg-slate-200" />
 
             {/* Content skeleton */}
-            <div className="container mx-auto px-4 py-20 space-y-8">
+            <div className="container mx-auto px-4 py-14 space-y-8">
                 <div className="h-8 bg-slate-200 rounded-lg w-1/3" />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {Array.from({ length: 3 }).map((_, i) => (

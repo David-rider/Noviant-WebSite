@@ -14,7 +14,7 @@ export default function PageHero({
     bgGradient = "from-blue-900/40 via-black to-black"
 }: PageHeroProps) {
     return (
-        <section className="relative h-[42vh] min-h-[260px] flex items-center justify-center overflow-hidden bg-black text-white pt-16">
+        <section className="relative h-[34vh] min-h-[220px] flex items-center justify-center overflow-hidden bg-black text-white pt-16">
             {/* Background Elements */}
             <div className={`absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] ${bgGradient} opacity-80`} />
             <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />

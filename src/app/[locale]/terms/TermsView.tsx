@@ -18,7 +18,7 @@ export default function TermsView() {
                 bgGradient="from-blue-900/40 via-black to-blue-900/40"
             />
 
-            <div className="container mx-auto px-4 py-14 relative z-10">
+            <div className="container mx-auto px-4 py-10 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ export default function TermsView() {
                                 </a>
                             </div>
 
-                            <p className="text-sm text-zinc-500 dark:text-zinc-500 italic mt-12">
+                            <p className="text-sm text-zinc-500 dark:text-zinc-500 italic mt-8">
                                 {t("footer_note")}
                             </p>
                         </div>
