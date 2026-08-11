@@ -83,6 +83,16 @@ export default function Footer() {
                                     <div className="absolute top-full left-6 -translate-y-px border-8 border-transparent border-t-slate-900/95" />
                                 </div>
                             </div>
+
+                            {/* NYS MWBE Certified decal — official artwork, colors must not
+                                be altered by theme/dark-mode styling */}
+                            <img
+                                src="/images/certifications/nys-mwbe-certified.png"
+                                alt="New York State Minority and Women's Business Enterprise (MWBE) Certified"
+                                width={72}
+                                height={72}
+                                className="w-[72px] h-[72px] mt-2"
+                            />
                         </div>
                     </div>
 
